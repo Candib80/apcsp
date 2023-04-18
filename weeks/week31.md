@@ -8,7 +8,7 @@
 | **Tue** |Finish Impact of Computing |Read over [Data Science Notes](/apcsp/curriculum/data_science) |
 | **Wed** | | |
 | **Thu** | | |
-| **Fri** | | |
+| **Fri** |Field Day!! | |
 
 <div style="text-align:center">
 <img src="" alt="" width="700px">
