@@ -5,7 +5,7 @@
 |         | Class | Homework |
 | ------- | ----- | -------- |
 | **Mon** |Start on Impact of Computing |Make sure you have read through the [Notes for Impact of Computing](/apcsp/curriculum/impact_of_computing/notes) |
-| **Tue** |Finish Impact of Computing | |
+| **Tue** |Finish Impact of Computing |Read over [Data Science Notes](/apcsp/curriculum/data_science) |
 | **Wed** | | |
 | **Thu** | | |
 | **Fri** | | |
