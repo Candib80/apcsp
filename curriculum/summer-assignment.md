@@ -1,6 +1,6 @@
 # Welcome to AP Computer Science Principles (AP CSP)
 
-Hello! I am happy to have you in my AP Computer Science Principles class for the 2022-2023 school year! 
+Hello! I am happy to have you in my AP Computer Science Principles class for the 2023-2024 school year! 
 
 This class is about the principles that underlie much of the technology around us. Your job as a student in the class is to be on the lookout, to be alert, for where and how computer science affects or impacts the things you care about, the things you know about. Whatever it is you want to do in your life, it is likely that technology affects it in some way, or that some technological innovation is needed.
 
@@ -9,24 +9,23 @@ This course is about creativity, technology and innovation. In this class, you w
 Inventing things, and having insights about how things work, and how they might work better is what this class is about. The goal of the summer assignment is to get you started on this way of thinking as well as get you familiar with what a computer actually is.
 
 I look forward to having you all in the fall, and have a great rest of your summer break! If you ever need me, email me at <cbeaman@parrottacademy.org>.  
-~Mrs. Beaman
+~Ms. Beaman
 
 <br><br>
 
-## Summer Assignment 2022 
+## Summer Assignment 2023 
 
-- The assignment below is due the first day we all meet and will count as **2** quiz grades
+- The assignment below is due the first day we all meet and will count as a **TEST** grade
 - **There will be a test on Friday, August 26** on material covered in the assignment; however, we will review before.
 
 ### Part 0
-- Download the [Guided Notes](\apcsp\assets\pdfs\summer\summer-22.pdf) and use them to complete Parts 1 & 2
+- Join the CodeHS Section for this summer here: [https://codehs.com/go/94ACB](https://codehs.com/go/94ACB)
+  - We will only be using CodeHS for the summer assignment to introduce programming and what computing is
+- Download the [Guided Notes]() and complete them as you go through the 2 sections within CodeHS
+- Try your best on the quizzes, but those will not be for a grade, rather your test the first week will determine your knowledge on the subject
 
 ### Part 1
-- Read Chapters 1 & 2 of *Blown to Bits* - [free pdf here](http://www.bitsbook.com/wp-content/uploads/2021/08/9780137441075-Blown-to-Bits-2e.pdf)
-  - If you search for, or [purchase](https://www.bitsbook.com/buy-the-book/), this book, make sure it is the second edition (linked for you). There is a version about 10 years older than the one linked here with an orange-ish cover - DON'T READ THIS ONE!
-- First 2 pages of handout are on the book
+- Complete the **What is Computing?** section on CodeHS
 
 ### Part 2
-- Complete the [Hardware](/apcsp/curriculum/understanding_technology/hardware) section and answer the rest of the guided notes based on the **Notes**, **Reference Sheets**, **Video**, and **Slides**; make sure to utilize all the materials to answer the questions
-- I promise you won't have to watch hour long videos every night. If I assign videos to watch, they will be broken up from here on out.
-- **DO NOT** do any of the Problems for the Hardware section, but do look over them as you may see something similar on the test
+- Complete the **Programming With Karel** section on CodeHS
