@@ -5,9 +5,9 @@
 
 ---
 
-<!-- - [Summer Assignment 2022](\apcsp\curriculum\summer-assignment) -->
+<!-- - [Summer Assignment 2023](\apcsp\curriculum\summer-assignment) -->
 
-- [Week 26](/apcsp/weeks/week26)
+<!-- - [Week 26](/apcsp/weeks/week26)
 - [Week 27](/apcsp/weeks/week27)
 - [Week 28](/apcsp/weeks/week28)
 - [Week 29](/apcsp/weeks/week29)
@@ -59,7 +59,7 @@
         <li><a href="https://candib80.github.io/apcsp/weeks/week24/">Week 24</a></li>
         <li><a href="https://candib80.github.io/apcsp/weeks/week25/">Week 25</a></li>
     </ul>
-</details>
+</details> -->
         
 
 ---

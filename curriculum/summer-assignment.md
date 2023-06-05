@@ -15,8 +15,8 @@ I look forward to having you all in the fall, and have a great rest of your summ
 
 ## Summer Assignment 2023 
 
-- The assignment below is due the first day we all meet and will count as a **TEST** grade
-- **There will be a test on Friday, August 26** on material covered in the assignment; however, we will review before.
+- The assignment below is due the first day we all meet and will count as a **Major** grade
+- **There will be a test on Friday, August 25** on material covered in the assignment; however, we will review before.
 
 ### Part 0
 - Join the CodeHS Section for this summer here: [https://codehs.com/go/94ACB](https://codehs.com/go/94ACB)
