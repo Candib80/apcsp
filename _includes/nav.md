@@ -5,7 +5,7 @@
 
 ---
 
-<!-- - [Summer Assignment 2023](\apcsp\curriculum\summer-assignment) -->
+- [Summer Assignment 2023](\apcsp\curriculum\summer-assignment)
 
 <!-- - [Week 26](/apcsp/weeks/week26)
 - [Week 27](/apcsp/weeks/week27)

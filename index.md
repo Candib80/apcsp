@@ -12,8 +12,7 @@ title: false
 
 
 
-### Your Summer Assignment will be up by the beginning of July!
-<!-- ### Your [Summer Assignment](\apcsp\curriculum\summer-assignment) is live now!! -->
+### Your [Summer Assignment](\apcsp\curriculum\summer-assignment) is live now!!
 
 #### Why CS?
 - To satisfy personal creativity

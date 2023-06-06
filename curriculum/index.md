@@ -11,7 +11,7 @@
 ## CS50 Core Curriculum
 
 <ol start="0">
-  <li><a href="/apcsp/curriculum/0/">Scratch</a></li>
+  <!-- <li><a href="/apcsp/curriculum/0/">Scratch</a></li> -->
   <li><a href="/apcsp/curriculum/1/">Intro to C</a></li>
   <li><a href="/apcsp/curriculum/2/">Arrays</a></li>
   <li><a href="/apcsp/curriculum/3/">Algorithms</a></li>
@@ -32,4 +32,4 @@
 
 ## Summer Assignment
 
-<!-- * [Summer 2022  - IS HERE!!!](\apcsp\curriculum\summer-assignment) -->
+* [Summer 2023 - IS HERE!!!](\apcsp\curriculum\summer-assignment)

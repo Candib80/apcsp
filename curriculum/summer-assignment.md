@@ -21,11 +21,12 @@ I look forward to having you all in the fall, and have a great rest of your summ
 ### Part 0
 - Join the CodeHS Section for this summer here: [https://codehs.com/go/94ACB](https://codehs.com/go/94ACB)
   - We will only be using CodeHS for the summer assignment to introduce programming and what computing is
-- Download the [Guided Notes]() and complete them as you go through the 2 sections within CodeHS
+- Download the [Guided Notes](\apcsp\assets\pdfs\summer\summer-23.pdf) and complete as you go through the first part within CodeHS
 - Try your best on the quizzes, but those will not be for a grade, rather your test the first week will determine your knowledge on the subject
 
 ### Part 1
-- Complete the **What is Computing?** section on CodeHS
+- Complete the **What is Computing?** section on CodeHS & complete the notes you downloaded
+- Make sure to complete the free response parts within CodeHS!
 
 ### Part 2
 - Complete the **Programming With Karel** section on CodeHS
