@@ -1,6 +1,6 @@
 ---
 
-- [VSCode for CS50](https://cs50.dev/)
+- <a href="https://cs50.dev/" target="_blank">VSCode for CS50</a>
 - <a href="https://cs50.me/" target="_blank">Submit50</a>
 
 ---
