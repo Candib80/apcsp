@@ -12,15 +12,15 @@
 
 <ol start="0">
   <!-- <li><a href="/apcsp/curriculum/0/">Scratch</a></li> -->
-  <li><a href="/apcsp/curriculum/1/">Intro to C</a></li>
-  <li><a href="/apcsp/curriculum/2/">Arrays</a></li>
-  <li><a href="/apcsp/curriculum/3/">Algorithms</a></li>
-  <li><a href="/apcsp/curriculum/4/">Memory</a></li>
-  <li><a href="/apcsp/curriculum/5/">Data Structures</a></li>
-  <li><a href="/apcsp/curriculum/6/">Python</a></li>
-  <li><a href="/apcsp/curriculum/7/">SQL</a></li>
-  <li><a href="/apcsp/curriculum/8/">HTML, CSS, & JavaScript</a></li>
-  <li><a href="/apcsp/curriculum/9/">Flask</a></li>
+  <li><a href="/apcsp/curriculum/0/">Intro to C</a></li>
+  <li><a href="/apcsp/curriculum/1/">Arrays</a></li>
+  <li><a href="/apcsp/curriculum/2/">Algorithms</a></li>
+  <li><a href="/apcsp/curriculum/3/">Memory</a></li>
+  <li><a href="/apcsp/curriculum/4/">Data Structures</a></li>
+  <li><a href="/apcsp/curriculum/5/">Python</a></li>
+  <li><a href="/apcsp/curriculum/6/">SQL</a></li>
+  <li><a href="/apcsp/curriculum/7/">HTML, CSS, & JavaScript</a></li>
+  <li><a href="/apcsp/curriculum/8/">Flask</a></li>
 </ol>
 
 * [Cybersecurity](https://cs50.harvard.edu/ap/2023/curriculum/x/weeks/cybersecurity/)
