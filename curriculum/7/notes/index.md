@@ -1,509 +1,189 @@
-# Lecture 7
+# Lecture 8
 {:.no_toc}
 
 * TOC
 {:toc}
 
-## Last time
+## Last time (and next time)
 
-* Last time, we learned about Python, a programming language that comes with many features and libraries. Today, we'll use Python to generate HTML for webpages, and see how separations of concerns might be applied.
-* A few weeks ago, we learned about web requests in HTTP, which might look like this:
+* We've been introduced to web programming, where we've learned to use Flask, a framework written in the language of Python, to build dynamic web-based applications.
+* The internal structure of our applications have followed a paradigm, or methodology, called MVC, Model-View-Controller, where code used for different functions are organized in different files and folders, and interact with each other in predictable ways.
+* But until now, we haven't had much code in our Model layer. We've used CSVs to read and write data, but those rows of text are a bit clunky to work with.
+* CS50 Finance will use a database language, SQL, to work with data more efficiently. It will also use a real third-party API, application programming interface, to get real-time data on stock prices, allowing users to "buy" and "sell" virtual stocks. We'll be able to access the API's functions by reading its documentation.
+
+## Logging in
+
+* When we log in to a website, with our username and password, we're not prompted to log in again for each page we visit after, usually until we explicitly log out.
+* It turns out that there is another web technology called **cookies**, small pieces of data that a website can ask a browser to store on a user's computer. Then, when the browser visits that website again, it will automatically send that cookie back, like a virtual handstamp that identifies ourself to the server, without having to enter our login information again. The cookie might store a long random string, to prevent adversaries from easily guessing it, and the server will remember that it corresponds to our account.
+* When we visit a site like Gmail for the first time, our browser will send HTTP headers like this:
   ```
   GET / HTTP/1.1
-  Host: www.example.com
+  Host: gmail.com
   ...
   ```
-  * Hopefully, a server responds with something like:
-    ```
-    HTTP/1.1 200 OK
-    Content-Type: text/html
-    ...
-    ```
-    * The `...` is the actual HTML of the page.
-
-## Flask
-
-* Today, we'll use Flask, a microframework, or a set of code that allows us to build programs without writing shared or repeated code over and over. (Bootstrap, for example, is a framework for CSS.)
-* Flask is written in Python and is a set of libraries of code that we can use to write a web server in Python.
-* One methodology for organizing web server code is MVC, or Model-View-Controller:<br>
-  ![request (HTTP, CLI, etc.) from a client goes into a Controller, which demands from a Model (Database, WS, etc) and receives data that it then sends to a View (Templates, layout) which are sent back to the client as a response (HTML, RSS, XML, JSON, etc.)](/mvc.png)
-  * Thus far, the programs we've written have all been in the Controller category, whereby we have logic and algorithms that solve some problem and print output to the terminal. But with web programming, we also want to add formatting and aesthetics (the View component), and also access data in a more organized way (the Model component). When we start writing our web server's code in Python, most of the logic will be in the controllers.
-  * By organizing our program this way, we can have separation of concerns.
-* Today, we'll build a website where students can fill out a form to register for Frosh IMs, freshman year intramural sports.
-* We can start by opening the CS50 IDE, and write some Python code that is a simple web server program, `serve.py`:
-  ```python
-  from http.server import BaseHTTPRequestHandler, HTTPServer
-
-  class HTTPServer_RequestHandler(BaseHTTPRequestHandler):
-
-      def do_GET(self):
-
-          self.send_response(200)
-
-          self.send_header("Content-type", "text/html")
-          self.end_headers()
-
-          self.wfile.write(b"<!DOCTYPE html>")
-          self.wfile.write(b"<html lang='en'>")
-          self.wfile.write(b"<head>")
-          self.wfile.write(b"<title>hello, title</title>")
-          self.wfile.write(b"</head>")
-          self.wfile.write(b"<body>")
-          self.wfile.write(b"hello, body")
-          self.wfile.write(b"</body>")
-          self.wfile.write(b"</html>")
-
-
-  port = 8080
-  server_address = ("0.0.0.0", port)
-  httpd = HTTPServer(server_address, HTTPServer_RequestHandler)
-
-  httpd.serve_forever()
+* Then, Gmail's server will reply with the login page. After we successfully log in, Gmail's server will then reply with headers like this:
   ```
-  * We already know how to write a hello, world HTML page, but now we're writing a program in Python to actually generate and return an HTML page.
-  * Most of this code is based on the `http` library that we can import that handles the HTTP layer, but we have written our own `do_GET` function that will be called every time we receive a GET request. As usual, we need to look at the documentation for the library to get a sense of what we should write, and what we have available for us. First, we send a 200 status code, and send the HTTP header indicating that this is an HTML page. Then, we write (as ASCII bytes) some HTML, line by line, into the response.
-  * Notice that we set the server to use port 8080 (since the IDE itself is using port 80), and actually create and start the server (based on documentation we found online).
-  * Now, if we run `python serve.py`, we can click CS50 IDE > Web Server, which will open our IDE's web server in another tab for us, and we'll see the hello, world page we just wrote.
-* We can see that reimplementing many common functions of a web server can get tedious, even with an HTTP library, so a framework like Flask helps a lot in providing abstractions and shortcuts that we can reuse.
-* With Flask, we can write the following in an `application.py` file:
+  HTTP/1.1 200 OK
+  Content-Type: text/html
+  Set-Cookie: session=value
+  ...
+  ```
+  * The `Set-Cookie` header asks our browser to save the `session` and `value` key-value pair to our computer; `value` will be a long random string or number that identifies us to the server.
+  * If we, as the user, set our browser to not save cookies, we'll have to log in for every page we visit. But cookies might also identify us to advertisers, who can then track us across different sites we visit, if those sites include embedded images or scripts that are from the same third-party advertising service. So political entities like the EU have passed laws to help ensure companies behind websites are explicit to users about the purpose of cookies they want to store.
+* When we visit Gmail again later, our browser will send the same value back as part of the `Cookie` header:
+  ```
+  GET / HTTP/1.1
+  Host: gmail.com
+  Cookie: session=value
+  ...
+  ```
+  * And cookies can be set to expire by the server, which is why after some number of days, we might be asked to log in again.
+* In today's source code directory in the CS50 IDE, we'll first look at the example called `store`. We'll `cd` into the `store` directory, and call `flask run` in our terminal to start our IDE's web server. Then, we can visit the link to see a simple "store":<br>
+  ![webpage with input boxes of 0 for Foo, 0 for Bar, 0 for Baz, with button labeled Purchase and link to View your shopping cart](/store.png)
+  * We can change the quantity of each item, and click "Purchase" to see them added to a virtual cart that tell us the count of each item we have.
+  * We can keep shopping, but even if we close the window and reopen it, we see that our cart still saved the number of each item we added before.
+* With cookies, we can implement **sessions** on our server. A session is an abstraction of saved state for each user's visit to our website; our server might give me a cookie with `session=12345` and you a cookie with `session=78910`, and store some data for each user who visits, based on that session value.
+* With Flask, we only need a few lines of code to use this abstraction:
+  ```python
+  ...
+  from flask_session import Session
+  ...
+  app.config["SESSION_PERMANENT"] = False
+  app.config["SESSION_TYPE"] = "filesystem"
+  Session(app)
+  ...
+  @app.route("/update", methods=["POST"])
+  def update():
+      for item in request.form:
+          session[item] = int(request.form.get(item))
+      return redirect("/cart")
+  ```
+  * We set up our Flask app to use the Session library, and in each of our routes, we'll have access to a `session` dictionary, which we can store data in our server's memory or filesystem for each specific user.
+  * We'll introduce this library in a bit more detail in this week's problem set.
+
+## Databases
+
+* So far, we've seen how we can store data in CSV files. But finding data requires linear search, and we have to open, read, change, and save the entire file if we want to make a change.
+* Databases are a set of data, usually organized and managed by some software for us. Database management software such as MySQL and Postgres commonly allow for selecting, inserting, updating, and deleting data with a language called SQL, Structured Query Language.
+* A spreadsheet with rows and columns is like a simple database. Each column is a specific field of data, and each row contains values for one entry in the database.
+* For example, we might store information about students, with a column for an ID, a column for a name, and so on.
+* We might have different sheets, or tabs, within the same spreadsheet, and in databases these would be called tables.
+* With Google Sheets, we can create a spreadsheet called "university", and create two sheets within that, one called "students" and one called "faculty":<br>
+  ![sheet labeled faculty with columns labeled id, name, department, email, phone](/faculty.png)
+* With a database, we can represent data in the same way, and SQL also requires us to specify the type of data we want to store in each field. By specifying the type, our database software can store and optimize our data more efficiently.
+* There are different variants, or dialects, of SQL, depending on what database program we're using. In SQLite, a popular, lightweight software we'll be using, data types include:
+  * `BLOB`
+  * `INTEGER`
+  * `NUMERIC`
+  * `REAL`
+  * `TEXT`
+* And within the `INTEGER` type, we might specify the size as a `smallint`, `integer`, or `bigint`, each of which might be stored with a different number of bytes. We might be tempted to use a `bigint`, for example, but that might use unnecessary space and be more and more costly as we have more and more rows to store.
+* `REAL` numbers can be a `real` type for a floating-point number, or `double precision`, with more bytes allocated.
+* The `NUMERIC` type represents other types of numbers, such as a `boolean`. `date`, `datetime`, `numeric(scale, precision)` (for decimal numbers with a specific number of digits), `time`, and `timestamp`.
+* A `TEXT` field can be a `char(n)` field, a fixed number of characters; a `varchar(n)`, a variable number of characters up to _n_, or a larger `text` field with no specified maximum. And we can infer, from our experience with arrays in C, that a fixed number of characters for each row would be faster to index into, since we can calculate exactly where each value will be. Our database software will provide this abstraction, and use the right data structures and algorithms for storing and accessing our data, faster than something we might be able to implement ourselves.
+
+## SQLite
+
+* We can open the CS50 IDE and use the terminal to explore SQLite, a popular database management software. SQLite is a technology for storing data on a server's disk as a binary file, so it doesn't have a server or other software to set up. (Other technologies, like Postgres and MySQL, use a running program that acts as a database server, which has better performance but requires some configuration and memory.) Instead, we'll use the `sqlite3` program on our IDE as a human interface to a database file, and in our code, we'll use abstractions that can open and work with an SQLite database file.
+* We'll start by typing `sqlite3 froshims3.db`, and we'll be able to create a table in that database with a command like `CREATE TABLE 'registrants' ('id' integer, 'name' varchar(255), 'dorm' varchar(255));`. We specify the name of our new table, and for each column or field, the type of data. And by convention, we use 255 for our `varchar` fields, since that used to be the maximum for many older databases, and are probably enough for all realistic possibilities, without being too excessive.
+* Nothing happens at our command line after, but we can type `.schema` and see the schema, or description, of our table:<br>
+  ![.schema command in sqlite in command line, showing our original CREATE TABLE command](/schema.png)
+* We can add a row to our table with `INSERT INTO registrants (id, name, dorm) VALUES(1, 'Brian', 'Pennypacker');`, and conventionally the uppercased words are SQL keywords, while the rest are words specific to our data.
+* We can see our table with `SELECT * FROM registrants;`, and see our table printed out.
+* And we can easily filter our data with `SELECT * FROM registrants WHERE dorm = 'Matthews';`. We can specify just the fields we want to get back, too, with something like `SELECT name FROM registrants WHERE dorm = 'Matthews';`
+* We can change rows with something like `UPDATE registrants SET dorm = 'Canaday' WHERE id = 1;`.
+* We can delete rows with something like `DELETE FROM registrants WHERE id = 1;`.
+* The CS50 IDE also has a graphical program, phpLiteAdmin, which can open SQLite files too. We can double-click `froshims3` in our files list on the IDE, and be able to browse rows. We can try to insert a row, too, by clicking on the name of the table and the Insert link, and see the SQL that phpLiteAdmin runs:<br>
+  ![phpLiteAdmin showing INSERT command](/phpliteadmin.png)
+* We can start over by deleting the file `froshims3.db`, and creating a blank file with the same name. Now we can double-click it, and phpLiteAdmin will let us create a new table. We'll create 7 fields this time, and we'll have more options:<br>
+  ![phpLiteAdmin showing Create new table with Field, Type, Primary Key, Autoincrement, Not NULL, and Default Value options for each field](/phpliteadmin.png)
+  * For our first field, `id`, we'll make that an `integer`, and we can use the Primary Key option to indicate to our database that this column will be the one used to uniquely identify each record. We'll use autoincrement so our database will automatically provide the next value for `id` each time we add a record, and the Not Null option ensures that there is a value for that field for each record.
+  * Then we'll have a `name` field that is a `varchar` with a maximum length of 255, and make that Not NULL.
+  * We'll have a `dorm` field, `varchar` with a maximum length of 255, and a `phone` field that we'll set to a fixed `char` of 10 characters. If we were to use a numeric field, phone numbers that start with 0 would lose those leading zeroes, and we might consider needing more characters if we wanted to support international phone numbers.
+  * We'll have an `email` field as a `varchar` with maximum length 255, and store a `birthdate` as a `date`. For `sports`, there might be more information we need someday, so we'll have that as a `varchar` with a maximum length of 1024, an even power of 2.
+* We can add fields to the table later, too.
+* We can click the SQL tab to insert rows manually, or use the Insert tab, but writing code to execute queries will be lead to the most organized data, since we'll be able to set everything consistently.
+
+## SQL
+
+* We can import the CS50 SQL library to execute queries easily, with `lecture.py`:
+  ```python
+  from cs50 import SQL
+
+  db = SQL("sqlite:///froshims.db")
+
+  rows = db.execute("SELECT * FROM registrants)
+
+  for row in rows:
+      print(f"{row['name']} registered")
+  ```
+  * Here, we're opening a file called `froshims.db` in the same directory and calling it `db`, using `SQL` to open it. We call `db.execute` to run a query, and save the results into the `rows` list. Then, we can iterate over each row and print out any fields we'd like.
+  * We can run `python lecture.py`, and the CS50 SQL library will also helpfully print a debug line showing what we sent to the database.
+* Since we can query a database in Python, we can also integrate that into a Flask application. We can create a Flask `application.py` file:
   ```python
   from flask import Flask, render_template, request
 
-  app = Flask(__name__)
-
-  @app.route("/")
-  def index():
-      return "hello, world"
-  ```
-  * With `app = Flask(__name__)`, we initialize a Flask application for our `application.py` file. Then, we use the `@app.route("/")` syntax to indicate that the function below will respond to any requests for `/`, or the root page of our site. We call that function `index` by convention, and it will just return "hello, world" as the response, without any HTML.
-  * Now, we can call `flask run` from the terminal in the same folder as our `application.py`, and the resulting URL will show a page that reads "hello, world" (which our browser displays even without HTML).
-* We can change the `index` function to return a template, or a file that has HTML that we've written, that acts as the View.
-  ```
-  return render_template("index.html")
-  ```
-  * In a `templates` folder, we'll have an `index.html` file with the following:
-    ```html
-    <!DOCTYPE html>
-
-    <html lang="en">
-        <head>
-            <meta name="viewport" content="initial-scale=1, width=device-width">
-            <title>hello</title>
-        </head>
-        <body>
-            hello, {{ name }}
-        </body>
-    </html>
-    ```
-  * We see a new feature, `{{ name }}`, like a placeholder. So we'll go back and change the logic of `index`, our controller, to check for parameters in the URL and pass them to the view:
-    ```
-    return render_template("index.html", name=request.args.get("name", "world"))
-    ```
-    * We use `request.args.get` to get a parameter from the request's URL called `name`. (The second argument, `world`, will be the default value that's returned if one wasn't set.) Now, we can visit `/?name=David` to see "hello, David" on the page. Now, we can generate an infinite number of webpages, even though we've only written a few lines of code.
-* In `froshims0`, we can write an `application.py` that can receive and respond to a POST request from a form:
-  ```python
-  from flask import Flask, render_template, request
+  from cs50 import SQL
 
   app = Flask(__name__)
 
+  db = SQL("sqlite:///lecture.db")
 
   @app.route("/")
   def index():
-      return render_template("index.html")
-
-
-  @app.route("/register", methods=["POST"])
-  def register():
-      if not request.form.get("name") or not request.form.get("dorm"):
-          return render_template("failure.html")
-      return render_template("success.html")
+      rows = db.execute("SELECT * FROM registrants")
+      return render_template("index.html", rows=rows)
   ```
-  * For the default page, we'll return an `index.html` that contains a form:
-    ```html
-    {% raw  %}
-    {% extends "layout.html" %}
-
-    {% block body %}
-        <h1>Register for Frosh IMs</h1>
-        <form action="/register" method="post">
-            <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
-            <select name="dorm">
-                <option disabled selected value="">Dorm</option>
-                <option value="Apley Court">Apley Court</option>
-                <option value="Canaday">Canaday</option>
-                <option value="Grays">Grays</option>
-                <option value="Greenough">Greenough</option>
-                <option value="Hollis">Hollis</option>
-                <option value="Holworthy">Holworthy</option>
-                <option value="Hurlbut">Hurlbut</option>
-                <option value="Lionel">Lionel</option>
-                <option value="Matthews">Matthews</option>
-                <option value="Mower">Mower</option>
-                <option value="Pennypacker">Pennypacker</option>
-                <option value="Stoughton">Stoughton</option>
-                <option value="Straus">Straus</option>
-                <option value="Thayer">Thayer</option>
-                <option value="Weld">Weld</option>
-                <option value="Wigglesworth">Wigglesworth</option>
-            </select>
-            <input type="submit" value="Register">
-        </form>
-    {% endblock %}
-    {% endraw %}
-    ```
-    * We have an HTML form, with an `input` tag for a student to type in their name, and a `select` tag to create a dropdown list for them to select a dorm. Our form will be submitted to a route we call `/register`, and we'll use the POST method to send the form's information.
-    * Notice that our template is now using a new feature, `extends`, to define blocks that will be substituted themselves in another file, `layout.html`:
-      ```html
-      {% raw  %}
-      <!DOCTYPE html>
-
-      <html lang="en">
-          <head>
-              <meta name="viewport" content="initial-scale=1, width=device-width">
-              <title>froshims0</title>
-          </head>
-          <body>
-              {% block body %}{% endblock %}
-          </body>
-      </html>
-      {% endraw %}
-      ```
-      * Now, if we have other pages on our site, they can easily share the common markup we would want on every page. The `{% raw %}{% block body %}{% endblock %}{% endraw %}` syntax is a placeholder block in Flask, where other pages, like `index.html`, can provide HTML that will be substituted into that block.
-    * In our `register` function, we'll indicate that we're listening for a POST request, and inside the function, just make sure that we got a value for both `name` and `dorm`. `request.form` is an abstraction provided by Flask, such that we can access the arguments, or parameters, from the request's POST data.
-* When we run our application with `flask run`, and visit the URL, sometimes we might see an Internal Server Error. And if we come back to our terminal, where our Flask server is running, we'll see an error message that provides us clues to what went wrong. We can press Control+C to stop our web server, make changes that will hopefully fix our error, and start our web server again. And even if nothing is broken but we made a change, sometimes we need to quit Flask and start it again, for it to notice those changes.
-* We also need a `success.html` and `failure.html` in our `templates` directory, which might look like:
+  * We select everything from the `registrants` table and store that in a variable called `rows`.
+  * Then, we pass the results, `rows`, to the template.
+* In our template, `templates/index.html`, we'll iterate over a list of rows that are passed in, displaying each one's `name` field:
   ```html
-  {% raw  %}
-  {% extends "layout.html" %}
+  {% raw  %}{% extends "layout.html" %}
 
   {% block body %}
-      You are registered! (Well, not really.)
-  {% endblock %}
-  {% endraw %}
-  ```
-  * Our `register` function will return that, with the template fully rendered, if we provided both a name and dorm in the form.
-  * With `layout.html`, we didn't need to copy and paste the same `<head>` and other shared markup, making it easier for us to make changes across all the pages we have at once.
-* The failure page, too, will share the same layout but send a different message:
-  ```html
-  {% raw  %}
-  {% extends "layout.html" %}
 
-  {% block body %}
-      You must provide your name and dorm!
-  {% endblock %}
-  {% endraw %}
+      <ul>
+          {% for row in rows %}
+
+              <li>{{ row["name"] }} registered</li>
+
+          {% endfor %}
+      </ul>
+
+  {% endblock %}{% endraw %}
   ```
-  * The `{% raw  %}{% %}{% endraw %}` syntax is actually called Jinja, a templating language that Flask is able to understand and put together.
-* And all of this Python code lives on our server in the CS50 IDE, generating a completed HTML page each time and sending it to the browser as a response. We can see that by right-clicking the page in Chrome, clicking View Source, and seeing the full HTML that users will get.
-* Now let's actually do something with the submitted form information. In `froshims1/application.py`, we'll create a list to store all the registered students:
+* We can implement a search functionality too, by adding a `q` URL parameter:
   ```python
-  from flask import Flask, redirect, render_template, request
-
-  # Configure app
-  app = Flask(__name__)
-
-  # Registered students
-  students = []
-
-
+  ...
   @app.route("/")
   def index():
-      return render_template("index.html")
-
-
-  @app.route("/registrants")
-  def registrants():
-      return render_template("registered.html", students=students)
-
-
-  @app.route("/register", methods=["POST"])
-  def register():
-      name = request.form.get("name")
-      dorm = request.form.get("dorm")
-      if not name or not dorm:
-          return render_template("failure.html")
-      students.append(f"{name} from {dorm}")
-      return redirect("/registrants")
+      q = request.args.get("q")
+      rows = db.execute(f"SELECT * FROM registrants WHERE name = '{q}'")
+      return render_template("index.html", rows=rows)
   ```
-  * We create an empty list, `students = []`, and when we get a name and dorm in `register`, we'll use `students.append(f"{name} from {dorm}")` to add a formatted string with that name and dorm, to the `students` list.
-  * In the `registrants` function, we'll pass in our `students` list to the template of `registered.html`:
-    ```html
-    {% raw  %}
-    {% extends "layout.html" %}
+  * Now, only rows that have a matching name will be returned to our template to display.
 
-    {% block body %}
-        <ul>
-            {% for student in students %}
-                <li>{{ student }}</li>
-            {% endfor %}
-        </ul>
-    {% endblock %}
-    {% endraw %}
-    ```
-    * Notice that, with Jinja, we can have simple concepts like a `for` loop to generate HTML based on variables passed into the template. (We need an `endfor` since, in HTML, indentation is only needed for stylistic purposes, so we need to specify when a loop ends.) Here, we're creating an `<li>` for each `student`, or string, in the `students` variable that was passed in by the controller, `application.py`. And notice that the markup, or formatting of the list, is in this template, or view.
-* If we stop our server, and restart it, we'll have lost all of the data we've collected, since the `students` variable is only created and stored as long as our program is running.
-* In `froshims2/application.py`, we use a new library:
-  ```python
-  import os
-  import smtplib
-  from flask import Flask, render_template, request
+## lecture.db
 
-  # Configure app
-  app = Flask(__name__)
+* A sample database of music metadata, `lecture.db`, is in this week's source directory. Importantly, it demonstrates how we can relate data in different tables.
+* With our database of students, we might have noticed that the `dorm` field will have the same strings repeated over and over again. Instead of storing the same data, we can store a reference to some other table of dorms, using fewer bytes to represent the same data.
+* In the sample database, we have a table for Albums, Artists, and Tracks. In the Album table, each row has an AlbumId, Title, and ArtistId. The Artist table has an ArtistId and Name for each row, so by joining the two tables together, we can figure out the artist's name. And since each artist has multiple albums, we're saving space. If a row in the Artist table has more data, we can update it just once, rather than in every row of the Album table, if that data was repeated there.
+* We can use phpLiteAdmin in the CS50 IDE, as before, to look at the tables and rows in `lecture.db`, and run a query like `SELECT * FROM Album WHERE ArtistId = 1;` to see all the albums by the artist with ID 1. We can use SQL to join tables, getting the artist's name too, with `SELECT * FROM Album, Artist WHERE Album.ArtistId = Artist.ArtistId;`. The `name` from the Artist table will also be selected (since we said `SELECT *`), and matched to each row in Album where the `ArtistId` field is the same. Another way to express the same idea would be `SELECT * FROM Artist JOIN Album ON Artist.ArtistId = Album.ArtistId;`.
+* Normalizing our database is this method of storing redundant data once, and using a reference to another table as needed to save space, with a slight cost to performance and simplicity.
+* In SQL, we can add a `UNIQUE` constraint to a field, without using it as a primary key. We can also indicate that a field should be an `INDEX`, where the database should build an index (with a tree, hash table, or some other data structure) for looking up fields more quickly. Finally a `FOREIGN KEY` is what we would call a field that refers to a row in some other table; for example, the `ArtistId` field in the `Album` table is a foreign key to the `Artist` table.
+* SQL also has functions for numeric operations like `AVG`, `COUNT`, `MAX`, `MIN`, and `SUM`.
 
+## Problems
 
-  @app.route("/")
-  def index():
-      return render_template("index.html")
-
-
-  @app.route("/register", methods=["POST"])
-  def register():
-      name = request.form.get("name")
-      email = request.form.get("email")
-      dorm = request.form.get("dorm")
-      if not name or not email or not dorm:
-          return render_template("failure.html")
-      message = "You are registered!"
-      server = smtplib.SMTP("smtp.gmail.com", 587)
-      server.starttls()
-      server.login("jharvard@cs50.net", os.getenv("PASSWORD"))
-      server.sendmail("jharvard@cs50.net", email, message)
-      return render_template("success.html")
-  ```
-  * The SMTP (Simple Mail Transfer Protocol) library allows us to use abstractions for sending email, and here, every time we get a valid form, we'll send an email. By reading the documentation for `smtplib` and for Gmail, we can figure out the lines of code needed to log in to Gmail's server programmatically, and send an email to the email address from our form.
-* We can also save the registration data to a CSV on our server, which can then be opened even after our server is stopped:
-  ```python
-  from flask import Flask, render_template, request
-  import csv
-
-  app = Flask(__name__)
-
-
-  @app.route("/")
-  def index():
-      return render_template("index.html")
-
-
-  @app.route("/register", methods=["POST"])
-  def register():
-      if not request.form.get("name") or not request.form.get("dorm"):
-          return render_template("failure.html")
-      file = open("registered.csv", "a")
-      writer = csv.writer(file)
-      writer.writerow((request.form.get("name"), request.form.get("dorm")))
-      file.close()
-      return render_template("success.html")
-
-
-  @app.route("/registered")
-  def registered():
-      file = open("registered.csv", "r")
-      reader = csv.reader(file)
-      students = list(reader)
-      return render_template("registered.html", students=students)
-  ```
-  * We import the `csv` library, and open a file called `registered.csv` to append or read from. If we received a form in the `register` route, we'll open the file with `a`, to append. Then, we create a `csv.writer` (based on the documentation for the library), and use the `writerow` function to write the name and dorm to the file. Finally, we'll close the file.
-  * The `registered` route will open the file for reading, and create a list of lists based on the file. Then, in `registered.html`, we can iterate over each list in the list (each row), and print the first item (the name) and the second item (the dorm):
-    ```html
-    {% raw %}
-    {% extends "layout.html" %}
-
-    {% block body %}
-        <h1>Registered</h1>
-        <ul>
-            {% for student in students %}
-                <li>{{ student[0] }} from {{ student[1] }}</li>
-            {% endfor %}
-        </ul>
-    {% endblock %}
-    {% endraw %}
-    ```
-* With a language we'll look at next week, SQL, we'll be able to work with data more easily than we can with a CSV file.
-* In `froshims6/templates/index.html`, we use JavaScript in our template to check the input immediately:
-  ```html
-  {% raw %}
-  {% extends "layout.html" %}
-
-  {% block body %}
-      <h1>Register for Frosh IMs</h1>
-      <form action="/register" method="post">
-          <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
-          <select name="dorm">
-              <option disabled selected value="">Dorm</option>
-              <option value="Apley Court">Apley Court</option>
-              <option value="Canaday">Canaday</option>
-              <option value="Grays">Grays</option>
-              <option value="Greenough">Greenough</option>
-              <option value="Hollis">Hollis</option>
-              <option value="Holworthy">Holworthy</option>
-              <option value="Hurlbut">Hurlbut</option>
-              <option value="Lionel">Lionel</option>
-              <option value="Matthews">Matthews</option>
-              <option value="Mower">Mower</option>
-              <option value="Pennypacker">Pennypacker</option>
-              <option value="Stoughton">Stoughton</option>
-              <option value="Straus">Straus</option>
-              <option value="Thayer">Thayer</option>
-              <option value="Weld">Weld</option>
-              <option value="Wigglesworth">Wigglesworth</option>
-          </select>
-          <input type="submit" value="Register">
-      </form>
-
-      <script>
-
-          document.querySelector('form').onsubmit = function() {
-              if (!document.querySelector('input').value) {
-                  alert('You must provide your name!');
-                  return false;
-              }
-              else if (!document.querySelector('select').value) {
-                  alert('You must provide your dorm!');
-                  return false;
-              }
-              return true;
-          };
-
-      </script>
-
-  {% endblock %}
-  {% endraw %}
-  ```
-  * With JavaScript on the page, the user can get feedback immediately since it runs in the browser. And we should still validate the input on our server, since someone might disable JavaScript or try to send bad requests programmatically. With libraries like Bootstrap, we can make validation pretty and really improve a user's experience, or UX.
-  * In this example, we have a function that will be called when the `form` on the page is submitted, and checks that there's a value for both the `input` and the `select`. If there is no value for one of them, we'll create an alert and `return fallse` to stop the form from being submitted. Otherwise, our function will `return true` if both are present, allowing the form to be submitted by the browser.
-  * We could also factor out the JavaScript code into a `.js` file and include it, but since we don't have very many lines of code yet, we can make a design decision to include our JavaScript code directly in our template. Frameworks like React will organize view code, like the HTML and JavaScript, in particular ways, so that we can maintain consistent patterns in more complicated web applications.
-
-## Words
-
-* Let's create a website where someone can search for words that start with some string, much like how we might want to have autocomplete. We'll need a file called `large` that's a list of dictionary words, and in `words0/application.py` we'll have:
-  ```python
-  from flask import Flask, render_template, request
-
-  app = Flask(__name__)
-
-  WORDS = []
-  with open("large", "r") as file:
-      for line in file.readlines():
-          WORDS.append(line.rstrip())
-
-  @app.route("/")
-  def index():
-      return render_template("index.html")
-
-
-  @app.route("/search")
-  def search():
-      words = [word for word in WORDS if word.startswith(request.args.get("q"))]
-      return render_template("search.html", words=words)
-  ```
-  * When our server starts, we'll create a `WORDS` list from reading in each line of the `large` file, removing the new line with `rstrip`, and storing that in our list.
-  * In our `index` function, we'll render `index.html`, which is just a form:
-    ```html
-    {% raw %}
-    {% extends "layout.html" %}
-
-    {% block body %}
-        <form action="/search" method="get">
-            <input autocomplete="off" autofocus name="q" placeholder="Query" type="text">
-            <input type="submit" value="Search">
-        </form>
-    {% endblock %}
-    {% endraw %}
-    ```
-    * Our form will use the `get` method, since we want the query to be in the URL.
-  * In our `search` route, we create a list, `words`, which is a list of every `word` in our global `WORDS` list (that we read in earlier) that start with the value of the parameter `q`. It's equivalent to:
-    ```python
-    words = []
-    q = request.args.get("q")
-    for word in WORDS:
-        if word.startswith(q):
-            words.append(word)
-    ```
-    * Once we have a list of words that match, we'll pass it to our template, `search.html` that will display each one with markup.
-  * We can run our server with `flask run`, and when we visit the URL, we see a form that we can type some input into. If we type in the letter `a` or `b`, we can click submit and be taken to a page with all the words in our dictionary that start with `a` or `b`. And we notice that our route is something like `/search?q=a`, though we could have changed `q` (for query) to anything we'd like. We can even change the URL with some other value for `q`, and see our results displayed.
-* In `words1`, we'll get the results list immediately with JavaScript. And we can infer how that example works, before looking at the code, by running it in the IDE. We can visit the URL, and use the Network tab in Developer Tools by right-clicking the page in Chrome:
-  ![words1 with input box on page and results directly below; Network panel in Developer tools shows a request to search?q=a](/words1.png)
-  * We see that our browser is making a request every time we type into the input box, and if we click on the request and then Response, we can see that our browser got some fragment of HTML with our results.
-* We can click on View Source on the page, and see that our page has a bit of JavaScript after the HTML:
-  ```html
-  <input autocomplete="off" autofocus placeholder="Query" type="text">
-
-  <ul></ul>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script>
-
-      let input = document.querySelector('input');
-      input.onkeyup = function() {
-          $.get('/search?q=' + input.value, function(data) {
-              document.querySelector('ul').innerHTML = data;
-          });
-      };
-
-  </script>
-  ```
-  * Here, we're using a JavaScript library called jQuery, which provides us with some abstractions. We're selecting the `input` element, and every time the `keyup` event occurs, we want to change the page. The `keyup` event will happen when we press a key in the input box, and let go. We use jQuery's `$.get` function to make a GET request to our server at the `/search?q=` route, with the value of the input box appended. When we get some `data` back, the `$.get` function will call an anonymous function (a callback) to set the `innerHTML` of the `ul` on our page to that `data`.
-  * And notice that we provided an empty opened and closed `<ul>` element in our template, but we'll change the HTML inside with what our server responds with.
-* On our server-side code, our `search` route is the mostly the same as before, but the template, `search.html`, will only have `<li>` elements, one for each matching word:
-  ```html
-  {% raw %}
-  {% for word in words %}
-      <li>{{ word }}</li>
-  {% endfor %}
-  {% endraw %}
-  ```
-  * Since we don't extend a `layout.html`, this route will only return an incomplete fragment of HTML. But that still works because our JavaScript code is putting it inside a complete page, our `index.html`.
-* With `words2`, we have our server return data more efficiently, in a format called JSON, JavaScript Object Notation:
-  ![words2 with Response to a request for search?q=a as a list of strings, as opposed to li elements with markup](/words2.png)
-  * Then, in our JavaScript code on the page, we'll write each of them as an `<li>`, generating the markup in the browser instead of on our server.
-  * The Python code in `application.py` uses a `jsonify` function to return a list as a JSON object:
-    ```python
-    @app.route("/search")
-    def search():
-        q = request.args.get("q")
-        words = [word for word in WORDS if q and word.startswith(q)]
-        return jsonify(words)
-    ```
-  * And our `index.html` has the JavaScript to append each word as an `<li>` element:
-    ```javascript
-    let input = document.querySelector('input');
-    input.onkeyup = function() {
-        $.get('/search?q=' + input.value, function(data) {
-            let html = '';
-            for (word of data) {
-                html += '<li>' + word + '</li>';
-            }
-            document.querySelector('ul').innerHTML = html;
-        });
-    };
-    ```
-* In fact, since the browser can run JavaScript that can search a list, we can write all of this in JavaScript, without making a request to a server:
-  ```javascript
-  let input = document.querySelector('input');
-  input.onkeyup = function() {
-      let html = '';
-      if (input.value) {
-          for (word of WORDS) {
-              if (word.startsWith(input.value)) {
-                  html += '<li>' + word + '</li>';
-              }
-          }
-      }
-      document.querySelector('ul').innerHTML = html;
-  };
-  ```
-    * When we get input from the user, we'll just iterate over a `WORDS` array and append any `word` string that starts with the input's value to the page as an `<li>` element.
-  * We'll also have to include a `large.js` file that creates that global variable, `WORDS`, which starts with the following:
-    ```javascript
-    let WORDS = [
-      "a",
-      "aaa",
-      "aaas",
-      "aachen",
-      "aalborg",
-      "aalesund",
-      "aardvark",
-      ...
-    ```
-* Even with a relatively simple example, we see how there can be a few different approaches to solving the same problem. With version 0, our server sent back entire, complete pages on every search. With version 1, we used JavaScript to make requests without navigating to another page, getting back data with markup from the server. With version 2, we used JavaScript, but only got back data from the server, that we then marked up in the browser. Finally, with version 3, we used JavaScript and the word list to accomplish the same results, but all within the browser. Each approach has pros and cons, so depending on what tradeoffs we value, one solution might be better than the rest.
+* One problem with databases is **race conditions**, where the timing of two actions or events cause unexpected behavior.
+* For example, when we sign up for a new account on a website, it might ask us for a username we'd like. If the username is taken already, we'll see a message that tells us so, and if not, we're able to start creating an account with that username. And if we take our time with putting in the rest of our information, that username might be taken by someone else by the time we actually submit the form. But if the web server didn't check again, there would be a problem where the same username is now reassigned to us!
+* If two people, or web server threads, are checking the state of a variable at the exact same time, and then make a change based on that, after some amount of time, then there is a race condition in that window of time.
+* Another example is two people, withdrawing money from two different ATMs at the exact same time, with the same account information. If the account has $100, but both people try to withdraw $100 at the same time, each ATM might check the account balance, see there is a balance of $100, and saves $0 back into the account. But each ATM did this, so a total of $200 would have been withdrawn!
+* Another example involves two roommates and a fridge. The first roommate comes home, and sees that there is no milk in the fridge. So the first roommate leaves to the store to buy milk, and while they are at the store, the second roommate comes home, sees that there is no milk, and leaves for another store to get milk. Later, there will be two jugs of milk in the fridge. By leaving a note, we can solve this problem. We can even lock the fridge so that our roommate can't check whether there is milk, until we've gotten back.
+* In the database world, we can also lock rows and tables. We can use **transactions**, where a set of actions is guaranteed to happen together. That property is called **atomicity**, where, for example, we can check the value of a row and change it, without anything else being able to read or change that value.
+* We might have also seen some websites, like for airline tickets or hotel rooms, provide a window of time after we add something to our cart, that reserves it for us, letting us fill out our information without someone else purchasing it in the meantime.
+* Another problem in SQL is called a **SQL injection attack**, where an adversary can execute their own commands on our database. Earlier, we passed in the `q` URL parameter to filter registrants based on their name, with `rows = db.execute(f"SELECT * FROM registrants WHERE name = '{q}'")`. But if `q` had the value of `Brian'; DELETE FROM registrants WHERE name = 'Brian`, it would end our previous statement and run another statement.
+* To guard against this, we can sanitize user data, or escape characters like semicolons and single quotes, such that they are interpreted as part of the string, rather than special characters that end strings or commands.
+* The CS50 SQL Library allows us to escape user input with the `execute` function, and we can write `rows = db.execute("SELECT * FROM registrants WHERE name = :name", name=q)` where we use a special placeholder, `:name`, that will be escaped before it is substituted into the string.
+* Another example would be typing in `' OR '1' = '1` in a password field; if the query is `db.execute(f"SELECT * FROM users WHERE username = '{username}' AND password = '{password}'")`, then substituting that password would get us `db.execute("SELECT * FROM users  WHERE username = 'me@examplemailprovider.com' AND password = '' OR '1' = '1'")`, and that would select that user since `1 = 1`.
+  * On the other hand, the escaped input would be substituted as `db.execute("SELECT * FROM users  WHERE username = 'me@examplemailprovider.com' AND password = '\' OR \'1\' = \'1'")`, preventing the intention of our command from being changed since the single quotes are escaped.

@@ -1,513 +1,408 @@
-# Lecture 5
+# Lecture 6
 {:.no_toc}
 
 * TOC
 {:toc}
 
-## Networking
+## Last Time
 
-* Today we'll transition from building command-line programs in C to web applications, and though we'll see new languages, many ideas and concepts will stay the same.
-* **TCP/IP** (Transmission Control Protocol and Internet Protocol) are two protocols, or rules that specify how computers can communicate with each other. The modern internet relies on these protocols to work.
-* We might have sent handwritten letters in the mail in the past. On the outside of the envelope, we need to write an address, including information like a name, street, and city. We also write our own name and address as the return address.
-* Each address, too, should uniquely identify a building or place.
-* Our computers also have addresses that uniquely identify them on the internet, called IP addresses. In IPv4, or version 4 of the protocol, these addresses are numbers in the format `#.#.#.#`, four numbers between 0 and 255 separated by dots. And to represent each number (with 256 possible values), we need exactly 8 bits, and so each IP address is made of 32 bits. But with 32 bits, we can only represent 4 billion values. And since there are more than 4 billion devices connected to the internet, we have a newer version of the protocol, IPv6, which has 128-bit addresses, that the world is starting to transition to.
-* A **server**, which is just a computer connected to the internet that can listen for and respond to messages, might provide many services, such as a web site or email. To specify that a message is intended for a particular service, such as web browsing, another number called the port number is added to the address. For example, HTTP, for browsing websites, is usually communicated with port 80. So an envelope with a message might have `1.2.3.4:80` as the destination address, and `5.6.7.8` as the return address.  And there are other complexities, but that's the basics of how computers can communicate over a network.
-* Let's say we wanted to visit a **URL**, Uniform Resource Locator, like `http://www.example.com/`. It turns out that there's another technology called DNS, Domain Name System, that many internet providers and organizations maintain, which converts domain names (like `example.com`) into IP addresses.
-  * There are actually now hundreds of TLDs, top-level domains in addition to `.com`, such as `.net`, `.org`, `.us`, `.uk`, and more.
-  * The `www` in front of a domain name is actually a subdomain, and there might be many of them created, each of which pointing to a different server or set of servers. It's not required, and `www` is only used by convention. For example, MIT uses `web.mit.edu` for their main website's address.
-  * The `/` at the end implies that we're asking for the root page of the site, which is conventionally `index.html`, where `.html` indicates that the file is written in HTML, a language we'll soon look at.
-* When we type that URL in a browser, our browser first uses DNS to look up the IP address for that domain, and then sends a request (in a virtual envelope) to the right IP address for the website. And when the server at that address responds, it will send us the content of the website in a virtual envelope with our address as the destination.
+* We learned some basics about the internet, and technologies like:
+  * TCP/IP, protocols by which computers can send each other messages across a network of many computers, using IP addresses and port numbers.
+  * HTTP, a protocol by which browsers, and other programs, can make a request for a webpage (or other content) from a server.
+  * URLs, including a domain name and parameters like `?q=cats`, to pass along additional inputs to a server.
+  * HTTP status codes, like 404 Not Found, which shows us an error page, and 301 Moved Permanently, which redirects us to the right URL if a website has moved.
+  * HTML and CSS, languages by which we can format and stylize webpages.
+  * JavaScript and the DOM, Document Object Model, by which we can change nodes in a tree representation of an HTML page, thereby changing the page itself.
 
-## HTTP
+## Python
 
-* **HTTP**, Hypertext Transfer Protocol, is another set of rules and conventions for communicating. For example, humans might have the convention of shaking hands when meeting for the first (or subsequent) times. When our browser communicates to web servers through HTTP, too, both computers follow a protocol for making requests and responses.
-* A request for a webpage will look like this:
+* Python is another programming language, but it is interpreted (run top to bottom by an interpreter, like JavaScript) and higher-level (including features and libraries that are more powerful).
+* For example, we can implement the entire `resize` program in just a few lines with Python:
+  ```python
+  import sys
+  from PIL import Image
+
+  if len(sys.argv) != 4:
+      sys.exit("Usage: python resize.py n infile outfile")
+
+  n = int(sys.argv[1])
+  infile = sys.argv[2]
+  outfile = sys.argv[3]
+
+  inimage = Image.open(infile)
+  width, height = inimage.size
+  outimage = inimage.resize((width * n, height * n))
+
+  outimage.save(outfile)
   ```
-  GET / HTTP/1.1
-  Host: www.example.com
-  ...
+  * First, we `import` (like `include`) a `sys` library (for command-line arguments) and an `Image` library.
+  * We check that there are the right number of command-line arguments with `len(sys.argv)`, and then create some variables `n`, `infile`, and `outfile`, without having to specify their types.
+  * Then, we use the Image library to open the input image, getting its width and height, resizing it with a `resize` function, and finally saving it to an output file.
+* Let's take a look at some new syntax. In Python, we can create variables with just `counter = 0`. To increment a variable, we can use `counter = counter + 1` or `counter += 1`.
+* Conditions look like:
+  ```python
+  if x < y:
+      something
+  elif:
+      something
+  else:
+      something
   ```
-  * `GET` is an HTTP verb that indicates we want to fetch some resource. The `/` indicates we're looking for the default page, and `HTTP/1.1` indicates the version of HTTP our browser is using.
-  * Then, `Host: www.example.com` is included, since the same server might be listening for and responding to requests for multiple websites. There are also other pieces of information included in the `...`, to help the server respond to us appropriately.
-* The response from the server might look like this:
+  * Unlike in C and JavaScript (whereby braces `{` `}` are used for blocks of code), the exact indentation of each line is what determines the level of nesting in Python.
+* Boolean expressions are slightly different, too:
+  ```python
+  while True:
+      something
   ```
-  HTTP/1.1 200 OK
-  Content-Type: text/html
-  ...
+* Loops can be created with another function, `range`, that, in the example below, returns a range of numbers from 0, up to but not including 50:
+  ```python
+  for i in range(50):
+      something
   ```
-  * First, we get back the version of HTTP, `HTTP/1.1`. Then, `200` is a numeric code that means `OK`, that the server was able to understand and respond to the request.
-  * `Content-Type: text/html` indicates that the content of the response is in the language called HTML, in text format.
-* We can open a browser like Chrome, and open the Developer Tools with View > Developer > Developer Tools. A panel will open:<br>
-  ![panel in Chrome with various tabs](/network.png)
-  * We can click the Network tab, and if we type `harvard.edu` into the address bar and press enter, a lot will happen very quickly. We can scroll to the very top, click the first request for `harvard.edu`, and see in the right panel, under "Request Headers", that the browser indeed sends a request that starts with what we expected:<br>
-    ![request in Chrome](/request.png)
-* We can scroll in the same panel and see that the response headers are slightly different:<br>
-  ![response in Chrome](/response.png)
-  * The response code, `301`, seems to say "Moved Permanently". And if we look down to "Location:", we see that the new location is `https://www.harvard.edu`. There's a `www`, and also a different protocol, HTTPS, which will encrypt our communication more securely.
-* Another HTTP code, `404`, is "Not Found", and we get that back if we're trying to get some URL that the server can't find. These are some interesting ones:
-  * `200 OK`
-  * `301 Moved Permanently`
-  * `302 Found`
-  * `304 Not Modified`
-  * `401 Unauthorized`
-  * `403 Forbidden`
-  * `404 Not Found`
-  * `418 I'm a Teapot`
-  * `500 Internal Server Error`
-  * `...`
-
-## HTML
-
-* Now that our computers can communicate, we can start thinking about creating the content that websites are comprised of.
-* **HTML**, Hypertext Markup Language, is a standard with which webpages are written. It's interpreted by browsers from top to bottom, and each line might have some text, image, or styling instructions.
-* In our browser, we can click View > Developer > View Source on a website to see the HTML that drives websites:<br>
-  ![view source in Chrome for CS50](/view_source.png)
-  * We can see that this is just text, and the first line, `<!DOCTYPE html>`, indicates to browsers that the page is written in HTML.
-  * Then, we see a pattern of lines and indentations, and many tags that start with `<` and end with `>`. First, we have the `<html>` tag, and nested inside is a `<head>` tag, which will include information about the webpage, that might not necessarily appear.
-  * Then, we eventually see a `<body>` tag, which will have the content of the webpage.
-* We can look at a simple example:
-  ```html
-  <!DOCTYPE html>
-  <html lang="en">
-      <head>
-          <title>
-              hello, title
-          </title>
-      </head>
-      <body>
-          hello, body
-      </body>
-  </html>
+* In Python, we'll start by looking at just a few data types:
+  * `bool`, `True` or `False`
+  * `float`, real numbers
+  * `int`, integers
+  * `str`, strings
+  * `dict`, a dictionary of key-value pairs, that act like hash tables
+  * `list`, like arrays, but can automatically resize
+  * `range`, range of values
+  * `set`, a collection of unique things
+  * `tuple`, a group of two or more things
+* In Python, we can too include the CS50 library, but our syntax will be:
+  ```python
+  from cs50 import get_float, get_int, get_string
   ```
-  * Inside the `<head>` of the webpage, we have a `<title>` tag that indicates the title of our webpage, "hello, title". And then, we have a line with `</title>`, which is a closing tag that indicates the end of the title.
-  * Notice that the indentation and opening and closing tags are symmetric. Like in C, the whitespace is not necessary, but stylistically important.
-  * The content of this page is just "hello, body".
-* With the text editor in CS50 IDE, we can create and save a file called `index.html` with our example code. The CS50 IDE is web-based, and it can run a web server, which is a program that can listen for and respond to web requests.
-* We can run a server in the terminal, called `http-server`, a free and open-source package. If we run that command, we'll see some information:<br>
-  ![http-server in terminal in CS50 IDE](/http_server.png)
-  * `./` is the current directory, and in this case we are in our `~/workspace/` folder.
-  * Then, we see a URL to our IDE's web server, and since we want to serve these files separately from the IDE itself, the URL ends in `:8080`, indicating that we're using port number 8080.
-  * If we click that link, we'll see a page that says `Index of /` with the files in our workspace. We can click on `index.html` and see our page. We can also change the code in our editor, save, and refresh to see our changes. Since HTML is interpreted by our browser, we don't need to compile it.
-* Let's take a look at examples of other tags:
-  ```html
-  <img src="cat.jpg">
+  * Notice that we specify the functions we want to use.
+* In Python, we can run our program without compiling it with `python hello.py` (or whatever the name of our file is).
+  * `python` is name of the program that we're actually running at the command line, and it is an interpreter which can read our source code (written in the language Python) and run it, one line at a time. (Technically, there is a compiler that turns our source code into something called bytecode that the interpreter actually runs, but that is abstracted away for us.)
+
+## Data types in Python
+
+* Our first `hello.py` program is just:
+  ```python
+  print("hello, world")
   ```
-  * Images can be included with the `<img>` tag, and `src` is an attribute on the tag that modifies it. In this case, it will specify the source of the image, and the value can be a file or other URL. (In the CS50 IDE, we should upload a file called `cat.jpg` in our workspace folder for this to work.) Finally, we don't close image tags (and other "empty tags"), since there's nothing else inside the element.
-  * We can also add another attribute tag, `alt`, to add alternative text for the image. So our image will look like this: `<img alt="photo of cat" src="cat.jpg">`
-* We can add links with something like `Visit <a href="https://www.harvard.edu/">Harvard</a>.` in our body. The `Visit` and `Harvard` pieces are just text, but the `<a>` tag surrounding `Harvard` is an anchor tag, which specifies a link with the `href` attribute. In fact, we can phish, or trick, people, into clicking a link to a site that isn't really what they expect. A bad actor could even copy the HTML of some site, and create a site of their own that appears to be the same. (Though, they won't have access to the code and data stored on the server.)
-* We can wrap text with the `<strong>` tag to tell browsers to make it bolder.
-* There's also the `<p>` tag for paragraphs:
-  ```html
-  <!DOCTYPE html>
+  * Notice that we didn't need a `main` function, or anything that we needed to import for the `print` function. The `print` function in Python also adds a new line for us automatically.
+  * Now we can run it with `python hello.py`.
+* We can get strings from a user:
+  ```python
+  from cs50 import get_string
 
-  <html lang="en">
-      <head>
-          <title>paragraphs</title>
-      </head>
-      <body>
-          <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in tincidunt augue. Duis imperdiet, justo ac iaculis rhoncus, erat elit dignissim mi, eu interdum velit sapien nec risus. Praesent ullamcorper nibh at volutpat aliquam. Nam sed aliquam risus. Nulla rutrum nunc augue, in varius lacus commodo in. Ut tincidunt nisi a convallis consequat. Fusce sed pulvinar nulla.
-          </p>
-          <p>
-              Ut tempus rutrum arcu eget condimentum. Morbi elit ipsum, gravida faucibus sodales quis, varius at mi. Suspendisse id viverra lectus. Etiam dignissim interdum felis quis faucibus. Integer et vestibulum eros, non malesuada felis. Pellentesque porttitor eleifend laoreet. Duis sit amet pellentesque nisi. Aenean ligula mauris, volutpat sed luctus in, consectetur id turpis. Phasellus mattis dui ac metus blandit volutpat. Donec lorem arcu, sollicitudin in risus a, imperdiet condimentum augue. Ut at facilisis mauris. Curabitur sagittis augue in dictum gravida. Integer sed sem sed justo tempus ultrices eu non magna. Phasellus semper eros erat, a posuere nisi auctor et. Praesent dignissim orci aliquam laoreet scelerisque.
-          </p>
-          <p>
-              Mauris eget erat arcu. Maecenas ac ante vel ipsum bibendum varius. Nunc tristique nulla eget tincidunt molestie. Morbi sed mauris eu lectus vehicula iaculis ac id lacus. Etiam sit amet magna massa. In pulvinar sapien ac mi ultrices, quis consequat nisl hendrerit. Aliquam pharetra nec sem non vehicula. In et risus leo. Ut tristique ornare nisl et lacinia.
-          </p>
-      </body>
-  </html>
+  s = get_string("Name: ")
+  print("hello,", s)
   ```
-  * Without the `<p>` tags, all of these lines would be displayed together on the page, since HTML ignores whitespace like new lines, and instead combines them to at most one space.
-* We look at a few more tags from HTML like headings (`<h1>` through `<h6>` indicating the level of heading) and tables (`<table>`, `<tr>` for rows, `<td>` for cells), but through practice and documentation, we can learn to use them fully. Once we understand the pattern of tags and attributes, we can write our own HTML.
-* We can use tools like the [W3C Markup Validator](https://validator.w3.org/) to check that our HTML is valid.
+  * We create a variable called `s`, without specifying the type, and we can pass in multiple variables into the `print` function, which will print them for us on the same line, separated by a space automatically.
+  * To avoid the extra spaces, we can put variables inside a string similar to how they are included in C: `print(f"hello, {s}")`. Here, we're saying that the string `hello, {s}` is a formatted string, with the `f` in front of the string, and so the variable `s` will be substituted in the string. And we don't need to worry about the variable type; we can just include them inside strings.
+* We can do some math, too:
+  ```python
+  from cs50 import get_int
 
-## Forms
+  x = get_int("x: ")
 
-* On Google, if we search for something, we get redirected to a long URL. It turns out that the URL has our search term in it, and going to a link like `https://www.google.com/search?q=cats` will bring us directly to the results page for a search for "cats".
-  * The page is called `search`, and that goes to code on their servers that generates a response for that page dynamically and programmatically.
-  * The `?` in the URL adds additional input for the page, and `q=cats` is telling the server that we are passing in "cats" for the input (search box in this case) with the name "q", which probably stands for "query".
-* We can write the HTML for a form that takes us to the Google search results for some user input:
-  ```html
-  <!DOCTYPE html>
+  y = get_int("y: ")
 
-  <html lang="en">
-      <head>
-          <title>search</title>
-      </head>
-      <body>
-          <form action="https://www.google.com/search" method="get">
-              <input name="q" type="text">
-              <input type="submit" value="Search">
-          </form>
-      </body>
-  </html>
+  print(f"x + y = {x + y}")
+  print(f"x - y = {x - y}")
+  print(f"x * y = {x * y}")
+  print(f"x / y = {x / y}")
+  print(f"x mod y = {x % y}")
   ```
-  * With the `form` tag, we can create a form. The `action` attribute tells the browser where the form should go, and the `method` attribute indicates how to send the form inputs.
-  * The first `input` tag is a text box, which we will name `q` so that it can be sent to Google correctly, and the second `input` tag is a submit button that we'll label "Search".
+  * Notice that expressions like `{x + y}` will be evaluated, or calculated, before it's substituted into the string to be printed.
+  * By running this program, we see that everything works as we might expect, even dividing two integers to get a floating-point value. (To keep the old behavior of always returning a truncated integer with division, there is the `//` operator.)
+* We can experiment with floating-point values:
+  ```python
+  from cs50 import get_float
 
-## CSS
+  x = get_float("x: ")
 
-* While HTML is used for layout and structure, **CSS**, Cascading Style Sheets, is another language we can use to style, or change the aesthetics, of our webpages.
-* Let's take a look at `css0.html`:
-  ```html
-  <!DOCTYPE html>
+  y = get_float("y: ")
 
-  <html lang="en">
-      <head>
-          <title>css0</title>
-      </head>
-      <body>
-          <header style="font-size: large; text-align: center;">
-              John Harvard
-          </header>
-          <main style="font-size: medium; text-align: center;">
-              Welcome to my home page!
-          </main>
-          <footer style="font-size: small; text-align: center;">
-              Copyright &#169; John Harvard
-          </footer>
-      </body>
-  </html>
+  z = x / y
+
+  print(f"x / y = {z}")
   ```
-  * Here, for each of these tags, we've added a `style` attribute and some set of key-value pairs as the value that will apply to just those elements. These pairs, like `font-size: large;`, are setting CSS properties and can change many aesthetic aspects of elements.
-  * Notice that we have semantic, or meaningful, tags like `<header>`, `<main>`, and `<footer>` that separates our page into sections.
-* Since CSS is inherited by nested elements in HTML, we can factor out the common styles:
-  ```html
-  <!DOCTYPE html>
+  * We see the following when we run this program:
+    ```
+    $ python floats.py
+    x: 1
+    y: 10
+    x / y = 0.1
+    ```
+  * We can print more decimal places with syntax like `print(f"x / y = {z:.50f}")`:
+    ```
+    x / y = 0.10000000000000000555111512312578270211815834045410
+    ```
+    * It turns out that Python still has floating-point imprecision by default, but there are some libraries that will use more memory to store decimal values more precisely.
+* We can see if Python has integer overflow:
+  ```python
+  from time import sleep
 
-  <html lang="en">
-      <head>
-          <title>css1</title>
-      </head>
-      <body style="text-align: center;">
-          <header style="font-size: large;">
-              John Harvard
-          </header>
-          <main style="font-size: medium;">
-              Welcome to my home page!
-          </main>
-          <footer style="font-size: small;">
-              Copyright &#169; John Harvard
-          </footer>
-      </body>
-  </html>
+  i = 1
+  while True:
+      print(i)
+      i *= 2
+      sleep(1)
   ```
-  * Here, the `text-align: center;` style is applied to the `<body>` element, so it will cascade, or be inherited by each element inside `<body>`.
-* We can factor out CSS into the `<head>`, with CSS classes:
-  ```html
-  <!DOCTYPE html>
+  * We use the `sleep` function to pause our program for one second, but double `i` over and over. And it turns out that integers in Python can be as big as memory allows, so we won't experience overflow for a much longer time.
 
-  <html lang="en">
-      <head>
-          <style>
+## Programming in Python
 
-              .centered
-              {
-                  text-align: center;
-              }
+* Let's take a closer look at conditions:
+  ```python
+  from cs50 import get_int
 
-              .large
-              {
-                  font-size: large;
-              }
+  # Get x from user
+  x = get_int("x: ")
 
-              .medium
-              {
-                  font-size: medium;
-              }
+  # Get y from user
+  y = get_int("y: ")
 
-              .small
-              {
-                  font-size: small;
-              }
-
-          </style>
-          <title>css2</title>
-      </head>
-      <body class="centered">
-          <header class="large">
-              John Harvard
-          </header>
-          <main class="medium">
-              Welcome to my home page!
-          </main>
-          <footer class="small">
-              Copyright &#169; John Harvard
-          </footer>
-      </body>
-  </html>
+  # Compare x and y
+  if x < y:
+      print("x is less than y")
+  elif x > y:
+      print("x is greater than y")
+  else:
+      print("x is equal to y")
   ```
-  * Now, the HTML in the `<body>` specifies a `class` for each element, but all the CSS for the styling has been moved to the `<head>`, so we can compartmentalize it more easily. And in CSS, we use `.something` to apply properties to elements with a class of `something`. Each class, too, can have many CSS properties, not just one.
-* We could even apply CSS to all elements of a certain type, using CSS selectors:
-  ```html
-  <!DOCTYPE html>
+  * Notice that we use consistent indentation, but we don't need parentheses or braces for our conditions.
+  * Comments, too, start with just a single `#` character.
+* We can compare strings the way we might expect:
+  ```python
+  from cs50 import get_char
 
-  <html lang="en">
-      <head>
-          <style>
+  # Prompt user for answer
+  c = get_string("Answer: ")
 
-              body
-              {
-                  text-align: center;
-              }
-
-              header
-              {
-                  font-size: large;
-              }
-
-              main
-              {
-                  font-size: medium;
-              }
-
-              footer
-              {
-                  font-size: small;
-              }
-
-          </style>
-          <title>css3</title>
-      </head>
-      <body>
-          <header>
-              John Harvard
-          </header>
-          <main>
-              Welcome to my home page!
-          </main>
-          <footer>
-              Copyright &#169; John Harvard
-          </footer>
-      </body>
-  </html>
+  # Check answer
+  if c == "Y" or c == "y":
+      print("yes")
+  elif c == "N" or c == "n":
+      print("no")
   ```
-  * Notice that now we can use `body` and `header` to select those elements, without attaching a class to them in the HTML.
-* Finally, we can include external stylesheets, or CSS in separate files, that multiple HTML pages can include and share:
-  ```html
-  <!DOCTYPE html>
+  * Strings can be compared directly, and Boolean expressions can include the words `and` and `or`.
+* We can write functions in Pythons like this:
+  ```python
+  def main():
+      for i in range(3):
+          cough()
 
-  <html lang="en">
-      <head>
-          <link href="css4.css" rel="stylesheet">
-          <title>css4</title>
-      </head>
-      <body>
-          <header>
-              John Harvard
-          </header>
-          <main>
-              Welcome to my home page!
-          </main>
-          <footer>
-              Copyright &#169; John Harvard
-          </footer>
-      </body>
-  </html>
+
+  def cough():
+      """Cough once"""
+      print("cough")
+
+
+  if __name__ == "__main__":
+      main()
   ```
-  * We need to create a file called `css4.css`, and place our CSS code inside that, for this to work. But now we can use the `<link>` tag to include it.
-  * There are tradeoffs, too, to having separated CSS files, since a simple webpage may not need the additional complexity and overhead of a linked stylesheet. But having separation of concerns allows for easier collaboration and clearer organization of code.
-* Phew, we covered lots of concepts here! But, now that we're familiar with some of these patterns, we can learn to use additional features by reading examples and documentation online.
+  * We use the `def` keyword to define a function `cough`, indicating that it takes no parameters, or inputs, by using just `()`, and call it from our `main` function. Notice that all the code for each function is indented additionally, instead of surrounded by braces.
+  * Then, at the below, we use a special line `if __name__ == "__main__":` to call our `main` function when our program is run. This way, the interpreter will know about the `cough` function by the time `main` actually calls it. We could also call `cough` directly, instead of `main`, though that would be unconventional in Python. (Instead, we want to try to be "Pythonic", or following the styles and patterns encouraged by the language and its community.)
+* We can add parameters and loops to our `cough` function, too:
+  ```python
+  def main():
+      cough(3)
 
-## JavaScript
 
-* **JavaScript**, a programming language, can be used on our webpages to make them more dynamic. The user's browser runs the JavaScript code we write, to make changes to the page.
-* JavaScript is similar to C, and is interpreted by a browser from top to bottom.
-* Many of the programming elements are the same:
-  ```javascript
-  let counter = 0;
+  def cough(n):
+      for i in range(n):
+          print("cough")
+
+
+  if __name__ == "__main__":
+      main()
   ```
-  * We use the `let` keyword in JavaScript to initialize a variable, and we don't need to specify what the type of the variable will be.
-* Adding 1 to a variable has the exact same syntax as it does in C.
-  ```javascript
-  counter = counter + 1;
-  counter += 1;
-  counter++;
+  * `n` is a variable that can be passed into `cough`, which we can also pass into `range`. And notice that we don't specify types in Python, so `n` can be of any data type (and can even be assigned to have a value of another type). It's up to us, the programmer, to use this great power with great responsibility.
+* We can define a function to get a positive integer:
+  ```python
+  from cs50 import get_int
+
+
+  def main():
+      i = get_positive_int("Positive integer: ")
+      print(i)
+
+
+  def get_positive_int(prompt):
+      while True:
+          n = get_int(prompt)
+          if n > 0:
+              break
+      return n
+
+
+  if __name__ == "__main__":
+      main()
   ```
-* Conditions and loops, too, are the same.
-  ```javascript
-  if (x < y)
-  {
+  * Since there is no do-while loop in Python as there is in C, we have a `while` loop that will go on infinitely, but we use `break` to end the loop if `n > 0`. Then, our function will just `return n`.
+  * Notice that variables in Python have function scope by default, meaning that `n` can be initialized within a loop, but still be accessible later in the function.
+* We can print each character in a string and capitalize them:
+  ```python
+  from cs50 import get_string
 
-  }
-  else if {
-
-  }
-  else
-  {
-
-  }
-
-  while (true)
-  {
-
-  }
-
-  for (let i = 0; i < 50; i++)
-  {
-
-  }
+  s = get_string()
+  for c in s:
+      print(c.upper(), end="")
+  print()
   ```
-* Our example webpage can be represented by a tree, in what's called the DOM, Document Object Model:<br>
-  ![simple webpage mapped to a tree with each element as a node, nested](/dom.png)
-  * Notice that each node is an element on the page, and nested nodes show as children nodes. A browser, when it loads a webpage, automatically builds a tree in memory with elements from the HTML.
-* With JavaScript, we can add or change any of these nodes in the DOM.
-* We can make an interactive page like the following:
-  ```html
-  <!DOCTYPE html>
+  * Notice that we can easily iterate over characters in a string with something like `for c in s`, and we print the uppercase version of each character with `c.upper()`. Strings in Python are objects, like a data structure with both the value it stores, as well as built-in functions like `.upper()` that we can call.
+  * Finally, we pass in another argument to the `print` function, `end=""`, to prevent a new line from being printed each time. Python has named arguments, where we can name arguments that we can pass in, in addition to positional arguments, based on the position they are in the list. With named arguments, we can pass in arguments in different orders, and omit optional arguments entirely. Notice that this example is labeled with `end`, indicating the string that we want to end each printed line with. By passing in an empty string, `""`, nothing will be printed after each character. Before, when we called `print` without the `end` argument, the function used `\n` as the default for `end`, which is how we got new lines automatically.
+* We can get the length of the string with the `len()` function.
+  ```python
+  from cs50 import get_string
 
-  <html lang="en">
-      <head>
-          <script>
-
-              function greet()
-              {
-                  alert('hello, ' + document.querySelector('#name').value);
-              }
-
-          </script>
-          <title>hello1</title>
-      </head>
-      <body>
-          <form onsubmit="greet(); return false;">
-              <input autocomplete="off" autofocus id="name" placeholder="Name" type="text">
-              <input type="submit">
-          </form>
-      </body>
-  </html>
+  s = get_string("Name: ")
+  print(len(s))
   ```
-  * We have a form element in the `<body>` with a text input and a submit button. But when the form is submitted, we want our browser to call a `greet()` function, and with `return false;`, we tell the browser to do nothing else with the form. So we put that into the `onsubmit` attribute of the form. Notice that we also have `id="name"` for the text input element. The `autocomplete="off"` attribute turns off the autocomplete in the browser, and `autofocus` selects the input box when the page is loaded so the user can start typing into it right away.
-  * The `greet()` function is defined in the `<head>` of our page, inside a `<script>` tag that allows us to write our own JavaScript. In JavaScript, we can define a function with the `function` keyword, and if it takes no inputs, we can simply use `()`. And this function in turns calls the `alert()` function, which is built into browsers, to create an alert box.
-  * The content of the alert box will be `hello, ` plus the value of the element in the webpage (called `document`) with the ID `name`. The `querySelector` function is attached to the object that represents the webpage, so we call it with `document.querySelector()`. Then, the element that gets selected will also has an attribute called `value` that we can access with `.value`.
-* We look at another example, that can change the style of a webpage:
-  ```html
-  <!DOCTYPE html>
+* We'll be using version 3 of Python, which the world is starting to use more and more, so when searching for documentation, we want to be sure that it's for the right version.
+* We can take command-line arguments with:
+  ```python
+  from sys import argv
 
-  <html lang="en">
-      <head>
-          <title>background</title>
-      </head>
-      <body>
-          <button id="red">R</button>
-          <button id="green">G</button>
-          <button id="blue">B</button>
-          <script>
-
-              let body = document.querySelector('body');
-              document.querySelector('#red').onclick = function() {
-                  body.style.backgroundColor = 'red';
-              };
-              document.querySelector('#green').onclick = function() {
-                  body.style.backgroundColor = 'green';
-              };
-              document.querySelector('#blue').onclick = function() {
-                  body.style.backgroundColor = 'blue';
-              };
-
-          </script>
-      </body>
-  </html>
+  if len(argv) == 2:
+      print(f"hello, {argv[1]}")
+  else:
+      print("hello, world")
   ```
-* It turns out that we can attach JavaScript functions to events in the browser, like the following:
-  * `blur`
-  * `change`
-  * `click`
-  * `drag`
-  * `focus`
-  * `keypress`
-  * `load`
-  * `mousedown`
-  * `mouseover`
-  * `mouseup`
-  * `submit`
-  * `touchmove`
-  * `unload`
-  * `...`
-* We can add code called event listeners to elements like `document.querySelector('#red')`. The `onclick` value of each element can be a function that is automatically called by the browser, when the element is clicked. And the function attached doesn't have a name, but is defined with `function() {}`.
-* With `body.style.backgroundColor`, we can access the `style` of the `body`, and set its `backgroundColor` value.
-* We can change the font size, too:
-  ```html
-  <!DOCTYPE html>
+  * We check the number of arguments by looking at the length of `argv`, a list of arguments, and if there is 2, we print the second one. Like in C, the first command-line argument is the name of the program we wrote, rather than the word `python`, which is technically the name of the program we run at the command-line.
+  * We can print each argument in the list:
+    ```python
+    from sys import argv
 
-  <html lang="en">
-      <head>
-          <title>size</title>
-      </head>
-      <body>
-          <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in tincidunt augue. Duis imperdiet, justo ac iaculis rhoncus, erat elit dignissim mi, eu interdum velit sapien nec risus. Praesent ullamcorper nibh at volutpat aliquam. Nam sed aliquam risus. Nulla rutrum nunc augue, in varius lacus commodo in. Ut tincidunt nisi a convallis consequat. Fusce sed pulvinar nulla.
-          </p>
-          <select>
-              <option value="xx-large">xx-large</option>
-              <option value="x-large">x-large</option>
-              <option value="large">large</option>
-              <option selected value="initial">initial</option>
-              <option value="small">small</option>
-              <option value="x-small">x-small</option>
-              <option value="xx-small">xx-small</option>
-          </select>
-          <script>
+    for s in argv:
+        print(s)
+    ```
+    * This will iterate over each element in the list `argv`, allowing us to use it as `s`.
+  * And we can iterate over each character, of each argument:
+    ```python
+    from sys import argv
 
-              document.querySelector('select').onchange = function() {
-                  document.querySelector('body').style.fontSize = this.value;
-              };
+    for s in argv:
+        for c in s:
+            print(c)
+        print()
+    ```
+* We can swap two variables in Python just by reversing their orders:
+  ```python
+  x = 1
+  y = 2
 
-          </script>
-      </body>
-  </html>
+  print(f"x is {x}, y is {y}")
+  x, y = y, x
+  print(f"x is {x}, y is {y}")
   ```
-  * We have a set of `option` elements in a `select` (a dropdown menu in HTML that we can look up the documentation for) and now, whenever the `select` element is changed, we set the `fontSize` of the `style` of the `body` element. We set that value to `this.value`, and `this` refers to the `select` element when the function is called, since the function is called from that element.
-* We can write a page with an element that blinks, or appears and disappears repeatedly:
-  ```html
-  <!DOCTYPE html>
+  * Here, we're using `x, y = y, x` to set `x` to `y` at the same time as setting `y` to `x`.
+* We can create a list and add to it:
+  ```python
+  from cs50 import get_int
 
-  <html lang="en">
-      <head>
-          <script>
+  numbers = []
 
-              // Toggles visibility of greeting
-              function blink()
-              {
-                  let body = document.querySelector('body');
-                  if (body.style.visibility == 'hidden')
-                  {
-                      body.style.visibility = 'visible';
-                  }
-                  else
-                  {
-                      body.style.visibility = 'hidden';
-                  }
-              }
+  # Prompt for numbers (until EOF)
+  while True:
 
-              // Blink every 500ms
-              window.setInterval(blink, 500);
+      # Prompt for number
+      number = get_int("number: ")
 
-          </script>
-          <title>blink</title>
-      </head>
-      <body>
-          hello, world
-      </body>
-  </html>
+      # Check for EOF
+      if not number:
+          break
+
+      # Check whether number is already in list
+      if number not in numbers:
+
+          # Add number to list
+          numbers.append(number)
+
+  # Print numbers
+  print()
+  for number in numbers:
+      print(number)
   ```
-  * We use the `visibility` attribute to make the `body` visible or hidden, and `window.setInterval` to call this function every 500 milliseconds.
-* Browsers also have a geolocation function, which we can call to get the user's current location:
-  ```html
-  <!DOCTYPE html>
+  * Here, we create a empty list called `numbers` with `numbers = []`, and we get a `number` from the user. If that `number` is not already in our list, we add it to our list. We can use `not in` to check if a value is (not) in a list, and `append` to add a value to the end of a list.
+* We can create our own data structures, objects:
+  ```python
+  from cs50 import get_string
 
-  <html lang="en">
-      <head>
-          <title>geolocation</title>
-      </head>
-      <body>
-          <script>
+  # Space for students
+  students = []
 
-              navigator.geolocation.getCurrentPosition(function(position) {
-                  document.write(position.coords.latitude + ", " + position.coords.longitude);
-              });
+  # Prompt for students' names and dorms
+  for i in range(3):
+      name = get_string("name: ")
+      dorm = get_string("dorm: ")
+      students.append({"name": name, "dorm": dorm})
 
-          </script>
-      </body>
-  </html>
+  # Print students' names and dorms
+  for student in students:
+      print(f"{student['name']} is in {student['dorm']}.")
   ```
-  * `navigator` refers to the user's browser, and the `geolocation.getCurrentPosition` function will return a `position` object. When we get that `position` object, we want to call a function that will then write the `latitude` and `longitude` values to the document.
+  * We create a list called `students`, and after we get some input from the user, we append a dictionary of key-value pairs, `{"name": name, "dorm": dorm}`, to that list. Here, `"name"` and `"dorm"` are the keys, and we want their values to be the variables we gathered as input. Then, we can later access each object's values with `student['name']` or `student['dorm']` to print them out. In Python, we can index into dictionaries with words or strings, as opposed to just numeric indexes in lists.
+* Let's print four question marks, one at a time:
+  ```python
+  for i in range(4):
+      print("?", end="")
+  print()
+  ```
+* We can print a vertical bar of hash marks, too:
+  ```python
+  for i in range(3):
+      print("#")
+  ```
+* And we can print a square with a nested loop:
+  ```python
+  for i in range(3):
+      for j in range(3):
+          print("#", end="")
+      print()
+  ```
+* Now we can revisit `resize.py`, and it might make more sense to us now:
+  ```python
+  from PIL import Image
+  from sys import argv
+
+  if len(sys.argv) != 4:
+      sys.exit("Usage: python resize.py n infile outfile")
+
+  n = int(sys.argv[1])
+  infile = sys.argv[2]
+  outfile = sys.argv[3]
+
+  inimage = Image.open(infile)
+  width, height = inimage.size
+  outimage = inimage.resize((width * n, height * n))
+
+  outimage.save(outfile)
+  ```
+  * We import the Image library from something called PIL, a free open-source library that we can download and install (which doesn't come with Python by default).
+  * Then, we import `argv` from the system library, and we check our arguments, storing them as `n`, `infile`, and `outfile`, converting the string input for `n` into an `int` as we do so.
+  * By reading the documentation for Python and the Image library, we can open files as an image, getting its `size` and calling a `resize` function on it to get another image, which we can then `save` to another file.
+* Let's look at another example, a spell-checker in Python:
+  ```python
+  # Words in dictionary
+  words = set()
+
+  def check(word):
+      """Return true if word is in dictionary else false"""
+      return word.lower() in words
+
+  def load(dictionary):
+      """Load dictionary into memory, returning true if successful else false"""
+      file = open(dictionary, "r")
+      for line in file:
+          words.add(line.rstrip("\n"))
+      file.close()
+      return True
+
+  def size():
+      """Returns number of words in dictionary if loaded else 0 if not yet loaded"""
+      return len(words)
+
+  def unload():
+      """Unloads dictionary from memory, returning true if successful else false"""
+      return True
+  ```
+  * The functions for `dictionary.py` are pretty straightforward, since all we need is a `set()`, a collection into which we can load unique values. In `load`, we open the `dictionary` file, and add each line in the file as a word (without the newline character).
+  * For `check`, we can just return whether `word` is in `words`, and for `size`, we can just return the length of `words`. Finally, we don't need to do anything to `unload`, since Python manages memory for us.
+* By having used C first, we have an understanding (and appreciation!) for the abstractions that a higher-level language like Python provides us. Indeed, if we run some tests for performance, a speller implementation in Python might be 1.5x slower, and so depending on the application, this may or may not be important enough to justify the human time it might take to write a program in a lower-level language like C, which might run much faster or require less memory.

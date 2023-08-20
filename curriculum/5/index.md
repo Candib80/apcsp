@@ -1,59 +1,34 @@
-# Chapter 5
+# Unit 6 - Python
 
-<iframe width="1033" height="520" src="https://www.youtube.com/embed/4IrUAqYKjIA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ky-24RvI57s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Lecture
-
+### Lecture
 <ul>
-  <li><a href="https://cs50.harvard.edu/ap/2021/curriculum/x/notes/5/">Notes</a></li>
-  <li><a href="https://video.cs50.io/4IrUAqYKjIA?screen=k5rlx6U0sJQ">CS50 Video Player</a></li>
- 
-  <details><summary>Slides</summary>
-    <ul>
-      <li><a href="https://docs.google.com/presentation/d/1KMzq3bLe7g_O4JVYZ0lxuxHjShnIk54beO84-chYTig/edit?usp=sharing">Google Slides</a></li>
-      <li><a href="https://cdn.cs50.net/2019/fall/lectures/5/lecture5.pdf">PDF</a></li>
-    </ul> 
-  </details>
+  <li><a href="https://cs50.harvard.edu/ap/2023/curriculum/x/notes/6/">Notes</a></li>
+  <li><a href="https://docs.google.com/presentation/d/1xn8FXxuwsahtTN_EhVDprDQIyMIkoJNA3a6lXXSo2CE/edit?usp=sharing">Google Slides</a></li>
 
   <details><summary>Source Code</summary>
     <ul>
-      <li><a href="https://cdn.cs50.net/2019/fall/lectures/5/src5/">Index</a></li>
-      <li><a href="https://cdn.cs50.net/2019/fall/lectures/5/src5.pdf">PDF</a></li>
-      <li><a href="https://cdn.cs50.net/2019/fall/lectures/5/src5.zip">Zip</a></li>
+      <li><a href="https://cdn.cs50.net/2021/fall/lectures/6/src6/">Index</a></li>
+      <li><a href="https://cdn.cs50.net/2021/fall/lectures/6/src6.pdf">PDF</a></li>
+      <li><a href="https://cdn.cs50.net/2021/fall/lectures/6/src6.zip">Zip</a></li>
     </ul>
   </details>  
 </ul>
 
-<details><summary>Shorts</summary>
-  <ul>
-    <li><a href="https://www.youtube.com/watch?v=3uGchQbk7g8">Data Structures</a></li>
-    <li><a href="https://www.youtube.com/watch?v=zQI3FyWm144">Singly-Linked Lists</a></li>
-    <li><a href="https://www.youtube.com/watch?v=nvzVHwrrub0">Hash Tables</a></li>
-    <li><a href="https://www.youtube.com/watch?v=MC-iQHFdEDI">Tries</a></li>
-   </ul>
-</details>
+#### Shorts
+  - [Python](https://www.youtube.com/watch?v=mgBpcQRDtl0)
 
-<!-- <details><summary><a href="\ap\assets\pdfs\">Reference Sheets</a></summary>
+#### References
   <ul>
-    <li><a href="\ap\assets\pdfs\"></a></li>
-    <li><a href="\ap\assets\pdfs\"></a></li>
-    <li><a href="\ap\assets\pdfs\"></a></li>
-    <li><a href="\ap\assets\pdfs\"></a></li>
+    <li><a href="\apcsp\assets\pdfs\python.pdf">Python Ref Sheet</a></li>
+    <li><a href="\apcsp\assets\pdfs\python-notes.pdf">Mrs. Beaman's Python Notes</a></li>
   </ul>
-</details> -->
 
-<!-- <details>
-  <summary>Labs</summary>
-  <ul>
-    <li><a href="">TBD</a></li>
-    <li><a href="">TBD</a></li>
-  </ul>
-</details> -->
+### Practice, Labs & Problems
+- [Lab 6](https://cs50.harvard.edu/ap/2023/curriculum/x/labs/6/)
+- Problems
+  - N/A
 
-<details><summary>Problems</summary>
-  <ul>
-    <li><a href="https://cs50.harvard.edu/ap/2021/curriculum/x/psets/5/speller/">Speller</a></li>
-    <!-- <li><a href=""></a></li>
-    <li><a href=""></a></li> -->
-  </ul>
-</details>
+#### Advice
+- Try out David's programs from class via [Chapter 6](https://cdn.cs50.net/2021/fall/lectures/6/src6.pdf)'s examples

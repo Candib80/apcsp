@@ -1,526 +1,708 @@
-## Lecture 1
+## Lecture 2
 {:.no_toc}
 
 * TOC
 {:toc}
 
-## Last Time
+## Compiling
 
-* We learned that, thanks to many layers of abstraction and those who came before us, we can easily write programs that are ultimately just binary, 0s and 1s.
-* Problem solving can be described as taking some inputs (a problem) and using an algorithm to find some outputs (a solution).
-* Computers represent inputs and outputs with lots of bits, binary digits, 0s and 1s, that are on or off. And with enough of those bits, we can represent not only larger numbers, but text, images, and video.
-* And there can be different algorithms that can solve the same problem, but with different running times.
-* We can write down algorithms more precisely with pseudocode, and along the way use concepts like functions, loops, and conditions.
-  * With the help of volunteers from the audience, we make peanut butter and jelly sandwiches from ingredients, though each of us interpreted the instructions differently!
-* It turns out, we (as humans) naturally make assumptions and abstractions when following instructions or even pseudocode. But as we saw in Scratch, and as we will see in C, we won't be able to do that anymore, and will have to think more carefully about the steps and cases that our programs will need to handle.
-  * With Scratch, we were able to leverage the work done by the folks at MIT, who created the blocks, and sprites, to make programs of our own. And we too made custom blocks like the `cough` function, that was a layer of abstraction of our own.
-
-## C
-
-* We'll use a new language, C, that's purely text, which comes with some cryptic keywords and punctuation:
+* We started the course with Scratch, and then learned C.
+* Recall that we write our source code in C, but needed to compile it to machine code, in binary, before our computers could run it.
+  * `clang` is the compiler we learned to use, and `make` is a utility that helps us run `clang` without having to indicate all the options manually.
+  * If we wanted to use CS50's library, via `#include <cs50.h>`, and use `clang` instead of `make`, we also have to add a flag: `clang hello.c -lcs50`. The `-l` flag *links* the `cs50` file, which was installed into the CS50 Sandbox.
+* "Compiling" source code into machine code is actually made up of smaller steps:
+  * preprocessing
+  * compiling
+  * assembling
+  * linking
+* *Preprocessing* involves looking at lines that start with a `#`, like `#include`, before everything else. For example, `#include <cs50.h>` will tell `clang` to look for that header file first, since it contains content that we want to include in our program. Then, `clang` will essentially replace the contents of those header files into our program:
   ```c
-  #include <stdio.h>
-
+  ...
+  string get_string(string prompt);
+  int printf(const char *format, ...);
+  ...
   int main(void)
   {
-      printf("hello, world\n");
-  }
-  ```
-  * This is equivalent to the "when green flag clicked" and "say (hello, world)" block:<br>
-    ![block labeled 'when green flag clicked', block labeled 'say (hello, world)'](when_green_flag.png)
-* We can compare a lot of the constructs in C, to blocks we've already seen and used in Scratch. The syntax is far less important than the principles, which we've already been introduced to.
-* The "say (hello, world)" block is a function, and maps to `printf("hello, world\n");`[^1]. In C, the function to print something to the screen is `printf`, where `f` stands for "format", meaning we can format the string in different ways. Then, we use parentheses to pass in what we want to print. We use double quotes to surround our text, or string, and add a `\n` which indicates a new line on the screen. (Then, the next time we call `printf`, our text will be on a new line. Finally, we add a semicolon `;` to end this line of code in C.
-* The "set [counter] to (0)" block is creating a variable, and in C we would say `int counter = 0;`, where `int` specifies that the type of our variable is an integer and the equals sign indicates assignment [^2]
-:<br>
-  ![block labeled 'set counter to (0)'](set_counter_to_0.png)
-* "change [counter] by (1)" is `counter = counter + 1;` in C. (In C, the `=` isn't like an equation, where we are saying `counter` is the same as `counter + 1`. Instead, `=` means "copy the value on the right, into the value on the left".) We can also say `counter += 1;` or `counter++;` both of which are "syntactic sugar", or shortcuts that have the same effect with fewer characters to type.<br>
-  ![block labeled 'change counter by (1)'](change_counter_by_1.png)
-* A condition[^3] would map to:<br>
-  ![block labeled 'if < (x) < (y)> then', inside which there is a block labeled 'say (x is less than y)'](if_x_y.png)
-  ```c
-  if (x < y)
-  {
-      printf("x is less than y\n");
-  }
-  ```
-  * Notice that in C, we use `{` and `}` (as well as indentation) to indicate how lines of code should be nested.
-* We can also have if-else conditions:<br>
-  ![block labeled 'if < (x) < (y)> then', inside which there is a block labeled 'say (x is less than y)', parent block also has an 'else', inside which there is a block labeled 'say (x is not less than y)'](if_else.png)
-  ```c
-  if (x < y)
-  {
-      printf("x is less than y\n");
-  }
-  else
-  {
-      printf("x is not less than y\n");
-  }
-  ```
-  * As another aside, whitespace (the spaces, new lines, and indentation) are generally not syntactically important in C, i.e. they won't change how our program ultimately runs, but following conventions and having good "style" is important for our code to be readable by humans.
-* And even `else if`:<br>
-  ![block labeled 'if < (x) < (y)> then', inside which there is a block labeled 'say (x is less than y)', parent block also has an 'else', inside which is a nesting of a block labeled 'if < (x) > (y) > then', inside which there is a block labeled 'say (x is greater than y)', parent block also has an 'else', inside which there is a block labeled 'if < (x) = (y) > then', inside which there is a block labeled 'say (x is equal to y)'](if_else_if.png)
-  ```c
-  if (x < y)
-  {
-      printf("x is less than y\n");
-  }
-  else if (x > y)
-  {
-      printf("x is greater than y\n");
-  }
-  else if (x == y)
-  {
-      printf("x is equal to y\n");
-  }
-  ```
-  * Notice that, to compare two values in C, we use `==`, two equals signs.
-  * And, logically, we don't need the `if (x == y)` in the final condition, since that's the only case remaining, and we can just say `else`.
-* Loops can be written like the following:<br>
-  ![block labeled 'forever', inside which there is a block labeled 'say (hello, world)'](forever.png)
-  ```c
-  while (true)
-  {
-      printf("hello, world\n");
-  }
-  ```
-  * The `while` keyword also requires a condition, so we use `true` as the Boolean expression to ensure that our loop will run forever. Our program will check whether the expression evaluates to `true` (which it always will in this case), and then run the lines inside the curly braces. Then it will repeat that until the expression isn't true anymore (which won't change in this case).<br>
-  ![block labeled 'repeat (50)', inside which there is a block labeled 'say (hello, world)'](repeat.png)
-  ```c
-  for (int i = 0; i < 50; i++)
-  {
-      printf("hello, world\n");
-  }
-  ```
-  * To write a loop that runs a specific number of times, we use the `for` keyword[^4], and first, we create a variable named `i` and set it to 0. `i` is a conventional name for a variable that keeps track of how many iterations of the loop we've already done. Then, we check that `i < 50` every time we reach the top of the loop, before we run any of the code inside. If that expression is true, then we run the code inside. Finally, after we run the code inside, we use `i++` to add one to `i`, and the loop repeats.
-* We can also get input from the user:<br>
-  ![block labeled 'ask (What's your name?) and wait', block labeled 'say (answer)'](ask_say.png)
-  ```c
-  string answer = get_string("What's your name?\n");
-  printf("%s\n", answer);
-  ```
-  * In Scratch, the response will be stored in a variable called "answer", but in C we can specify the name of the variable. We'll choose "answer" too, and the type of this variable is `string`, which is just a sequence of characters.
-  * And we'll use `printf` to print the string, but we need to specify how. We first pass in `"%s`, the string we want to print, which happens to be just `%s`. And `%s` is a placeholder, into which `printf` will substitute the value of the string we pass in next, which we specify as `answer`.
-  * And we need this structure because now, we can convert this:<br>
-    ![block labeled 'ask (What's your name?) and wait', block labeled 'say (join (hello, ) (answer))'](ask_say_join.png)
-    ```c
-    string answer = get_string("What's your name?\n");
-    printf("hello, %s\n", answer);
-    ```
-
-## CS50 Sandbox
-
-* The [CS50 Sandbox](https://sandbox.cs50.io/) is a cloud-based, virtual environment where we've installed the right libraries and settings so that we can all start writing and running code the same way. At the top, there is a simple code editor, where we can type text. Below, we have a terminal window, into which we can type commands:<br>
-  ![two panels, top labeled hello.c, bottom labeled Terminal](cs50_sandbox.png)
-* We'll type our code from earlier into the top:<br>
-  ![hello, world in editor](editor.png)
-  * Notice that our code is colorized, so that certain things are more visible.
-  * And we write our code and save it into a file, to something like `hello.c` to indicate that it is written in C.
-* Once we save the code that we wrote, which is called *source code*, we need to convert it to *machine code*, binary instructions that the computer understands more directly.
-  * We use a program called a *compiler* to compile our source code into machine code.
-* To do this, we use the Terminal panel. The `$` at the left is a prompt, into which we can type commands.
-* We type `clang hello.c` (where `clang` stands for "C languages") and ... nothing happens. We see another `$`, waiting for another command. We can click the folder icon on the top left of CS50 Sandbox, and see that we have another file now, called `a.out`. Now, we can type `./a.out` in the terminal prompt, and see `hello, world`. We just wrote, compiled, and ran our first program!
-* We can change the name of our program from `a.out` to something else. We can pass *command-line arguments* to programs in the terminal, if they accept them. For example, we can type `clang -o hello hello.c`, and `-o hello` is telling the program `clang` to save the compiled output as just `hello`. Then, we can just run `./hello`. (The `.` means the current folder.)
-* We can even abstract this away and just type `make hello`. We see that, by default (in the CS50 Sandbox), `make` uses `clang` to compile our code from `hello.c` into `hello`, with other special features.
-* Now, let's try to get input from the user.
-  ```c
-  #include <stdio.h>
-
-  int main(void)
-  {
-      string name = get_string("What is your name?\n");
-      printf("hello, name\n");
-  }
-  ```
-  * If we run `make hello`, we get lots and lots of errors now. But, in cases like this, we should scroll up to the top, and see what that error is, since the first one might have led to all the others.
-  * We see that the first error is `hello.c:5:5: error: use of undeclared identifier 'string' ...`. This tells us that, on line 5, character 5, of the file `hello.c`, the compiler encountered something called `string` that it didn't recognize. In fact, the language C doesn't have a type called `string`.
-* To simplify things (at least for the beginning), we'll include a library, or set of code, from CS50. The library provides us with the `string` variable type, the  `get_string` function, and more. We just have to write a line at the top to `include` the file `cs50.h`:
-  ```c
-  #include <cs50.h>
-  #include <stdio.h>
-
-  int main(void)
-  {
-      string name = get_string("What is your name?\n");
-      printf("hello, name\n");
-  }
-  ```
-  * And `stdio.h` is a library that comes with C, that stands for "standard input/output", which includes the `printf` function that prints to the screen,
-* Now, if we try to compile that code, our first error is `hello.c:6:12: error: unused variable 'name' ...`. It turns out, we didn't do anything with the `name` variable after we created it. To do that, we need to change the next line:
-  ```c
-  #include <cs50.h>
-  #include <stdio.h>
-
-  int main(void)
-  {
-      string name = get_string("What is your name?\n");
+      string name = get_string("Name: ");
       printf("hello, %s\n", name);
   }
   ```
-  * We're passing in two arguments, or parameters, to `printf`. The first is the string we want to print, with our `%s` placeholder, and the second is the variable `name` that we want to substitute in.
-* If we change our code, we need to save our file and run `make hello` again. And, if we wanted to stop our program before it finishes, we just need to press control-C.
-* Functions, like `get_string` or `printf`, can take arguments. They can also have return values, and `get_string` returns something of the type `string`.
-* You can find the full documentation for the CS50 Sandbox at [cs50.readthedocs.io](cs50.readthedocs.io/sandbox)
+* *Compiling* takes our source code, in C, and converts it to assembly code, which looks like this:
+  ```
+  ...
+  main:                 # @main
+      .cfi_startproc
+  # BB#0:
+      pushq %rbp
+  .Ltmp0:
+      .cfi_def_cfa_offset 16
+  .Ltmp1:
+      .cfi_offset %rbp, -16
+      movq %rsp, %rbp
+  .Ltmp2:
+      .cfi_def_cfa_register %rbp
+      subq $16, %rsp
+      xorl %eax, %eax
+      movl %eax, %edi
+      movabsq $.L.str, %rsi
+      movb $0, %al
+      callq get_string
+      movabsq $.L.str.1, %rdi
+      movq %rax, -8(%rbp)
+      movq -8(%rbp), %rsi
+      movb $0, %al
+      callq printf
+      ...
+  ```
+  * These instructions are lower-level and can be understood by the CPU more directly, and generally operate on bytes themselves, as opposed to abstractions like variable names.
+* The next step is to take the assembly code and translate it to instructions in binary by *assembling* it.
+* Now, the final step is *linking*, where the contents of linked libraries, like `cs50.c`, are actually included in our program as binary.
 
-## More examples
+## Debugging
 
-* The CS50 library has other functions, getting input of various types:
-  * `get_char`
-  * `get_double`
-  * `get_float`
-  * `get_int`
-  * `get_long`
-  * `get_string`
-  * ...
-* And there are corresponding types in C and ways to print them with `printf`:
-  * `bool`
-  * `char`, `%c`
-  * `double`
-  * `float`, `%f`
-  * `int`, `%i`
-  * `long`, `%li`
-  * `string`, `%s`
-* The CS50 Sandbox has various languages we can choose from, as well as a file name we can get started with.
-* In fact, for each of these examples, you can click on the sandbox links on the [curriculum](https://cs50.harvard.edu/2018/fall/weeks/1/) to run and edit your own copies of them.
-* In `int.c`, we get and print an integer:
+* Let's say we wrote this program, `buggy0`:
   ```c
-  #include <cs50.h>
-  #include <stdio.h>
-
   int main(void)
   {
-      int i = get_int("Integer: ");
-      printf("hello, %i\n", i);
+      printf("hello, world\n")
   }
   ```
-  * Notice that we use `%i` to print an integer.
-  * `int main(void)` is the equivalent of "when green flag clicked", and we'll learn more about that in the coming weeks.
-  * We can now run `make int` and run our program with `./int`.
-* In `float.c`, we can get decimal numbers (called floating-point values in computers, because the decimal point can "float" between the digits, depending on the number):
+  * We see an error, when we try to `make` this program, that we didn't include a missing header file.
+  * We can also run `help50 make buggy0`, which will tell us, at the end, that we should `#include <stdio.h>`, which contains `printf`.
+  * We do that, and see another error, and realize we're missing a semicolon at the end of our line.
+* Let's look at another program:
   ```c
-  #include <cs50.h>
   #include <stdio.h>
 
   int main(void)
   {
-      float f = get_float("Float: ");
-      printf("hello, %f\n", f);
-  }
-  ```
-  * Now, if we compile and run our program, we see something like `hello, 42.000000`, even if we just typed in `42` at the prompt.
-* With `ints.c`, we can do some math[^5]:
-  ```c
-  #include <cs50.h>
-  #include <stdio.h>
-
-  int main(void)
-  {
-      // Prompt user for x
-      int x = get_int("x: ");
-
-      // Prompt user for y
-      int y = get_int("y: ");
-
-      // Perform arithmetic
-      printf("x + y = %i\n", x + y);
-      printf("x - y = %i\n", x - y);
-      printf("x * y = %i\n", x * y);
-      printf("x / y = %i\n", x / y);
-      printf("x mod y = %i\n", x % y);
-  }
-  ```
-  * First, we get two integers, `x` and `y`. Then, we print out what we want to do, like `x + y = %i\n`, and pass in the value we want, `x + y`. `*` is used for multiplication, and `/` for division. `%` on its own, between two variables, is the [modulo operator](https://en.wikipedia.org/wiki/Modulo_operation). [^6]
-  * Interestingly, when we pass in `2` for `x` and `10` for `y`, we got ... `x - y = 0`. It turns out, since the two variables are integers, the result is an integer, and since 2 divided by 10 is less than 1, all we have left is the 0.
-* With `floats.c`, we can see what happens when we use floats:
-  ```c
-  #include <cs50.h>
-  #include <stdio.h>
-
-  int main(void)
-  {
-      // Prompt user for x
-      float x = get_float("x: ");
-
-      // Prompt user for y
-      float y = get_float("y: ");
-
-      // Perform division
-      printf("x / y = %.50f\n", x / y);
-  }
-  ```
-  * With `%50f`, we can specify the number of decimal places displayed.
-  * Hmm, now we get ...
-  ```
-  x: 2
-  y: 10
-  x / y = 0.20000000298023223876953125000000000000000000000000
-  ```
-* Our computer has memory, in hardware chips called RAM, random-access memory. Our programs use that RAM to store data as they run, but that memory is finite. So with a finite number of bits, we can't represent all possible numbers (of which there are an infinite number of). So our computer has a certain number of bits for each float, and has to round to the nearest decimal value at a certain point.
-* And these imprecisions can be problematic in finance, rockets, or scientific applications. But we can get around this problem, by specifying the number of decimal places we will be precise to, and allocate the right number of bits to represent that many decimal places.
-* A float in C, on most computers, uses 4 bytes, or 32 bits. Another type, called a double, uses twice as many bits, or 8 bytes.
-* If we run `doubles.c`, which is `floats.c` but with the `double` type for variables, we see that we have many more decimal digits of precision. And the tradeoff for the additional precision is that we now have to use more memory space.
-* Let's look at `parity.c`:
-  ```c
-  #include <cs50.h>
-  #include <stdio.h>
-
-  int main(void)
-  {
-      // Prompt user for integer
-      int n = get_int("n: ");
-
-      // Check parity of integer
-      if (n % 2 == 0)
+      for (int i = 0; i <= 10; i++)
       {
-          printf("even\n");
+          printf("#\n");
+      }
+  }
+  ```
+  * Hmm, we intended to only see 10 `#`s, but there are 11. If we didn't know what the problem is (since our program is working as we wrote it), we could add another print line to help us:
+    ```c
+    #include <stdio.h>
+
+    int main(void)
+    {
+        for (int i = 0; i <= 10; i++)
+        {
+            printf("i is %i\n", i);
+            printf("#\n");
+        }
+    }
+    ```
+  * Now, we see that `i` started at 0 and continued until it was 10, but we should have it stop once it's at 10.
+* If we wrote our program without any whitespace, like the below, it would still be correct:
+  ```c
+  #include <stdio.h>
+
+  int main(void)
+  {
+  for (int i = 0; i < 10; i++)
+  {
+  printf("i is %i\n", i);
+  printf("#\n");
+  }
+  }
+  ```
+  * But, our program is much harder to read, and so it's poorly styled. With indentation for our loops, it'll be easier to see the nesting of our lines of code.
+  * We can run `style50 buggy2.c`, and see suggestions for what we should change.
+* So to recap, we have three tools to help us improve our code:
+  * `help50`
+  * `printf`
+  * `style50`
+
+## Memory
+
+* Inside our computers, we have chips called RAM, random-access memory, that stores data for short-term use. We might save a file to our hard drive (or SSD) for long-term storage, but when we open it and start making changes, it gets copied to RAM. Though RAM is much smaller, and temporary (until the power is turned off), it is much faster.
+* We can think of bytes, stored in RAM, as though they were in a grid:
+  ![computer chip with grid overlaid](ram.png)
+  * In reality, there are millions or billions of bytes per chip.
+* In C, when we create a variable of type `char`, which will be sized one byte, it will physically be stored in one of those boxes in RAM. An integer, with 4 bytes, will take up four of those boxes.
+
+## Arrays
+
+* In memory, we can store variables one after another, back-to-back. And in C, a list of variables stored, one after another in a contiguous chunk of memory, is called an *array* [^bignote].
+* It turns out, we can do interesting things with just an array.[^2]
+* Let's look at `scores0.c`:
+  ```c
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int main(void)
+  {
+      // Get scores from user
+      int score1 = get_int("Score 1: ");
+      int score2 = get_int("Score 2: ");
+      int score3 = get_int("Score 3: ");
+
+      // Generate first bar
+      printf("Score 1: ");
+      for (int i = 0; i < score1; i++)
+      {
+          printf("#");
+      }
+      printf("\n");
+
+      // Generate second bar
+      printf("Score 2: ");
+      for (int i = 0; i < score2; i++)
+      {
+          printf("#");
+      }
+      printf("\n");
+
+      // Generate third bar
+      printf("Score 3: ");
+      for (int i = 0; i < score3; i++)
+      {
+          printf("#");
+      }
+      printf("\n");
+  }
+  ```
+  * We get 3 scores from the user, and print bars for each score.
+  * Our 3 integers, `score1`, `score2`, and `score3` will be stored somewhere in memory.
+* We can use a loop, but we can start factoring out pieces:
+  ```c
+  #include <cs50.h>
+  #include <stdio.h>
+
+  void chart(int score);
+
+  int main(void)
+  {
+      // Get scores from user
+      int score1 = get_int("Score 1: ");
+      int score2 = get_int("Score 2: ");
+      int score3 = get_int("Score 3: ");
+
+      // Chart first score
+      printf("Score 1: ");
+      chart(score1);
+
+      // Chart second score
+      printf("Score 2: ");
+      chart(score2);
+
+      // Chart third score
+      printf("Score 3: ");
+      chart(score3);
+  }
+
+  // Generate bar
+  void chart(int score)
+  {
+      // Output one hash per point
+      for (int i = 0; i < score; i++)
+      {
+          printf("#");
+      }
+      printf("\n");
+  }
+  ```
+  * Now, we have a `chart` function that can print each score.
+  * Remember that we need our prototype, `void chart(int score);`, to be at the top. We could also have the entire `chart` function at the top, before we use it, but eventually our `main` function would be pushed down too far, and be harder and harder to find.
+* With an array, we can collect our scores in a loop, and access them later in a loop, too:
+  ```c
+  // Generates a bar chart of three scores using an array
+
+  #include <cs50.h>
+  #include <stdio.h>
+
+  void chart(int score);
+
+  int main(void)
+  {
+      // Get scores from user
+      int scores[3];
+      for (int i = 0; i < 3; i++)
+      {
+          scores[i] = get_int("Score %i: ", i + 1);
+      }
+
+      // Chart scores
+      for (int i = 0; i < 3; i++)
+      {
+          printf("Score %i: ", i + 1);
+          chart(scores[i]);
+      }
+  }
+
+  // Generate bar
+  void chart(int score)
+  {
+      // Output one hash per point
+      for (int i = 0; i < score; i++)
+      {
+          printf("#");
+      }
+      printf("\n");
+  }
+  ```
+  * Notice that we use `int scores[3]` to initialize an array for 3 integers. Then, we use `scores[i] = ...` to store values into that array, using some index `i` that goes from `0` to `2` (since there are 3 elements).
+  * Then, we use `scores[i]` to access the values stored, at each index.
+* We repeat the value `3` in a few times, so we can factor that out to a *constant*, or a number we can specify and use globally:
+  ```c
+  #include <cs50.h>
+  #include <stdio.h>
+
+  const int COUNT = 3;
+
+  void chart(int score);
+
+  int main(void)
+  {
+      // Get scores from user
+      int scores[COUNT];
+      for (int i = 0; i < COUNT; i++)
+      {
+          scores[i] = get_int("Score %i: ", i + 1);
+      }
+
+      // Chart scores
+      for (int i = 0; i < COUNT; i++)
+      {
+          printf("Score %i: ", i + 1);
+          chart(scores[i]);
+      }
+  }
+
+  // Generate bar
+  void chart(int score)
+  {
+      // Output one hash per point
+      for (int i = 0; i < score; i++)
+      {
+          printf("#");
+      }
+      printf("\n");
+  }
+  ```
+  * At the top, we use the `const` keyword to indicate that this value shouldn't change. And we can use this throughout our code, so if we wanted this value to change, we only need to change it once. Finally, `COUNT` is in all capital letters, to indicate that it's a constant (by convention).
+* We can have our `chart` function print the entire chart, not just one bar at a time:
+  ```c
+  #include <cs50.h>
+  #include <math.h>
+  #include <stdio.h>
+
+  const int COUNT = 3;
+
+  void chart(int count, int scores[]);
+
+  int main(void)
+  {
+      // Get scores from user
+      int scores[COUNT];
+      for (int i = 0; i < COUNT; i++)
+      {
+          scores[i] = get_int("Score %i: ", i + 1);
+      }
+
+      // Chart scores
+      chart(COUNT, scores);
+  }
+
+  // Generate bars
+  void chart(int count, int scores[])
+  {
+      // Output one hash per point
+      for (int i = 0; i < count; i++)
+      {
+          for (int j = 0; j < scores[i]; j++)
+          {
+              printf("#");
+          }
+          printf("\n");
+      }
+  }
+  ```
+  * By passing in the entire `scores` array, as well as the `count` of scores we want to print, we can have the `chart` function iterate over `scores`. In fact, `chart` doesn't know how big the `scores` array actually is, so we necessarily have to pass in a `count`. If we wanted to traverse only a part of the list we could use the [`continue`](https://www.programiz.com/c-programming/c-break-continue-statement#continue) or [`break`](https://www.programiz.com/c-programming/c-break-continue-statement#break) keywords.
+* With arrays, we can do perform operations more efficiently, like adding or taking the average of all the numbers in a list together using a loop.
+
+## Strings
+
+* Strings[^3] are actually just arrays of characters. We can see this with `string0.c`:
+  ```c
+  #include <cs50.h>
+  #include <stdio.h>
+  #include <string.h>
+
+  int main(void)
+  {
+      string s = get_string("Input:  ");
+      printf("Output: ");
+      for (int i = 0; i < strlen(s); i++)
+      {
+          printf("%c\n", s[i]);
+      }
+  }
+  ```
+  * First, we need a new library, `string.h`, for `strlen`, which tells us the length of a string. Then, we use the same syntax to access elements in arrays, `s[i]`, to print each individual character of the string `s`.
+* We can improve the design of our program. `string0` was a bit inefficient, since we check the length of the string, after each character is printed, in our condition. But since the length of the string doesn't change, we can check the length of the string once:
+  ```c
+  #include <cs50.h>
+  #include <stdio.h>
+  #include <string.h>
+
+  int main(void)
+  {
+      string s = get_string("Input: ");
+      printf("Output:\n");
+      for (int i = 0, n = strlen(s); i < n; i++)
+      {
+          printf("%c\n", s[i]);
+      }
+  }
+  ```
+  * Now, at the start of our loop, we initialize both an `i` and `n` variable, and remember the length of our string in `n`. Then, we can check the values each time, without having to actually calculate the length of the string.
+  * `n` will only be accessible in the scope of the `for` loop, though we could initialize it outside of the loop, if we wanted to reuse it later.
+* When a string is stored in memory, each character is placed into one byte into the grid of bytes. Somewhere, for example, `Zamyla` is stored in 6 bytes. But one more byte is needed, to indicate the end of the string:
+  ![letters 'Zamyla' in grid, with first letter 'Z' labeled 's' and grid following 'a' filled with '0000000'](zamyla.png)
+  * The byte in memory where the first character of the string, `Z`, is stored, is labeled `s`, since we called our string `s` in the code above. Then, after the last character, `a`, we have one byte with all `0`s, to indicate the end of the string. And the byte of all `0`s is called a null character, which we can also write as `\0`.
+* If we wanted to write our own version of `strlen`, for example, we would need to know this:
+  ```c
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int main(void)
+  {
+      // Prompt for user's name
+      string s = get_string("Name: ");
+
+      // Count number of characters up until '\0' (aka NUL)
+      int n = 0;
+      while (s[n] != '\0')
+      {
+          n++;
+      }
+      printf("%i\n", n);
+  }
+  ```
+  * Here, we iterate over each character of the string `s` with the syntax we use to access elements in arrays, and we increment a counter, `n`, as long as the character isn't the null character, `\0`. If it is, we're at the end of the string, and can print out the value of `n`.
+* And, since we know that each character has a numeric, ASCII value, we can even print that:
+  ```c
+  #include <cs50.h>
+  #include <stdio.h>
+  #include <string.h>
+
+  int main(void)
+  {
+      string s = get_string("String: ");
+      for (int i = 0; i < strlen(s); i++)
+      {
+          int c = (int) s[i];
+          printf("%c %i\n", s[i], c);
+      }
+  }
+  ```
+  * With `(int) s[i]`, we take the value of `s[i]` and convert that character type to an integer type. Then, we can print out both the character and its numeric value.
+  * Technically, we can even do `printf("%c %i\n", s[i], s[i]);`, and `printf` will interpret the value of `s[i]` as an integer.
+* We can now combine what we've seen, to write a program that can capitalize letters:
+  ```c
+  #include <cs50.h>
+  #include <stdio.h>
+  #include <string.h>
+
+  int main(void)
+  {
+      string s = get_string("Before: ");
+      printf("After:  ");
+      for (int i = 0, n = strlen(s); i < n; i++)
+      {
+          if (s[i] >= 'a' && s[i] <= 'z')
+          {
+              printf("%c", s[i] - ('a' - 'A'));
+          }
+          else
+          {
+              printf("%c", s[i]);
+          }
+      }
+      printf("\n");
+  }
+  ```
+  * First, we get a string `s`. Then, for each character in the string, if it's lowercase (its value is between that of `a` and `z`), we convert it to uppercase. Otherwise, we just print it.
+  * We can convert a lowercase letter to its uppercase equivalent, by subtracting the difference between a lowercase `a` and an uppercase `A`. (We know that lowercase letters have a higher value than uppercase letters, and so we can subtract that difference to get an uppercase letter from a lowercase letter.)
+* But there are library functions that we can use, to accomplish the same thing:
+  ```c
+  #include <cs50.h>
+  #include <ctype.h>
+  #include <stdio.h>
+  #include <string.h>
+
+  int main(void)
+  {
+      string s = get_string("Before: ");
+      printf("After:  ");
+      for (int i = 0, n = strlen(s); i < n; i++)
+      {
+          if (islower(s[i]))
+          {
+              printf("%c", toupper(s[i]));
+          }
+          else
+          {
+              printf("%c", s[i]);
+          }
+      }
+      printf("\n");
+  }
+  ```
+  * `islower()` and `toupper()` are two functions, among others, from a library called `ctype`, that we can use. (And we would only know this from reading the documentation, for that library, that other people wrote.)
+  * We can use a command-line program, `man`, to read manual information for other programs, if it exists. For example, we can run `man toupper` to see some documentation about that function. Then, we'll see that `toupper` will return the character as-is, if it's not a lowercase letter, and so we can simply have:
+    ```c
+    for (int i = 0, n = strlen(s); i < n; i++)
+    {
+        printf("%c", toupper(s[i]));
+    }
+    ```
+
+## Command-line arguments
+
+* We've used programs like `make` and `clang`, which take in extra words after their name in the command line. It turns out that programs of our own, can also take in *command-line arguments*.
+* In `argv0.c`, we change what our `main` function looks like:
+  ```c
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int main(int argc, string argv[])
+  {
+      if (argc == 2)
+      {
+          printf("hello, %s\n", argv[1]);
       }
       else
       {
-          printf("odd\n");
+          printf("hello, world\n");
       }
   }
   ```
-  * By taking the remainder after we divide `n` by 2, we can tell whether `n` is even or odd.
-* In `conditions.c`, we turn the snippet from before into a program:
+  * `argc` and `argv` are two variables that our `main` function will now get, when our program is run from the command line. `argc` is the argument count, or number of arguments, and `argv` is an array of strings that are the arguments. And the first argument, `argv[0]`, will be the name of our program (the first word typed, like `./hello`). In this example, we'll check if we have two arguments, and print out the second one if so.
+* We can print every argument, one at a time:
   ```c
   #include <cs50.h>
   #include <stdio.h>
 
-  int main(void)
+  int main(int argc, string argv[])
   {
-      // Prompt user for x
-      int x = get_int("x: ");
-
-      // Prompt user for y
-      int y = get_int("y: ");
-
-      // Compare x and y
-      if (x < y)
+      for (int i = 0; i < argc; i++)
       {
-          printf("x is less than y\n");
-      }
-      else if (x > y)
-      {
-          printf("x is greater than y\n");
-      }
-      else
-      {
-          printf("x is equal to y\n");
+          printf("%s\n", argv[i]);
       }
   }
   ```
-* In `answer.c`, we get text from the user:
+* We can print out each character of each argument, too:
+  ```c
+  #include <cs50.h>
+  #include <stdio.h>
+  #include <string.h>
+
+  int main(int argc, string argv[])
+  {
+      for (int i = 0; i < argc; i++)
+      {
+          for (int j = 0, n = strlen(argv[i]); j < n; j++)
+          {
+              printf("%c\n", argv[i][j]);
+          }
+          printf("\n");
+      }
+  }
+  ```
+  * With `argv[i]`, we get the current argument from the array of arguments, and with `argv[i][j]`, we get a character from that string.
+
+## Encryption
+
+* If we wanted to send a message to someone, we might want to *encrypt*, or somehow scramble that message so that it would be hard for others to read. The original message is called *plaintext*, and the encrypted message is called *ciphertext*.
+* A message like `HI!` could be converted to ASCII, `72 73 33`. But anyone would be able to convert that back to letters.
+* We look at examples, from World War I, to a poem about Paul Revere's ride, of historical codes.
+* *Encryption* generally requires another input, in addition to the plaintext. A *key* is needed, and sometimes it is simply a number, that is kept secret. With the key, plaintext can be converted, via some algorith, to ciphertext, and vice versa.
+* For example, if we wanted to send a message like `I  L O V E  Y O U`, we can first convert it to ASCII: `73  76 79 86 69  89 79 85`. Then, we can encrypt it with a key of just `1` and a simple algorithm, where we just add the key to each value: `74  77 80 87 70  90 80 86`. Then, someone converting that ASCII back to text will see `J  M P W F  Z P V`. To decrypt this, someone might have to guess the value of each letter, through trial-and-error, but they wouldn't be sure, without knowing the key. In fact, this algorithm is known as a [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher).
+
+## Exit codes
+
+* It turns out that we can indicate errors in our program, by returning a value from our `main` function:
   ```c
   #include <cs50.h>
   #include <stdio.h>
 
-  int main(void)
+  int main(int argc, string argv[])
   {
-      // Prompt user for answer
-      char c = get_char("Answer: ");
-
-      // Check answer
-      if (c == 'Y' || c == 'y')
+      if (argc != 2)
       {
-          printf("yes\n");
+          printf("missing command-line argument\n");
+          return 1;
       }
-      else if (c == 'N' || c == 'n')
-      {
-          printf("no\n");
-      }
+      printf("hello, %s\n", argv[1]);
+      return 0;
   }
   ```
-  * Here, we use `get_char` and the `char` data type to get a single character from the user.
-* The algorithms we use here can be helpful for building more complex algorithms. We could imagine that we could use the sum algorithm as a start to build a program that takes the average of multiple numbers. Similarly we can think about the programs we write for physical objects like robots. The algorithms to move a robot forwards, backwards, left, and right is likely something someone has already implemented, but we could build something more complex based off of that like determining the robot's path through a maze.
-  #### Logical Operators
-  * The logical operators we have access to are "and", "or", and "not"[^7].
-  * | C syntax | Operator | Example (suppose `x = 5` and `y = 4`) |
-|:----------:|:------:|-------------------------------|
-| `&&` | AND | `x < 10 && y > 3` --> `true` |
-| `||` | OR | `x < 2 || y > 3` --> `true` |
-| `!` | NOT | `!(x==y)` --> `true` |
-  * Notice that we use a `||` to indicate an "or" in our Boolean expression. (A logical "and" would be `&&`.)
-* In Scratch, we were able to create our own block, that we called "cough". We can do the same in C, by creating our own function.
-* If we wanted to print "cough" 3 times, we could use a `for` loop:
-  ```c
-  #include <stdio.h>
+  * The return value of `main` in our program is called an exit code, and we can actually see this in our command line. If we ran this program with `./exit`, we can then type `echo $?`, which will print the last program's return value.
+  * As we write more complex programs, error codes like this will help us determine what went wrong, even if it's not visible or meaningful to the user.
 
-  int main(void)
-  {
-      for (int i = 0; i < 3; i++)
-      {
-          printf("cough\n");
-      }
-  }
+## Sorting
+
+* With arrays, we can solve more interesting problems than before. We can think of arrays like lockers, where, behind the doors of each locker, is some value, like an integer or character. Indeed, computers can only look at one locker, or value at a time.
+* If we had a list of numbers, and we wanted to find a number in that list, the best we could do is look through it, one at a time, or randomly.
+* But if we knew the list was sorted, we could look in the middle first, and move left or right accordingly.
+* With some volunteers, we demonstrate how we might sort a list.
+
+#### Bubble Sort
+
+* Our volunteers start in the following random order:
   ```
-* We can move the `printf` line to its own function:
-  ```c
-  #include <stdio.h>
-
-  void cough(void);
-
-  int main(void)
-  {
-      for (int i = 0; i < 3; i++)
-      {
-          cough();
-      }
-  }
-
-  // Cough once
-  void cough(void)
-  {
-      printf("cough\n");
-  }
+  6 5 1 3 7 8 4 2
   ```
-  * Notice that we need to declare that the `cough` function exists, so we need the prototype, `void cough(void);`, before our `main` function calls it. The C compiler reads our code from top to bottom, so we need to tell it that the `cough` function exists, before we use it. And we want to keep our `main` function close to the top, so the actual implementation of `cough` will still be below it.
-  * In fact, `cs50.h` and `stdio.h` are both header files, containing prototypes for functions like `get_string` and `printf` that we can then use. The actual implementation of those files are in `cs50.c` and `stdio.c` as source code, and compiled to files elsewhere on the system.
-  * And our `cough` function doesn't take any inputs, so we have `cough(void)`, and the function also doesn't return anything, so we have `void` in front of `cough` as well. (Our `main` function is supposed to return an `int`, and by default it will return `0` if nothing goes wrong.)
-* We can abstract `cough` further:
-  ```c
-  #include <stdio.h>
-
-  void cough(int n);
-
-  int main(void)
-  {
-      cough(3);
-  }
-
-  // Cough some number of times
-  void cough(int n)
-  {
-      for (int i = 0; i < n; i++)
-      {
-          printf("cough\n");
-      }
-  }
+* We look at the first two numbers, and swap them so they are in order:
   ```
-  * Now, when we want to print "cough" some number of times, we can just call that same function. Notice that, with `cough(int n)`, we indicate that the `cough` function takes as input an `int`, which we refer to as `n`. And inside `cough`, we use `n` in our `for` loop to print "cough" the right number of times.
-* Let's look at `positive.c`:
-  ```c
-  #include <cs50.h>
-  #include <stdio.h>
-
-  int get_positive_int(string prompt);
-
-  int main(void)
-  {
-      int i = get_positive_int("Positive integer: ");
-      printf("%i\n", i);
-  }
-
-  // Prompt user for positive integer
-  int get_positive_int(string prompt)
-  {
-      int n;
-      do
-      {
-          n = get_int("%s", prompt);
-      }
-      while (n < 1);
-      return n;
-  }
+  5 6 1 3 7 8 4 2
   ```
-  * The CS50 library doesn't had a `get_positive_int` function, but we can write one ourselves. In our function, we initialize a variable, `int n`, but not assign a value to it yet. Then, we have a new construct, `do ... while`, which does something _first_, then checks a condition, and repeats until the condition is no longer true.
-  * Then, once we have an `n` that is not `< 1`, we can return it with the `return` keyword. And back in our `main` function, we can set `int i` to that value.
-  * In C, variables also have *scope*, which generally means that they only exist within the curly braces that they were declared. For example, if we had `int n = get_int(...)` within the do-while loop, we wouldn't be able to `return` it, since that line would be outside of the scope of `n`. (Similarly, our `main` function can't directly see any variables inside `get_positive_int`, since each function has its own set of curly braces and thus different scopes for variables declared inside them.)
-* In Scratch, you might have noticed that you could make a variable available to one sprite, or all sprites. And in C, we have both *local* and *global* variables. All variables we've seen thus far are local, though eventually we'll see global variables, which we'll be able to use anywhere in our program.
-
-## More problems
-
-* We've already seen an example of floating-point imprecision, but we can also have problems with integers.
-* If, for example, we had a number like 129, to which we added a 1, we wouldn't have 1210, where the last digit went from 9 to 10. Instead, we carry the 1, such that the number we have is 130. And if we had a number like 999, we would carry the 1 a few times, until we got the number 1000.
-* But if we only had space to write down 3 digits, we would end up with 000. And this problem is called overflow, where the number we are trying to store is too big for the amount of space we have allocated.
-* In binary, if we had the number `111`, and added 1, we would carry that 1 until we got `1000`. And similarly, if we only had 3 bits, we would have `000`.
-* In the Lego Star Wars game, there is a set maximum of 4 billion coins that the player can collect, since presumably there are only 32 bits used to store that count (and 2 to the power of 32 is slightly over 4 billion).
-* We can see this in `overflow.c`:
-  ```c
-  #include <stdio.h>
-  #include <unistd.h>
-
-  int main(void)
-  {
-      // Iteratively double i
-      for (int i = 1; ; i *= 2)
-      {
-          printf("%i\n", i);
-          sleep(1);
-      }
-  }
+* Then we look at the next pair, `6` and `1`, and swap them:
   ```
-  * Notice that here, we have a line that starts with `//`, which indicates a comment. A comment is a note to ourselves or future readers, that the compiler will ignore. Not all environments will support textual comments in the same way, so it is important to think about other ways to document your code.
-  * In our `for` loop, we set `i` to `1`, and double it with `*= 2`. (And we'll keep doing this forever, so there's no condition we check.)
-  * We also use the `sleep` function from `unistd.h` to let our program pause each time.
-  * Now, when we run this program, we see the number getting bigger and bigger, until:
+  5 1 6 3 7 8 4 2
+  ```
+* We repeat this, until, after our first pass, the largest number ended up furthest on the right:
+  ```
+  5 1 6 3 7 4 2 8
+  ```
+  * (In the lecture, the 1 accidentally moved a spot too far!)
+* We repeat this, and every time we make a pass, the next-largest number ends up next-furthest to the right:
+  ```
+  1 5 3 6 4 2 7 8
+  ```
+* Eventually, our list becomes fully sorted. The first time, we compared 7 pairs of numbers. The second time, we compared 6 pairs.
+
+#### Selection Sort
+
+* We shuffle our numbers again:
+  ```
+  2 4 8 5 7 1 3 6
+  ```
+* And this time, we look for the smallest number each time, as we go down the list, and put that to the far left:
+  ```
+  1 4 8 5 7 2 3 6
+  1 2 8 5 7 4 3 6
+  1 2 3 5 7 4 8 6
+  ```
+  * Each time, we select the smallest number and swap it with the number that's in the furthest left part of the unsorted part of the list.
+* With this algorithm, we still pass through the list _n - 1_ times, since there are _n_ people, and we do have to compare each number with the smallest number we've seen thus far.
+* Let's try to figure this out a little more formally. The first algorithm, bubble sort, involved comparing pairs of numbers next to each other, until the largest bubbled up to the right. We might write that in pseudocode as:
+  ```
+  repeat until no swaps
+      for i from 0 to n-2
+          if i'th and i+1'th elements out of order
+              swap them
+  ```
+* And selection sort might be as follows:
+  ```
+  for i from 0 to n-1
+      find smallest element between i'th and n-1'th
+      swap smallest with i'th element
+  ```
+* For the first pass, we needed to make `n - 1` comparisons, to find the smallest number. Then, in each of the following passes, we made one less comparison, since we had already moved some numbers to the left:
+  ```
+  (n – 1) + (n – 2) + ... + 1
+  n(n – 1)/2
+  (n^2 – n)/2
+  n^2 / 2 – n/2
+  ```
+  * Each line simplifies to the next, and eventually, we get `n^2 / 2 – n/2` as the number of comparisons we need to make. In computer science, we can use _O_, big _O_ notation, to simplify that further, and say that our algorithm takes _O_(_n_^2) steps, "on the order of _n_ squared". This is because, as _n_ gets bigger and bigger, only the _n_^2 term matters.
+  * For example, if _n_ were 1,000,000, we would get:
     ```
-    1073741824
-    overflow.c:9:31: runtime error: signed integer overflow: 1073741824 * 2 cannot be represented in type 'int'
-    -2147483648
-    0
-    0
-    ...
+    n^2 / 2 – n/2
+    1,000,000^2 / 2 – 1,000,000/2
+    500,000,000,000 – 500,000
+    499,999,500,000
     ```
-  * It turns out, our program recognized that a signed integer (an integer with a positive or negative sign) couldn't store that next value, and printed an error. Then, since it tried to double it anyways, `i` became a negative number, and then 0.
-* The Y2K problem arose because many programs stored the calendar year with just two digits, like 98 for 1998, and 99 for 1999. But when the year 2000 approached, the programs would have stored 00, leading to confusion between the years 1900 and 2000.
-* A Boeing 787 airplane also had a bug where a counter in the generator overflows after a certain number of days of continuous operation, since the number of seconds it has been running could no longer be stored in that counter.
-* In an older version of Civilization, integer underflow leads to one of the characters, Gandhi, becoming much more aggressive since his "aggression" value, already low,  becomes large when too much is subtracted from it. For example, if we had `00000001` stored, and subtract 1 from it, we would have `00000000`. But if we were to subtract 2, we actually roll backwards to `11111111`, which is the largest positive value!
-* So, we've seen a few problems that can happen, but hopefully now too understand why and how to prevent them.
-* With this week's problem set, we'll use the CS50 Lab, built on top of the CS50 Sandbox, to write some programs with walkthroughs to guide us.
+    * which is on the same order of magnitude as _n_<sup>2</sup>.
+* It turns out, there are other common orders of magnitude:
+  * _O_(_n_<sup>2</sup>)
+  * _O_(_n_ log _n_)
+  * _O_(_n_)
+  * _O_(log _n_)
+  * _O_(1)
+* Searching through a phone book, one page at a time, has _O_(_n_) running time, since we need one step for every page. Using binary search would have _O_(log _n_) running time, since we divided the problem in half each time.
+
+#### Merge Sort
+
+* Let's take another array of numbers, but this time, use an empty array of the same size as our working space:
+  ```
+  4 2 7 5 6 8 3 1
+  _ _ _ _ _ _ _ _
+  ```
+* Since we have 8 numbers, let's look at the first half, the first 4. We'll sort that recursively, and look at just the left half of that. With 2 numbers, `4 2`, we look at the left half of that (sorted), and the right half of that (sorted), and combine them by sorting them, `2 4`. We'll move them to our second array:
+  ```
+  _ _ 7 5 6 8 3 1
+  2 4 _ _ _ _ _ _
+  ```
+* We repeat this, for the right half of the original half:
+  ```
+  _ _ | _ _ 6 8 3 1
+  2 4 | 5 7 _ _ _ _
+  ```
+* Then, we merge those halves, to get a sorted left half:
+  ```
+  _ _ _ _ 6 8 3 1
+  _ _ _ _ _ _ _ _
+  2 4 5 7 _ _ _ _
+  ```
+* We repeat, for the right half:
+  ```
+  _ _ _ _ | _ _ _ _
+  _ _ _ _ | _ _ _ _
+  2 4 5 7 | 1 3 6 8
+  ```
+* And now, we can merge both halves:
+  ```
+  _ _ _ _ _ _ _ _
+  _ _ _ _ _ _ _ _
+  _ _ _ _ _ _ _ _
+  1 2 3 4 5 6 7 8
+  ```
+* Each number had to move 3 times, since we divided 8 by 2 three times, or log _n_ times. So this algorithm takes _O_(_n_ log _n_) to sort a list.
+* We look at demos like [Sorting Algorithms Animations](https://www.toptal.com/developers/sorting-algorithms) and [What different sorting algorithms sound like](https://www.youtube.com/watch?v=t8g-iYGHpEA) to conclude.
+* Typically programs that run at polynomial time or faster (_O(1)_, _O(n)_, _O(n<sup>2</sup>_) are considered to run in a reasonable amount of time, where as those that run at exponential or factorial time (_O(2<sup>poly(n)</sup>)_, _O(n!)_) are not.
+* There are some problems that cannot be solved in a reasonable amount of time so can use approximations, called heuristics, to get a solution that is not optimal but comes close to solving the problem.
+* Decidable problems are ones that we can determine the correct output, like whether or not a number is a number prime or not. Within this range of problems are varying levels of opportunities for optimization, or finding the best solution for a problem. Undecidable problems, like the [halting problem](https://www.youtube.com/watch?v=92WHN-pAFCs), cannot determine the output of program. Like the halting problem, some of the inputs can be solved but not all.
+
+## Computational Models
+
+* There are three main computational models:
+  * Parallel computing, whereby two or more algorithms are running in parallel, or at the same time.
+  * Distributed computing, whereby two or more machines are running programs and communicating with one another
+  * Sequential computing, whereby an entire program is run in order on one machine
+
+* Some algorithms can be implemented in multiple models, while others cannot
+
+* Consider the merge sort algorithm, we could imagine a program that uses parallel computing to sort the right side and the left side of a list at the same time.
+
+* Selection sort on the other hand would lend itself to sequential computing, since each iteration is dependent on the previous step.
+
+* Ultimately, these methods allow us to look at efficiency through a different lens.
+  * Parallel solutions are faster than sequential ones since we can do more, computationally per one unit of time.
+  * We can think about parallel computing solutions as having some sequential portion and multiple parallel portions, so it would take as much time as the sum of the sequential portion and longest parallel portion.
+  * Sequential solutions take as long as the sum of all of its steps.
+  * We can even calculate the speedup, or the ratio between sequential and parallel solutions' run times by dividing the runtime of the sequential solution by the runtime of the parallel solution.
+
+* Parallel solutions are typically able to scale better than sequential solutions as well. This means that they can handle large increases of data much better than sequential ones can.
+
+* Parallel solutions can be made even faster by increasing the number of processors used (granted that your machine can handle this load). This can also us to run two or three or _n_ algorithms simultaneously. We are limited though by our hardware, as well as the sequential portion of our solution, since there is a point when adding more parallel portions doesn't decrease runtime a significant amount.
+
+* While parallel solutions sound like the clear choice, they are definitely more difficult to develop. They also require your machine to have multiple processor cores so that information can actually be processed simultaneously.
+
+* We can think of a distributed solution in a similar way as a parallel one. The main difference here is that while parallel solutions can be run on one computer, distributed ones cannot. This is considered both a positive and negative side effect. On one hand it is more expensive to attain all the machines to run your program, but on the other hand you have access to more space and processing power, so you can process datasets that may have been to large or taken too long to process on one machine.
+
+* Distributed solutions are also typically faster than solutions that are implemented on one machine.
 
 ---
 
-[^1]:In the exam reference sheet for the AP CSP exam, `DISPLAY(expression)` displays or "prints" the value of an expression followed by a space.
+[^bignote]:In the exam reference sheet for the AP CSP exam: `[value1, value2, value3…]` is the syntax for an array, `aList ← [value1, value2, value3…]` stores a list in a variable `aList`, `aList ← []` initiates an empty list and assigns it to `aList`, `aList ← bList` stores a copy of `bList` in `aList`, and lists are 1 indexed instead of 0 indexed like in C. To access the first element in `aList`, use `aList[1]`, to assign a value to an element in a list to a variable, `x`, use `x` ← `aList [i]`. Assigning a variable to an element of a list can be done with `aList[i] ← x`.
 
-[^2]:In the exam reference sheet for the AP CSP exam, "←" is used to indicate assignment instead of "=".
+[^2]: In the exam reference sheet for the AP CSP exam, we have access to even more functionality with lists, like inserting an item into a list as with `INSERT(list name, index, value)`, appending an item to a list as with `APPEND(list name, value)`, remove items as with `REMOVE(list name, i)`, and you can find the length with `LENGTH(list name)`.
 
-[^3]: In the exam reference sheet for the AP CSP exam, `=`, `≠`, `>`, `<`, `≥`, and `≤` are relational operators that are evaluated as a Boolean value. For example `a = b` would return `true` if `a` and `b` are equal. The syntax for an `if` block in the AP CSP exam reference sheet is:
-    ```
-    IF(condition)
-    {
-    <block of statements>
-    }
-    ```
-    and the syntax for an `if-else` block is
-    ```
-    IF(condition)
-    {
-     <first block of statements>
-    }
-    ELSE
-    {
-     <second block of statements>
-    }
-    ```
-
-[^4]: The syntax for a `for` loop in the AP CSP Exam reference sheet is:
-    ```
-    REPEAT n TIMES
-    {
-     <block of statements>
-    }
-    ```
-    The syntax for a `while` loop in the AP CSP Exam reference sheet is:
-    ```
-    REPEAT UNTIL(condition)
-    {
-     <block of statements>
-    }
-    ```
-    The syntax for iterating over a list in the AP CSP Exam reference sheet is:
-    ```
-    FOR EACH item IN aList
-    {
-     <block of statements>
-    }
-    ```
-
-[^5]: In the exam reference sheet for the AP CSP exam:
-    * `a + b` indicates addition
-    * `a - b` indicates subtraction
-    * `a * b` indicates multiplication
-    * `a / b` indicates division
-    * `a MOD b` indicates modulo
-
-[^6]: In terms of order of operations, modulo operators have the same precedence as multiplication and division.
-
-[^7]: In the exam reference sheet for the AP CSP exam, `AND`, `OR`, `NOT` are the syntactical equivalents of `&&`, `||`, and `!`.
+[^3]: The term substring is also associated with strings. These are parts of an existing string. For example, "vision" would be a substring of "Television".

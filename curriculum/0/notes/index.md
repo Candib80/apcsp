@@ -1,247 +1,526 @@
-## Lecture 0
+## Lecture 1
 {:.no_toc}
 
 * TOC
 {:toc}
 
-## Welcome
+## Last Time
 
-* When David was a freshman, he was too intimidated to take any computer science classes. But even if the topic feels out of your comfort zone, know that we'll fill in all the blanks along the way, until we are all on the same page.
-* In fact, 68% of CS50 students have never taken a CS course before.
-* To support you, there is an amazing staff, sections, and office hours.
-* And importantly, too:
-  > what ultimately matters in this course is not so much where you end up relative to your classmates but where you end up relative to where you started.
+* We learned that, thanks to many layers of abstraction and those who came before us, we can easily write programs that are ultimately just binary, 0s and 1s.
+* Problem solving can be described as taking some inputs (a problem) and using an algorithm to find some outputs (a solution).
+* Computers represent inputs and outputs with lots of bits, binary digits, 0s and 1s, that are on or off. And with enough of those bits, we can represent not only larger numbers, but text, images, and video.
+* And there can be different algorithms that can solve the same problem, but with different running times.
+* We can write down algorithms more precisely with pseudocode, and along the way use concepts like functions, loops, and conditions.
+  * With the help of volunteers from the audience, we make peanut butter and jelly sandwiches from ingredients, though each of us interpreted the instructions differently!
+* It turns out, we (as humans) naturally make assumptions and abstractions when following instructions or even pseudocode. But as we saw in Scratch, and as we will see in C, we won't be able to do that anymore, and will have to think more carefully about the steps and cases that our programs will need to handle.
+  * With Scratch, we were able to leverage the work done by the folks at MIT, who created the blocks, and sprites, to make programs of our own. And we too made custom blocks like the `cough` function, that was a layer of abstraction of our own.
 
-## What is computer science?
+## C
 
-* Computer science is fundamentally problem-solving, and programming alone or (more likely) collaboratively is one way to do that.
-* Collaboration is an important aspect of problem solving. It can take on many forms, such as communication or consultation. Collaboration helps us see diverse perspectives, which can help us avoid bias in the development of computing innovations.
-* We can think of problem-solving as the process of taking some input (details about our problem) and generate some output (the solution to our problem). The "black box" in the middle is what we'll gradually learn more and more about in this course.<br>
-  ![word "input", arrow into box, arrow out of box, word "output"](input_output.png)
-* We need a way to represent inputs in some standard way, and if our problem were to simply count the number of people in the lecture hall, we'd have many options. We could write tally marks on a board, or use our hands. In fact, with just one hand, we can use our fingers creatively: with just our thumb up, we could represent one; with our just index finger up, we could represent two; with both our thumb and index finger up, we could represent three. And by continuing to use a pattern of permutations, we could represent 32 different values with just five fingers!
+* We'll use a new language, C, that's purely text, which comes with some cryptic keywords and punctuation:
+  ```c
+  #include <stdio.h>
 
-## Binary
-
-* A computer, at the lowest level, stores data in binary, where there are just two digits, 0 and 1. And that maps to how our computers use electricity, which is easy to turn off or on.
-* As humans, we know the following represents one hundred and twenty-three.
+  int main(void)
+  {
+      printf("hello, world\n");
+  }
   ```
-  1 2 3
+  * This is equivalent to the "when green flag clicked" and "say (hello, world)" block:<br>
+    ![block labeled 'when green flag clicked', block labeled 'say (hello, world)'](when_green_flag.png)
+* We can compare a lot of the constructs in C, to blocks we've already seen and used in Scratch. The syntax is far less important than the principles, which we've already been introduced to.
+* The "say (hello, world)" block is a function, and maps to `printf("hello, world\n");`[^1]. In C, the function to print something to the screen is `printf`, where `f` stands for "format", meaning we can format the string in different ways. Then, we use parentheses to pass in what we want to print. We use double quotes to surround our text, or string, and add a `\n` which indicates a new line on the screen. (Then, the next time we call `printf`, our text will be on a new line. Finally, we add a semicolon `;` to end this line of code in C.
+* The "set [counter] to (0)" block is creating a variable, and in C we would say `int counter = 0;`, where `int` specifies that the type of our variable is an integer and the equals sign indicates assignment [^2]
+:<br>
+  ![block labeled 'set counter to (0)'](set_counter_to_0.png)
+* "change [counter] by (1)" is `counter = counter + 1;` in C. (In C, the `=` isn't like an equation, where we are saying `counter` is the same as `counter + 1`. Instead, `=` means "copy the value on the right, into the value on the left".) We can also say `counter += 1;` or `counter++;` both of which are "syntactic sugar", or shortcuts that have the same effect with fewer characters to type.<br>
+  ![block labeled 'change counter by (1)'](change_counter_by_1.png)
+* A condition[^3] would map to:<br>
+  ![block labeled 'if < (x) < (y)> then', inside which there is a block labeled 'say (x is less than y)'](if_x_y.png)
+  ```c
+  if (x < y)
+  {
+      printf("x is less than y\n");
+  }
   ```
-  * The `3` is in the ones column, the `2` is in the tens column, and the `1` is in the hundreds column.
-  * So `123` is 100×1 + 10×2 + 1×3 = 100 + 20 + 3 = 123.
-* In binary, with just two digits, we have powers of two for each place value:
-  <pre>
-  4 2 1
-  <b>0 0 0</b>
-  </pre>
-  * This would still be equal to 0.
-* Now if we change the binary value to, say, `0 1 1`, the decimal value would be 3.
-  <pre>
-  4 2 1
-  <b>0 1 1</b>
-  </pre>
-* With enough bits, or binary digits, computers can count much higher.
-* To represent letters, all we need to do is decide how numbers map to letters. Some humans, many years ago, collectively decided on a standard mapping called [ASCII](https://en.wikipedia.org/wiki/ASCII). The letter "A", for example, is the number 65, and "B" is 66, and so on.
-  * A byte is 8 bits, and we use that as a unit to manage bits. The number 72, for example, fits into one byte.
-* And computer programs know, based on the context of its code, whether the binary numbers should be interpreted as numbers, or letters, or even other media.
+  * Notice that in C, we use `{` and `}` (as well as indentation) to indicate how lines of code should be nested.
+* We can also have if-else conditions:<br>
+  ![block labeled 'if < (x) < (y)> then', inside which there is a block labeled 'say (x is less than y)', parent block also has an 'else', inside which there is a block labeled 'say (x is not less than y)'](if_else.png)
+  ```c
+  if (x < y)
+  {
+      printf("x is less than y\n");
+  }
+  else
+  {
+      printf("x is not less than y\n");
+  }
+  ```
+  * As another aside, whitespace (the spaces, new lines, and indentation) are generally not syntactically important in C, i.e. they won't change how our program ultimately runs, but following conventions and having good "style" is important for our code to be readable by humans.
+* And even `else if`:<br>
+  ![block labeled 'if < (x) < (y)> then', inside which there is a block labeled 'say (x is less than y)', parent block also has an 'else', inside which is a nesting of a block labeled 'if < (x) > (y) > then', inside which there is a block labeled 'say (x is greater than y)', parent block also has an 'else', inside which there is a block labeled 'if < (x) = (y) > then', inside which there is a block labeled 'say (x is equal to y)'](if_else_if.png)
+  ```c
+  if (x < y)
+  {
+      printf("x is less than y\n");
+  }
+  else if (x > y)
+  {
+      printf("x is greater than y\n");
+  }
+  else if (x == y)
+  {
+      printf("x is equal to y\n");
+  }
+  ```
+  * Notice that, to compare two values in C, we use `==`, two equals signs.
+  * And, logically, we don't need the `if (x == y)` in the final condition, since that's the only case remaining, and we can just say `else`.
+* Loops can be written like the following:<br>
+  ![block labeled 'forever', inside which there is a block labeled 'say (hello, world)'](forever.png)
+  ```c
+  while (true)
+  {
+      printf("hello, world\n");
+  }
+  ```
+  * The `while` keyword also requires a condition, so we use `true` as the Boolean expression to ensure that our loop will run forever. Our program will check whether the expression evaluates to `true` (which it always will in this case), and then run the lines inside the curly braces. Then it will repeat that until the expression isn't true anymore (which won't change in this case).<br>
+  ![block labeled 'repeat (50)', inside which there is a block labeled 'say (hello, world)'](repeat.png)
+  ```c
+  for (int i = 0; i < 50; i++)
+  {
+      printf("hello, world\n");
+  }
+  ```
+  * To write a loop that runs a specific number of times, we use the `for` keyword[^4], and first, we create a variable named `i` and set it to 0. `i` is a conventional name for a variable that keeps track of how many iterations of the loop we've already done. Then, we check that `i < 50` every time we reach the top of the loop, before we run any of the code inside. If that expression is true, then we run the code inside. Finally, after we run the code inside, we use `i++` to add one to `i`, and the loop repeats.
+* We can also get input from the user:<br>
+  ![block labeled 'ask (What's your name?) and wait', block labeled 'say (answer)'](ask_say.png)
+  ```c
+  string answer = get_string("What's your name?\n");
+  printf("%s\n", answer);
+  ```
+  * In Scratch, the response will be stored in a variable called "answer", but in C we can specify the name of the variable. We'll choose "answer" too, and the type of this variable is `string`, which is just a sequence of characters.
+  * And we'll use `printf` to print the string, but we need to specify how. We first pass in `"%s`, the string we want to print, which happens to be just `%s`. And `%s` is a placeholder, into which `printf` will substitute the value of the string we pass in next, which we specify as `answer`.
+  * And we need this structure because now, we can convert this:<br>
+    ![block labeled 'ask (What's your name?) and wait', block labeled 'say (join (hello, ) (answer))'](ask_say_join.png)
+    ```c
+    string answer = get_string("What's your name?\n");
+    printf("hello, %s\n", answer);
+    ```
 
-## Representing data
+## CS50 Sandbox
 
-* **Abstraction** is a concept in computer science where some low-level implementation (such as how data is ultimately stored in binary) is simplified or taken for granted, so we can use that implementation at a higher level (such as representing letters, that we can then use in our programs).
-* On a standard American keyboard, letters with accent marks, and many other symbols and characters, aren't visible:
-  ![computer keyboard with labeled keys](keyboard.png)
-* To solve that problem, computers can represent letters with standards in addition to ASCII.
-* It turns out that both letters with accent marks, as well as emoji, can be represented as characters with multiple bytes, with a standard called [Unicode](https://en.wikipedia.org/wiki/Unicode) (one specific version of which is called UTF-8).
-  ![text editor with various options for accent marks over the letter a](unicode.png)
-  ![on-screen emoji selector](emoji.png)
-  * When we receive an emoji, our computer is actually just receiving a decimal number like `128514` (`11111011000000010` in binary, if you can read that more easily) that it then maps to the image of the emoji.
-* Computers can also use binary to represent images. With three bytes, each representing some amount of red, green, and blue, we can represent millions of colors:<br>
-  ![red square labeled with 72, green square labeled with 73, blue square labeled with 33](rgb.png)
-  * The red, green, and blue values are combined to get a light yellow color:<br>
-    ![light yellow square](rgb_combined.png)
-* Each image is comprised of thousands or millions of pixels, or squares of colors, that we can see once we zoom in far enough:
-  ![zoomed-in emoji of laughing tears of joy with squares of pixels distinguishable](emoji_zoomed.png)
-* And videos are just many, many images displayed one after another, at some number of frames per second.
-* On newer iPhones, the "Animoji" feature is just lots of images, generated and displayed one after another:
-  ![various animoji](animoji.png)
-* We can think of videos as abstractions over images, images as abstractions over pixels, and pixels as abstractions over bits.
+* The [CS50 Sandbox](https://sandbox.cs50.io/) is a cloud-based, virtual environment where we've installed the right libraries and settings so that we can all start writing and running code the same way. At the top, there is a simple code editor, where we can type text. Below, we have a terminal window, into which we can type commands:<br>
+  ![two panels, top labeled hello.c, bottom labeled Terminal](cs50_sandbox.png)
+* We'll type our code from earlier into the top:<br>
+  ![hello, world in editor](editor.png)
+  * Notice that our code is colorized, so that certain things are more visible.
+  * And we write our code and save it into a file, to something like `hello.c` to indicate that it is written in C.
+* Once we save the code that we wrote, which is called *source code*, we need to convert it to *machine code*, binary instructions that the computer understands more directly.
+  * We use a program called a *compiler* to compile our source code into machine code.
+* To do this, we use the Terminal panel. The `$` at the left is a prompt, into which we can type commands.
+* We type `clang hello.c` (where `clang` stands for "C languages") and ... nothing happens. We see another `$`, waiting for another command. We can click the folder icon on the top left of CS50 Sandbox, and see that we have another file now, called `a.out`. Now, we can type `./a.out` in the terminal prompt, and see `hello, world`. We just wrote, compiled, and ran our first program!
+* We can change the name of our program from `a.out` to something else. We can pass *command-line arguments* to programs in the terminal, if they accept them. For example, we can type `clang -o hello hello.c`, and `-o hello` is telling the program `clang` to save the compiled output as just `hello`. Then, we can just run `./hello`. (The `.` means the current folder.)
+* We can even abstract this away and just type `make hello`. We see that, by default (in the CS50 Sandbox), `make` uses `clang` to compile our code from `hello.c` into `hello`, with other special features.
+* Now, let's try to get input from the user.
+  ```c
+  #include <stdio.h>
 
-## Algorithms
+  int main(void)
+  {
+      string name = get_string("What is your name?\n");
+      printf("hello, name\n");
+  }
+  ```
+  * If we run `make hello`, we get lots and lots of errors now. But, in cases like this, we should scroll up to the top, and see what that error is, since the first one might have led to all the others.
+  * We see that the first error is `hello.c:5:5: error: use of undeclared identifier 'string' ...`. This tells us that, on line 5, character 5, of the file `hello.c`, the compiler encountered something called `string` that it didn't recognize. In fact, the language C doesn't have a type called `string`.
+* To simplify things (at least for the beginning), we'll include a library, or set of code, from CS50. The library provides us with the `string` variable type, the  `get_string` function, and more. We just have to write a line at the top to `include` the file `cs50.h`:
+  ```c
+  #include <cs50.h>
+  #include <stdio.h>
 
-* So now we can represent inputs and outputs. Inputs and outputs can come in various forms, such as tactile, audio, visual, or text. The black box earlier will contain *algorithms*, step-by-step instructions for solving a problem:<br>
-  ![box with word "algorithms"](algorithms.png)
-* Let's say we wanted to find a friend, Mike Smith, in a phone book.
-  * We could start by flipping through the book, one page at a time, until we find Mike Smith or reach the end of the book.
-  * We could also flip two pages at a time, but if we go too far, we'll have to know to go back a page.
-  * But the most efficient way would be opening the phone book to the middle, decide whether Mike will be in the left half or right half of the book (because the book is alphabetized), and immediately throw away half of the problem. We can repeat this, dividing the problem in half each time.
-*  In fact, we can represent the efficiency of each of those algorithms with a chart:<br>
-  ![chart with: "size of problem" as x-axis; "time to solve" as y-axis; red, steep straight line from origin to top of graph labeled "n"; yellow, less steep straight line from origin to top of graph labeled "n/2"; green, curved line that gets less and less steep from origin to right of graph labeled "log n"](running_time.png)
-  * Our first solution, one page at a time, is like the red line: our time to solve increases linearly as the size of the problem increases.
-  * The second solution, two pages at a time, is like the yellow line: our slope is less steep, but still linear.
-  * Our final solution, is like the green line: logarithmic, since our time to solve rises more and more slowly as the size of the problem increases. In other words, if the phone book went from 1000 to 2000 pages, we would need one more step to find Mike. If the size doubled again from 2000 to 4000 pages, we would still only need one more step.
-* Instinctively, we knew how to solve this problem since we have encountered it in our day lives, but what if we didn't? We can think about solving a problem or designing a program with different strategies, including but not limited to:
-  * brainstorming
-  * planning and storyboarding
-  * organizing the problem into several components or parts and solving each one modularly
-  * creating diagrams or flow charts
-  * developing a set of tests check if your program does the desired task
-* It is important to investigate multiple solutions based on the constraints of the problem to find the most efficient solution for the desired user. Some methods for investigating are:
-  * collecting data via surveys
-  * user testing
-  * interviewing future users
-  * direct observations
-* Interviewing future users play a large role in the development process as they can help provide multiple perspectives that the developer may not have thought about.
+  int main(void)
+  {
+      string name = get_string("What is your name?\n");
+      printf("hello, name\n");
+  }
+  ```
+  * And `stdio.h` is a library that comes with C, that stands for "standard input/output", which includes the `printf` function that prints to the screen,
+* Now, if we try to compile that code, our first error is `hello.c:6:12: error: unused variable 'name' ...`. It turns out, we didn't do anything with the `name` variable after we created it. To do that, we need to change the next line:
+  ```c
+  #include <cs50.h>
+  #include <stdio.h>
 
-## Pseudocode
+  int main(void)
+  {
+      string name = get_string("What is your name?\n");
+      printf("hello, %s\n", name);
+  }
+  ```
+  * We're passing in two arguments, or parameters, to `printf`. The first is the string we want to print, with our `%s` placeholder, and the second is the variable `name` that we want to substitute in.
+* If we change our code, we need to save our file and run `make hello` again. And, if we wanted to stop our program before it finishes, we just need to press control-C.
+* Functions, like `get_string` or `printf`, can take arguments. They can also have return values, and `get_string` returns something of the type `string`.
+* You can find the full documentation for the CS50 Sandbox at [cs50.readthedocs.io](cs50.readthedocs.io/sandbox)
 
-* We can write *pseudocode*, an informal syntax that is just a more specific version of English (or other human language) that represents our algorithm:
-  <pre>
-   0 pick up phone book
-   1 open to middle of phone book
-   2 look at names
-   3 if Smith is among names
-   4     call Mike
-   5 else if Smith is earlier in book
-   6     open to middle of left half of book
-   7     go back to step 2
-   8 else if Smith is later in book
-   9     open to middle of right half of book
-  10     go back to step 2
-  11 else
-  12     quit
-  </pre>
-* Some of these lines start with verbs, or actions. We'll start calling these *functions*:
-  <pre>
-   0 <b>pick up</b> phone book
-   1 <b>open to</b> middle of phone book
-   2 <b>look at</b> names
-   3 if Smith is among names
-   4     <b>call</b> Mike
-   5 else if Smith is earlier in book
-   6     <b>open</b> to middle of left half of book
-   7     go back to step 2
-   8 else if Smith is later in book
-   9     <b>open</b> to middle of right half of book
-  10     go back to step 2
-  11 else
-  12     <b>quit</b>
-  </pre>
-* We also have questions that lead to different paths, like forks in the road, which we'll call *conditions*:
-  <pre>
-   0 pick up phone book
-   1 open to middle of phone book
-   2 look at names
-   3 <b>if</b> Smith is among names
-   4     call Mike
-   5 <b>else if</b> Smith is earlier in book
-   6     open to middle of left half of book
-   7     go back to step 2
-   8 <b>else if</b> Smith is later in book
-   9     open to middle of right half of book
-  10     go back to step 2
-  11 <b>else</b>
-  12     quit
-  </pre>
-* And the answers to questions that decide where we go are called *Boolean expressions*, which eventually result to a value of true or false:
-  <pre>
-   0 pick up phone book
-   1 open to middle of phone book
-   2 look at names
-   3 if <b>Smith is among names</b>
-   4     call Mike
-   5 else if <b>Smith is earlier in book</b>
-   6     open to middle of left half of book
-   7     go back to step 2
-   8 else if <b>Smith is later in book</b>
-   9     open to middle of right half of book
-  10     go back to step 2
-  11 else
-  12     quit
-  </pre>
-* Finally, we have words that lead to cycles, where we can repeat parts of our program, called *loops*:
-  <pre>
-   0 pick up phone book
-   1 open to middle of phone book
-   2 look at names
-   3 if Smith is among names
-   4     call Mike
-   5 else if Smith is earlier in book
-   6     open to middle of left half of book
-   7     <b>go back to step 2</b>
-   8 else if Smith is later in book
-   9     open to middle of right half of book
-  10     <b>go back to step 2</b>
-  11 else
-  12     quit
-  </pre>
+## More examples
 
-## Scratch
-
-* We can write programs with the building blocks we just discovered:
-  * functions
-  * conditions
-  * Boolean expressions
-  * loops
-* We'll use a graphical programming language called [Scratch](https://scratch.mit.edu/), where we'll drag and drop blocks that contain instructions.
-* Later in our course, we'll move onto textual programming languages like C, and Python, and JavaScript. All of these languages, including Scratch, has more powerful features like:
-  * variables
-    * the ability to store values and change them
-  * threads
-    * the ability for our program to do multiple things at once
-  * events
-    * the ability to respond to changes in our program or inputs
+* The CS50 library has other functions, getting input of various types:
+  * `get_char`
+  * `get_double`
+  * `get_float`
+  * `get_int`
+  * `get_long`
+  * `get_string`
   * ...
-* David's first program in Scratch was [Oscartime](https://scratch.mit.edu/projects/76196420/), which we play with a volunteer. The game involves clicking and dragging trash that falls from the top of the screen:<br>
-  ![screenshot of oscartime, with cartoon image of shoe being dropped into a cartoon image of trash can](oscartime.png)
-  * We can already start to decompose the program for the game:
-    * The animation of the trash can is a sequence of 3 images, displayed one after another.
-    * The score was being stored in a variable, and increased with each piece of trash we dragged.
-* The programming environment for Scratch looks like this:<br>
-  ![screenshot of scratch](scratch.png)
-  * On the left, we have puzzle pieces that represent functions or variables, or other concepts, that we can drag and drop into our instruction area in the center.
-  * On the right, we have a stage that will be shown by our program to a human, where we can add or change backgrounds, characters (called sprites in Scratch), and more.
-* We can drag a few blocks to make Scratch say "hello, world":<br>
-  ![screenshot of hello, world](hello_world.png)
-  * The "when green flag clicked" block is the start of our program, and below it we've snapped in a "say" block and typed in "hello, world".
-* We can also drag in the "ask and wait" block, with a question like "What's your name?", and combine it with a "say" block for the answer:<br>
-  ![screenshot of question and answer](answer.png)
-* We can use the "join" block to combine two phrases so Scratch can say "hello, David":<br>
-  ![screenshot of join](join.png)
-  * Notice that we can nest instructions and variables.
-* We can try to make Scratch (the name of the cat) say meow:<br>
-  ![three blocks labeled "start sound Meow", one after the other](meow.png)
-  * But when we click the green flag, we only hear the meow sound once. Our first bug, or mistake! It turns out that computers can do things really quickly, so it went to each block, started playing the sound, and moved on to the next block. So all three "meow"s overlapped and sounded like one.
-* We can fix this with "play sound until done", and even "wait" before we say meow again:<br>
-  ![three blocks labeled "play sound Meow until done", with a "wait 1 second" block between each](meow_wait.png)
-* We can copy and paste these blocks over and over again, but our program can have better design if we use a loop, like the "forever" block:<br>
-  ![blocks labeled "play sound Meow until done" and "wait 1 second", nested inside a block that is labeled "forever"](forever.png)
-* We have another program, [counting sheep](https://scratch.mit.edu/projects/26329219/):<br>
-  ![blocks labeled "set counter to 1", "forever", "say counter for 1 seconds", "wait 1 seconds", "change counter by 1"](count.png)
-  * Here, "counter" is a variable where we store a value, and increase it every time our sheep says it.
-* We can have our sheep double the counter each time, and if we wait a while, eventually the sheep gives up and says "infinity". Since computers has to store values physically, there is only a finite number of bits. The programmer (in this case, the writers of the Scratch language) will have to decide on a limit to how many bits are used for each type of variable, as well as how to handle reaching those limits.
-* We can tinker with other blocks, and have Scratch meow when we "pet" him with our mouse pointer:<br>
-  ![blocks labeled "forever", "if touching mouse pointer then", "play sound meow until done"](pet-0.png)
-  * We need the "forever" block because, otherwise, our program would check that condition at the very beginning, and then stop.
-* We can also use the "if else" block to have different sounds play depending on the condition.
-* With a few more blocks, we can make Scratch move on the screen, left and right:<br>
-  ![blocks labeled "set rotation style left-right", "forever", "move 10 steps", "if touching edge then", "turn 180 degrees"](bounce.png)
-* And if we find some images of Scratch with his legs in various positions, we can even simulate walking:<br>
-  ![blocks labeled "set rotation style left-right", "forever", "move 10 steps", "if touching edge then", "turn 180 degrees", "next costume"](costume.png)
-  * In another tab called "Costumes", we can set what Scratch looks like in each frame. And animation is just a more complex version of this.
-* By exploring what other blocks we have available, we can have Scratch follow us with blocks like "point toward mouse cursor".
-* We can also have multiple scripts, or snippets of code, in the same program:<br>
-  ![two sets of blocks, each under a "when green flag clicked" block. the first set of blocks is: "set muted to false", "forever", "if key space pressed then", "if muted = false then", "set muted to true", "else", "set muted to false", "wait 1 seconds". the second set is: "forever", "if muted = false then", "start sound SeaLion", "think hi hi hi for 2 seconds", "wait 1 seconds"](seal.png)
-  * With the space bar, we can change the value of the variable called "muted", and the second script will play the sound or not depending on the value of "muted".
-* With events, we can have two sprites, each with their own script, interact with each other:<br>
-  ![blocks labeled "forever", "if key space pressed? then", "say Marco for 2 seconds", "broadcast event"](marco.png)<br>
-  ![blocks labeled "when I receive event", "say Polo for 2 seconds"](polo.png)
-  * We put these sets of blocks on different sprites, and now when we click the green flag, one says "Marco" and the other says "Polo" on its own!
-* One sign of a poorly designed program is one where we copy and paste the same code over and over again. The acronym of DRY, or "Don't Repeat Yourself", is a good reminder. For example, instead of duplicating the same blocks, we can use a "repeat" block to do something over and over again.
-* The next step is abstracting away some of our code into a function. We can make a block called "cough" and put some blocks inside it:<br>
-  ![two sets of blocks. the first set of blocks is: "define cough", "say cough for 1 seconds", "wait 1 seconds". the second set is: "when green flag clicked", "repeat 3", "cough"](cough_function.png)
-  * Now, all of our sprites can use the same "cough" block, in as many places as we'd like.
-* We can even put a number of times into our cough function, so we only need a single block to cough any number of times:<br>
-  ![two sets of blocks. the first set of blocks is: "define cough n times", "repeat n", say cough for 1 seconds", "wait 1 seconds". the second set is: "when green flag clicked", "cough 3 times"](cough_function_2.png)
-* As we use higher-level programming languages, we'll see more examples of how collections of code written by others, called libraries, will be useful for us to write programs of our own.
-* We play more examples of interactive games, written by former students.
-* Welcome aboard!
+* And there are corresponding types in C and ways to print them with `printf`:
+  * `bool`
+  * `char`, `%c`
+  * `double`
+  * `float`, `%f`
+  * `int`, `%i`
+  * `long`, `%li`
+  * `string`, `%s`
+* The CS50 Sandbox has various languages we can choose from, as well as a file name we can get started with.
+* In fact, for each of these examples, you can click on the sandbox links on the [curriculum](https://cs50.harvard.edu/2018/fall/weeks/1/) to run and edit your own copies of them.
+* In `int.c`, we get and print an integer:
+  ```c
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int main(void)
+  {
+      int i = get_int("Integer: ");
+      printf("hello, %i\n", i);
+  }
+  ```
+  * Notice that we use `%i` to print an integer.
+  * `int main(void)` is the equivalent of "when green flag clicked", and we'll learn more about that in the coming weeks.
+  * We can now run `make int` and run our program with `./int`.
+* In `float.c`, we can get decimal numbers (called floating-point values in computers, because the decimal point can "float" between the digits, depending on the number):
+  ```c
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int main(void)
+  {
+      float f = get_float("Float: ");
+      printf("hello, %f\n", f);
+  }
+  ```
+  * Now, if we compile and run our program, we see something like `hello, 42.000000`, even if we just typed in `42` at the prompt.
+* With `ints.c`, we can do some math[^5]:
+  ```c
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int main(void)
+  {
+      // Prompt user for x
+      int x = get_int("x: ");
+
+      // Prompt user for y
+      int y = get_int("y: ");
+
+      // Perform arithmetic
+      printf("x + y = %i\n", x + y);
+      printf("x - y = %i\n", x - y);
+      printf("x * y = %i\n", x * y);
+      printf("x / y = %i\n", x / y);
+      printf("x mod y = %i\n", x % y);
+  }
+  ```
+  * First, we get two integers, `x` and `y`. Then, we print out what we want to do, like `x + y = %i\n`, and pass in the value we want, `x + y`. `*` is used for multiplication, and `/` for division. `%` on its own, between two variables, is the [modulo operator](https://en.wikipedia.org/wiki/Modulo_operation). [^6]
+  * Interestingly, when we pass in `2` for `x` and `10` for `y`, we got ... `x - y = 0`. It turns out, since the two variables are integers, the result is an integer, and since 2 divided by 10 is less than 1, all we have left is the 0.
+* With `floats.c`, we can see what happens when we use floats:
+  ```c
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int main(void)
+  {
+      // Prompt user for x
+      float x = get_float("x: ");
+
+      // Prompt user for y
+      float y = get_float("y: ");
+
+      // Perform division
+      printf("x / y = %.50f\n", x / y);
+  }
+  ```
+  * With `%50f`, we can specify the number of decimal places displayed.
+  * Hmm, now we get ...
+  ```
+  x: 2
+  y: 10
+  x / y = 0.20000000298023223876953125000000000000000000000000
+  ```
+* Our computer has memory, in hardware chips called RAM, random-access memory. Our programs use that RAM to store data as they run, but that memory is finite. So with a finite number of bits, we can't represent all possible numbers (of which there are an infinite number of). So our computer has a certain number of bits for each float, and has to round to the nearest decimal value at a certain point.
+* And these imprecisions can be problematic in finance, rockets, or scientific applications. But we can get around this problem, by specifying the number of decimal places we will be precise to, and allocate the right number of bits to represent that many decimal places.
+* A float in C, on most computers, uses 4 bytes, or 32 bits. Another type, called a double, uses twice as many bits, or 8 bytes.
+* If we run `doubles.c`, which is `floats.c` but with the `double` type for variables, we see that we have many more decimal digits of precision. And the tradeoff for the additional precision is that we now have to use more memory space.
+* Let's look at `parity.c`:
+  ```c
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int main(void)
+  {
+      // Prompt user for integer
+      int n = get_int("n: ");
+
+      // Check parity of integer
+      if (n % 2 == 0)
+      {
+          printf("even\n");
+      }
+      else
+      {
+          printf("odd\n");
+      }
+  }
+  ```
+  * By taking the remainder after we divide `n` by 2, we can tell whether `n` is even or odd.
+* In `conditions.c`, we turn the snippet from before into a program:
+  ```c
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int main(void)
+  {
+      // Prompt user for x
+      int x = get_int("x: ");
+
+      // Prompt user for y
+      int y = get_int("y: ");
+
+      // Compare x and y
+      if (x < y)
+      {
+          printf("x is less than y\n");
+      }
+      else if (x > y)
+      {
+          printf("x is greater than y\n");
+      }
+      else
+      {
+          printf("x is equal to y\n");
+      }
+  }
+  ```
+* In `answer.c`, we get text from the user:
+  ```c
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int main(void)
+  {
+      // Prompt user for answer
+      char c = get_char("Answer: ");
+
+      // Check answer
+      if (c == 'Y' || c == 'y')
+      {
+          printf("yes\n");
+      }
+      else if (c == 'N' || c == 'n')
+      {
+          printf("no\n");
+      }
+  }
+  ```
+  * Here, we use `get_char` and the `char` data type to get a single character from the user.
+* The algorithms we use here can be helpful for building more complex algorithms. We could imagine that we could use the sum algorithm as a start to build a program that takes the average of multiple numbers. Similarly we can think about the programs we write for physical objects like robots. The algorithms to move a robot forwards, backwards, left, and right is likely something someone has already implemented, but we could build something more complex based off of that like determining the robot's path through a maze.
+  #### Logical Operators
+  * The logical operators we have access to are "and", "or", and "not"[^7].
+  * | C syntax | Operator | Example (suppose `x = 5` and `y = 4`) |
+|:----------:|:------:|-------------------------------|
+| `&&` | AND | `x < 10 && y > 3` --> `true` |
+| `||` | OR | `x < 2 || y > 3` --> `true` |
+| `!` | NOT | `!(x==y)` --> `true` |
+  * Notice that we use a `||` to indicate an "or" in our Boolean expression. (A logical "and" would be `&&`.)
+* In Scratch, we were able to create our own block, that we called "cough". We can do the same in C, by creating our own function.
+* If we wanted to print "cough" 3 times, we could use a `for` loop:
+  ```c
+  #include <stdio.h>
+
+  int main(void)
+  {
+      for (int i = 0; i < 3; i++)
+      {
+          printf("cough\n");
+      }
+  }
+  ```
+* We can move the `printf` line to its own function:
+  ```c
+  #include <stdio.h>
+
+  void cough(void);
+
+  int main(void)
+  {
+      for (int i = 0; i < 3; i++)
+      {
+          cough();
+      }
+  }
+
+  // Cough once
+  void cough(void)
+  {
+      printf("cough\n");
+  }
+  ```
+  * Notice that we need to declare that the `cough` function exists, so we need the prototype, `void cough(void);`, before our `main` function calls it. The C compiler reads our code from top to bottom, so we need to tell it that the `cough` function exists, before we use it. And we want to keep our `main` function close to the top, so the actual implementation of `cough` will still be below it.
+  * In fact, `cs50.h` and `stdio.h` are both header files, containing prototypes for functions like `get_string` and `printf` that we can then use. The actual implementation of those files are in `cs50.c` and `stdio.c` as source code, and compiled to files elsewhere on the system.
+  * And our `cough` function doesn't take any inputs, so we have `cough(void)`, and the function also doesn't return anything, so we have `void` in front of `cough` as well. (Our `main` function is supposed to return an `int`, and by default it will return `0` if nothing goes wrong.)
+* We can abstract `cough` further:
+  ```c
+  #include <stdio.h>
+
+  void cough(int n);
+
+  int main(void)
+  {
+      cough(3);
+  }
+
+  // Cough some number of times
+  void cough(int n)
+  {
+      for (int i = 0; i < n; i++)
+      {
+          printf("cough\n");
+      }
+  }
+  ```
+  * Now, when we want to print "cough" some number of times, we can just call that same function. Notice that, with `cough(int n)`, we indicate that the `cough` function takes as input an `int`, which we refer to as `n`. And inside `cough`, we use `n` in our `for` loop to print "cough" the right number of times.
+* Let's look at `positive.c`:
+  ```c
+  #include <cs50.h>
+  #include <stdio.h>
+
+  int get_positive_int(string prompt);
+
+  int main(void)
+  {
+      int i = get_positive_int("Positive integer: ");
+      printf("%i\n", i);
+  }
+
+  // Prompt user for positive integer
+  int get_positive_int(string prompt)
+  {
+      int n;
+      do
+      {
+          n = get_int("%s", prompt);
+      }
+      while (n < 1);
+      return n;
+  }
+  ```
+  * The CS50 library doesn't had a `get_positive_int` function, but we can write one ourselves. In our function, we initialize a variable, `int n`, but not assign a value to it yet. Then, we have a new construct, `do ... while`, which does something _first_, then checks a condition, and repeats until the condition is no longer true.
+  * Then, once we have an `n` that is not `< 1`, we can return it with the `return` keyword. And back in our `main` function, we can set `int i` to that value.
+  * In C, variables also have *scope*, which generally means that they only exist within the curly braces that they were declared. For example, if we had `int n = get_int(...)` within the do-while loop, we wouldn't be able to `return` it, since that line would be outside of the scope of `n`. (Similarly, our `main` function can't directly see any variables inside `get_positive_int`, since each function has its own set of curly braces and thus different scopes for variables declared inside them.)
+* In Scratch, you might have noticed that you could make a variable available to one sprite, or all sprites. And in C, we have both *local* and *global* variables. All variables we've seen thus far are local, though eventually we'll see global variables, which we'll be able to use anywhere in our program.
+
+## More problems
+
+* We've already seen an example of floating-point imprecision, but we can also have problems with integers.
+* If, for example, we had a number like 129, to which we added a 1, we wouldn't have 1210, where the last digit went from 9 to 10. Instead, we carry the 1, such that the number we have is 130. And if we had a number like 999, we would carry the 1 a few times, until we got the number 1000.
+* But if we only had space to write down 3 digits, we would end up with 000. And this problem is called overflow, where the number we are trying to store is too big for the amount of space we have allocated.
+* In binary, if we had the number `111`, and added 1, we would carry that 1 until we got `1000`. And similarly, if we only had 3 bits, we would have `000`.
+* In the Lego Star Wars game, there is a set maximum of 4 billion coins that the player can collect, since presumably there are only 32 bits used to store that count (and 2 to the power of 32 is slightly over 4 billion).
+* We can see this in `overflow.c`:
+  ```c
+  #include <stdio.h>
+  #include <unistd.h>
+
+  int main(void)
+  {
+      // Iteratively double i
+      for (int i = 1; ; i *= 2)
+      {
+          printf("%i\n", i);
+          sleep(1);
+      }
+  }
+  ```
+  * Notice that here, we have a line that starts with `//`, which indicates a comment. A comment is a note to ourselves or future readers, that the compiler will ignore. Not all environments will support textual comments in the same way, so it is important to think about other ways to document your code.
+  * In our `for` loop, we set `i` to `1`, and double it with `*= 2`. (And we'll keep doing this forever, so there's no condition we check.)
+  * We also use the `sleep` function from `unistd.h` to let our program pause each time.
+  * Now, when we run this program, we see the number getting bigger and bigger, until:
+    ```
+    1073741824
+    overflow.c:9:31: runtime error: signed integer overflow: 1073741824 * 2 cannot be represented in type 'int'
+    -2147483648
+    0
+    0
+    ...
+    ```
+  * It turns out, our program recognized that a signed integer (an integer with a positive or negative sign) couldn't store that next value, and printed an error. Then, since it tried to double it anyways, `i` became a negative number, and then 0.
+* The Y2K problem arose because many programs stored the calendar year with just two digits, like 98 for 1998, and 99 for 1999. But when the year 2000 approached, the programs would have stored 00, leading to confusion between the years 1900 and 2000.
+* A Boeing 787 airplane also had a bug where a counter in the generator overflows after a certain number of days of continuous operation, since the number of seconds it has been running could no longer be stored in that counter.
+* In an older version of Civilization, integer underflow leads to one of the characters, Gandhi, becoming much more aggressive since his "aggression" value, already low,  becomes large when too much is subtracted from it. For example, if we had `00000001` stored, and subtract 1 from it, we would have `00000000`. But if we were to subtract 2, we actually roll backwards to `11111111`, which is the largest positive value!
+* So, we've seen a few problems that can happen, but hopefully now too understand why and how to prevent them.
+* With this week's problem set, we'll use the CS50 Lab, built on top of the CS50 Sandbox, to write some programs with walkthroughs to guide us.
+
+---
+
+[^1]:In the exam reference sheet for the AP CSP exam, `DISPLAY(expression)` displays or "prints" the value of an expression followed by a space.
+
+[^2]:In the exam reference sheet for the AP CSP exam, "←" is used to indicate assignment instead of "=".
+
+[^3]: In the exam reference sheet for the AP CSP exam, `=`, `≠`, `>`, `<`, `≥`, and `≤` are relational operators that are evaluated as a Boolean value. For example `a = b` would return `true` if `a` and `b` are equal. The syntax for an `if` block in the AP CSP exam reference sheet is:
+    ```
+    IF(condition)
+    {
+    <block of statements>
+    }
+    ```
+    and the syntax for an `if-else` block is
+    ```
+    IF(condition)
+    {
+     <first block of statements>
+    }
+    ELSE
+    {
+     <second block of statements>
+    }
+    ```
+
+[^4]: The syntax for a `for` loop in the AP CSP Exam reference sheet is:
+    ```
+    REPEAT n TIMES
+    {
+     <block of statements>
+    }
+    ```
+    The syntax for a `while` loop in the AP CSP Exam reference sheet is:
+    ```
+    REPEAT UNTIL(condition)
+    {
+     <block of statements>
+    }
+    ```
+    The syntax for iterating over a list in the AP CSP Exam reference sheet is:
+    ```
+    FOR EACH item IN aList
+    {
+     <block of statements>
+    }
+    ```
+
+[^5]: In the exam reference sheet for the AP CSP exam:
+    * `a + b` indicates addition
+    * `a - b` indicates subtraction
+    * `a * b` indicates multiplication
+    * `a / b` indicates division
+    * `a MOD b` indicates modulo
+
+[^6]: In terms of order of operations, modulo operators have the same precedence as multiplication and division.
+
+[^7]: In the exam reference sheet for the AP CSP exam, `AND`, `OR`, `NOT` are the syntactical equivalents of `&&`, `||`, and `!`.
