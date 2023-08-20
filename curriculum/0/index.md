@@ -19,6 +19,8 @@ C. Source Code. Machine Code. Compiler. Correctness, Design, Style. Visual Studi
     </ul>
   </details>
 
+### Resources
+
 <details>  
   <summary>Shorts</summary>
   <ul>
