@@ -5,7 +5,7 @@
 <div style="text-align:center">
 <img src="https://image.freepik.com/free-vector/back-school-design-with-yellow-background-vector_1142-4669.jpg" alt="welcome back to school" height="200px">
 </div>
-<br><br>
+<br>
 
 ### This week's agenda
 
