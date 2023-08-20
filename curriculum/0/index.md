@@ -4,7 +4,7 @@ C. Source Code. Machine Code. Compiler. Correctness, Design, Style. Visual Studi
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ywg7cW0Txs4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-  ### Lecture
+### Lecture
 
   - [Notes](https://cs50.harvard.edu/ap/2024/curriculum/x/notes/1/)
   - [Slides](https://docs.google.com/presentation/d/1gTpAaUbeu30YuvMu4rHEVTG6S9M3UeLyoEiWkqoGiJA/edit?usp=sharing)
