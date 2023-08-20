@@ -3,7 +3,7 @@
 ## Week 0<br>Week of 8/21  
 
 <div style="text-align:center">
-<img src="https://image.freepik.com/free-vector/back-school-design-with-yellow-background-vector_1142-4669.jpg" alt="welcome back to school" width="30%">
+<img src="https://image.freepik.com/free-vector/back-school-design-with-yellow-background-vector_1142-4669.jpg" alt="welcome back to school" height="150px">
 </div>
 <br><br>
 
