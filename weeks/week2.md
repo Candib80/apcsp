@@ -2,7 +2,7 @@
 
 ## Week 2<br>Week of 9/6 
 
-### [Unit 1](/apcsp/curriculum/1)
+### [Unit 0](/apcsp/curriculum/0)
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
