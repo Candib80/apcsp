@@ -6,8 +6,8 @@
   
   |       | Class | Homework |
   | ----- | ----- | -------- |
-  |**Mon**|Start C | |
-  |**Tue**|Continue C | |
+  |**Mon**|Start C |Join class on Submit50 - Details in Teams!<br>Join AP Classroom |
+  |**Tue**|Continue C |Join class on Submit50 - Details in Teams!<br>Join AP Classroom |
   |**Wed**|Continue C | |
   |**Thu**|Continue C | |
   |**Fri**| | |
