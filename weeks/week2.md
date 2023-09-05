@@ -8,6 +8,6 @@
   |-------|---------              |---------  |
   |**Mon**|Labor Day Holiday!! | |
   |**Tue**|Continue with C<br>Join class in Submit50 | |
-  |**Wed**| | |
+  |**Wed**|Finish up lecture on C | |
   |**Thu**| | |
   |**Fri**| | |
