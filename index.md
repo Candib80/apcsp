@@ -8,11 +8,11 @@ title: false
 
 <img src="https://bordertherapy.com/wp-content/uploads/2018/05/announcements-border-therapy.jpg" alt="announcements" height="300">  
 
-- <span style="font-size: 22px;">We are on Week 1!</span>
+- <span style="font-size: 22px;">We are on Week 2!</span>
 
 
 
-### Your [Summer Assignment](\apcsp\curriculum\summer-assignment) is live now!!
+<!-- ### Your [Summer Assignment](\apcsp\curriculum\summer-assignment) is live now!! -->
 
 #### Why CS?
 - To satisfy personal creativity
