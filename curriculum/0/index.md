@@ -54,6 +54,7 @@ C. Source Code. Machine Code. Compiler. Correctness, Design, Style. Visual Studi
 - [Lab 1](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/1/)
 - [Practice Problems](https://cs50.harvard.edu/ap/2024/problems/1/)
 - Problem Sets: Coming
+
   <!-- 1. Submit one of:
     - [this version of Mario](https://cs50.harvard.edu/ap/2023/curriculum/x/psets/1/mario/less/) if feeling less comfortable
     - [this version of Mario](https://cs50.harvard.edu/ap/2023/curriculum/x/psets/1/mario/more/) if feeling more comfortable
