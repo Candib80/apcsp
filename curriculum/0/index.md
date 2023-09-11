@@ -55,14 +55,14 @@ C. Source Code. Machine Code. Compiler. Correctness, Design, Style. Visual Studi
 - [Practice Problems](https://cs50.harvard.edu/ap/2024/problems/1/)
 - Problem Sets: Coming
 
-  <!-- 1. Submit one of:
-    - [this version of Mario](https://cs50.harvard.edu/ap/2023/curriculum/x/psets/1/mario/less/) if feeling less comfortable
-    - [this version of Mario](https://cs50.harvard.edu/ap/2023/curriculum/x/psets/1/mario/more/) if feeling more comfortable
   1. Submit one of:
-    - [Cash](https://cs50.harvard.edu/ap/2023/curriculum/x/psets/1/cash/) if feeling less comfortable
-    - [Credit](https://cs50.harvard.edu/ap/2023/curriculum/x/psets/1/credit/) if feeling more comfortable 
+    - [this version of Mario](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/1/mario/less/) if feeling less comfortable
+    - [this version of Mario](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/1/mario/more/) if feeling more comfortable
+  1. Submit one of:
+    - [Cash](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/1/cash/) if feeling less comfortable
+    - [Credit](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/1/credit/) if feeling more comfortable 
 
-    *If you submit both versions of Mario, I’ll record the higher of your two scores. If you submit both Cash and Credit, I’ll record the higher of your two scores.* -->
+    *If you submit both versions of Mario, I’ll record the higher of your two scores. If you submit both Cash and Credit, I’ll record the higher of your two scores.*
    
 ### Advice
 
