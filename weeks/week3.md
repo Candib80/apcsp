@@ -1,16 +1,15 @@
 <meta http-equiv="refresh" content="300"/>
 
-## Week 3<br>Week of 9/12
+## Week 3<br>Week of 9/11
 
-### [Unit 1](/apcsp/curriculum/1)
-
+### [Unit 0](/apcsp/curriculum/0)
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|Start [lecture](https://www.youtube.com/watch?v=URrzmoIyqLw&t=3873s) with `calculator.c` | |
-  |**Tue**|Conditionals & Boolean expressions | |
-  |**Wed**|Loops | |
-  |**Thu**|Continue with [Loops & Functions](https://www.youtube.com/watch?v=URrzmoIyqLw&t=5798s) | |
-  |**Fri**|Intro to Mario |Try and figure out how to validate user input for Mario to accept an integer between 2 and 10 inclusive |
+  |**Mon**|Work on [Practice Problems](https://cs50.harvard.edu/ap/2024/problems/1/) | |
+  |**Tue**| | |
+  |**Wed**| | |
+  |**Thu**| | |
+  |**Fri**| | |
 
 <img src="https://pbs.twimg.com/media/DKAT7rLVoAAaqdV.jpg" alt="code works, why" height="300">
