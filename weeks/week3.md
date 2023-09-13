@@ -7,9 +7,9 @@
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
   |**Mon**|Work on [Practice Problems](https://cs50.harvard.edu/ap/2024/problems/1/) | |
-  |**Tue**| | |
-  |**Wed**| | |
-  |**Thu**| | |
-  |**Fri**| | |
+  |**Tue**|Finish Practice problems<br>Start on PSET if finished | |
+  |**Wed**|Start on [PSET](https://candib80.github.io/apcsp/curriculum/0/#labs-practice-and-problems) | |
+  |**Thu**|Work on PSET | |
+  |**Fri**|Work on PSET | |
 
 <img src="https://pbs.twimg.com/media/DKAT7rLVoAAaqdV.jpg" alt="code works, why" height="300">
