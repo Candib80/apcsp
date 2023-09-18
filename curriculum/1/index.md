@@ -1,26 +1,24 @@
 # Unit 1 - Arrays
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xC3BZa1pcsY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Preprocessing. Compiling. Assembling. Linking. Debugging. Arrays. Strings. Command-Line Arguments. Cryptography.
 
-<details>
-  <summary>Lecture</summary>
-  <ul>
-    <li><a href="https://cs50.harvard.edu/ap/2023/curriculum/x/notes/2/">Notes</a></li>
-    <details><summary>Slides</summary>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XmYnsO7iSI8?si=5flLfWHOiNjIHudo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### Lecture
+
+  - [Notes](https://cs50.harvard.edu/ap/2024/curriculum/x/notes/2/)
+  - [Slides](https://docs.google.com/presentation/d/1HBQcIKeQUy-kK_WW8G2bABTJu94bAdfgyZRaJbR0lbE/edit?usp=sharing)
+
+  <details>
+    <summary>Source Code</summary>
     <ul>
-      <li><a href="https://docs.google.com/presentation/d/1O-Ft7NJln0OYA8veKHDhTurnHrYN67TMaBaTskESnkg/edit?usp=sharing">Google Slides</a></li>
-      <li><a href="https://cdn.cs50.net/2021/fall/lectures/2/lecture2.pdf">PDF</a></li>
+      <li><a href="https://cdn.cs50.net/2022/fall/lectures/2/src2/">Index</a></li>
+      <li><a href="https://cdn.cs50.net/2022/fall/lectures/2/src2.pdf">PDF</a></li>
+      <li><a href="https://cdn.cs50.net/2022/fall/lectures/2/src2.zip">Zip</a></li>
     </ul>
-    </details>
-    <details><summary>Source Code</summary>
-    <ul>
-      <li><a href="https://cdn.cs50.net/2021/fall/lectures/2/src2/">Index</a></li>
-      <li><a href="https://cdn.cs50.net/2021/fall/lectures/2/src2.pdf">PDF</a></li>
-      <li><a href="https://cdn.cs50.net/2021/fall/lectures/2/src2.zip">Zip</a></li>
-    </ul>
-    </details>
-  </ul>   
-</details>   
+  </details>
+
+### Resources
 
 <details>  
   <summary>Shorts</summary>
@@ -33,6 +31,8 @@
     <li><a href="https://www.youtube.com/embed/AI6Ccfno6Pk">Command Line Arguments</a></li>
   </ol>
 </details>
+
+- [Section](https://cs50.harvard.edu/ap/2024/curriculum/x/sections/2/)
 
 <details>  
   <summary><a href="\apcsp\assets\pdfs\ch2_ref_sheets.pdf">Reference Sheets</a></summary>
@@ -48,13 +48,19 @@
 
 ### Practice, Labs & Problems
 
-- [Practice Problems](https://cs50.harvard.edu/ap/2023/problems/2/)
-- [Lab 2](https://cs50.harvard.edu/ap/2023/curriculum/x/labs/2/)
+- [Lab 2](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/2/)
+- [Practice Problems](https://cs50.harvard.edu/ap/2024/problems/2/)
 - Problem Sets:
-  - Submit [Readability](https://cs50.harvard.edu/ap/2023/curriculum/x/psets/2/readability/)
+  - Run `update50` in your codespace’s terminal window to ensure your codespace is up-to-date and, when prompted, click **Rebuild now**
+  - Submit [Readability](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/2/readability/)
   - Submit **one** of the following:
-    - [Caesar](https://cs50.harvard.edu/ap/2023/curriculum/x/psets/2/caesar/), if feeling less comfortable
-    - [Substitution](https://cs50.harvard.edu/ap/2023/curriculum/x/psets/2/substitution/), if feeling more comfortable
+    - [Bulbs](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/2/bulbs/), if feeling less comfortable
+    - [Caesar](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/2/caesar/), if feeling less comfortable
+    - [Substitution](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/2/substitution/), if feeling more comfortable
+    - [Wordle50](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/2/wordle50/), if feeling more comfortable
+
+If you submit more than one of Bulbs, Caesar, Substitution, or Wordle50, we’ll record the single highest of your scores among those problems.
+
 
 
 <!-- 1. [Shining](https://lab.cs50.io/candib80/cs50labs/c/shining/)
