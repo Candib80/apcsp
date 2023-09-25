@@ -5,7 +5,7 @@
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
   |**Mon**|Continue with Unit 1 | |
-  |**Tue**| | |
+  |**Tue**|Watch the [arrays section ov video](https://www.youtube.com/live/XmYnsO7iSI8?si=Q-iuK2Gq8Wwrb8NF&t=3778) until strings at 1:35:11 | |
   |**Wed**| | |
   |**Thu**| | |
   |**Fri**| | |
