@@ -8,7 +8,7 @@ title: false
 
 <img src="https://bordertherapy.com/wp-content/uploads/2018/05/announcements-border-therapy.jpg" alt="announcements" height="300">  
 
-- <span style="font-size: 22px;">We are on Week 5!</span>
+- <span style="font-size: 22px;">We are on Week 6!</span>
 
 
 
