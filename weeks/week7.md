@@ -1,14 +1,14 @@
-## Week 7 <br>Week of 10/10
+## Week 7 <br>Week of 10/9
 
-### [Unit 2](/apcsp/curriculum/2)
+### [Unit 1](/apcsp/curriculum/1)
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|Test | |
-  |**Tue**|Start on [Unit 2](/apcsp/curriculum/2) | |
-  |**Wed**|Juniors - PSAT | |
-  |**Thu**|Debugging |Watch the debugging shorts on how to use debug50:<br>[Step Over](https://www.youtube.com/watch?v=---HbbANxDQ) & [Step Into](https://www.youtube.com/watch?v=tk3cl8hyfqM)<br>Complete the short assignment in Teams for the videos |
-  |**Fri**|Memory & Arrays | |
+  |**Mon**|Work Practice problems or start on [PSET: Readability](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/2/readability/)<br>Make sure to update your codespace first! |Work on PSET |
+  |**Tue**|Work on PSET |Work on PSET |
+  |**Wed**|Work on PSET |Work on PSET |
+  |**Thu**|Readability Due tonight! |Work on PSET |
+  |**Fri**|Work on your choice of other PSET |Work on PSET |
 
 
 <img src="https://ih0.redbubble.net/image.453247676.2842/flat,800x800,070,f.u3.jpg" alt="hide and seek champ ;" height="350">
