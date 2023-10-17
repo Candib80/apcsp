@@ -1,13 +1,13 @@
-## Week 8 <br>Week of 10/17
+## Week 8 <br>Week of 10/16
 
-### [Unit 2](/apcsp/curriculum/2)
+### [Unit 1](/apcsp/curriculum/1)
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
   |**Mon**|Fall Holiday - NO SCHOOL! | |
-  |**Tue**|Fall Holiday - NO SCHOOL! | |
-  |**Wed**|Continue with Arrays; Start on Strings | |
-  |**Thu**|Finish up strings<br>In class exercises | |
+  |**Tue**|Start on next [PSET](https://candib80.github.io/apcsp/curriculum/1/#practice-labs--problems) | |
+  |**Wed**| | |
+  |**Thu**| | |
   |**Fri**| | |
 
 

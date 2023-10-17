@@ -7,18 +7,10 @@
 
 <!-- - [Summer Assignment 2023](\apcsp\curriculum\summer-assignment) -->
 
-- [Week 0](/apcsp/weeks/week0)
-- [Week 1](/apcsp/weeks/week1)
-- [Week 2](/apcsp/weeks/week2)
-- [Week 3](/apcsp/weeks/week3)
-- [Week 4](/apcsp/weeks/week4)
-- [Week 5](/apcsp/weeks/week5)
-- [Week 6](/apcsp/weeks/week6)
-- [Week 7](/apcsp/weeks/week7)
+- [Week 8](/apcsp/weeks/week8)
 
 
 
-<!--
 <details>
     <summary>Q1</summary>
     <ul>
@@ -32,6 +24,8 @@
         <li><a href="https://candib80.github.io/apcsp/weeks/week7/">Week 7</a></li>
     </ul>
 </details>
+
+<!--
 
 <details>
     <summary>Q2</summary>
