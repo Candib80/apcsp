@@ -6,7 +6,7 @@ title: false
 
 # Hello, world!
 
-<img src="https://cdn2.vectorstock.com/i/1000x1000/66/81/announcement-sign-or-stamp-vector-32356681.jpg" alt="announcements" height="300">  
+<img src="https://www.dv8sussex.com/wp-content/uploads/2020/03/bud-important-announcement-800x280-1.jpg" alt="announcements" height="300">  
 
 - <span style="font-size: 22px;">We are on Week 8!</span>
 
