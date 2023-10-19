@@ -8,7 +8,7 @@
   |**Tue**|Start on next [PSET](https://candib80.github.io/apcsp/curriculum/1/#practice-labs--problems) | |
   |**Wed**| | |
   |**Thu**| | |
-  |**Fri**| | |
+  |**Fri**|Finish up PSETs, and look over stuff from Unit 1<br>Test on Unit 1 next week | |
 
 
 <meta http-equiv="refresh" content="300"/>
