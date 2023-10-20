@@ -4,7 +4,7 @@
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|Review for Test on Unit 1<br>Test tomorrow |If you would like some extra practice, and some simple programs, see below |
+  |**Mon**|Review for Test on Unit 1<br>Test tomorrow |If you would like some extra practice, and some simple programs, [see below](https://candib80.github.io/apcsp/weeks/week9/#additional-practice-on-arrays--command-line-arguments) |
   |**Tue**|Test on Unit 1 | |
   |**Wed**|Start on Unit 2 | |
   |**Thu**| | |
