@@ -1,26 +1,24 @@
-# Unit 3 - Algorithms
+# Unit 2 - Algorithms
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yb0PY3LX2x8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Searching: Linear Search, Binary Search. Sorting: Bubble Sort, Selection Sort, Merge Sort. Asymptotic Notation. Recursion.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4oqjcKenCH8?si=UlTQgLAfKGRx9vE1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### Lecture
+
+  - [Notes](https://cs50.harvard.edu/ap/2024/curriculum/x/notes/3/)
+  - [Slides](https://docs.google.com/presentation/d/1F7-qTRQ__brpeAxx7MiIGu_bMH027p627fl5GFHdMEQ/edit?usp=sharing)
 
 <details>
-  <summary>Lecture</summary>
-  <ul>
-    <li><a href="https://cs50.harvard.edu/ap/2023/curriculum/x/notes/3/">Notes</a></li>
-    <details><summary>Slides</summary>
+  <summary>Source Code</summary>
     <ul>
-      <li><a href="https://docs.google.com/presentation/d/1yIBqjBlJMr_lS7NjADY8Fz0D9hIoy-EJG0dZB7pBPj0/edit?usp=sharing">Google Slides</a></li>
-      <li><a href="https://cdn.cs50.net/2021/fall/lectures/3/lecture3.pdf">PDF</a></li>
+      <li><a href="https://cdn.cs50.net/2022/fall/lectures/3/src3/">Index</a></li>
+      <li><a href="https://cdn.cs50.net/2022/fall/lectures/3/src3.pdf">PDF</a></li>
+      <li><a href="https://cdn.cs50.net/2022/fall/lectures/3/src3.zip">Zip</a></li>
     </ul>
-    </details>
-    <details><summary>Source Code</summary>
-    <ul>
-      <li><a href="https://cdn.cs50.net/2021/fall/lectures/3/src3/">Index</a></li>
-      <li><a href="https://cdn.cs50.net/2021/fall/lectures/3/src3.pdf">PDF</a></li>
-      <li><a href="https://cdn.cs50.net/2021/fall/lectures/3/src3.zip">Zip</a></li>
-    </ul>
-    </details>
-  </ul>   
-</details>    
+</details>
+
+### Resources
 
 <details>  
   <summary>Shorts</summary>
@@ -35,6 +33,8 @@
   </ol>
 </details>
 
+- [Section](https://cs50.harvard.edu/ap/2024/curriculum/x/sections/3/)
+
 <details><summary><a href="\apcsp\assets\pdfs\ch3_ref_sheets_2020.pdf">Reference Sheets</a></summary>
   <ul>
     <li><a href="\apcsp\assets\pdfs\linear_search.pdf">Linear Search</a></li>
@@ -47,7 +47,7 @@
   </ul>
 </details>
 
-### Practice, Labs & Problems
+<!-- ### Practice, Labs & Problems
 
 - [Practice Problems](https://cs50.harvard.edu/ap/2023/problems/3/)
 - [Lab 3](https://cs50.harvard.edu/ap/2023/curriculum/x/labs/3/)
@@ -72,7 +72,7 @@ is yielding errors, try running
 help50 make plurality
 ```
 
-instead!
+instead! -->
 
 
 
