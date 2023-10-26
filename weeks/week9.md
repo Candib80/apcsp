@@ -6,9 +6,9 @@
   |-------|---------              |---------  |
   |**Mon**|Review for Test on Unit 1<br>Test tomorrow |If you would like some extra practice, and some simple programs, [see below](https://candib80.github.io/apcsp/weeks/week9/#additional-practice-on-arrays--command-line-arguments) |
   |**Tue**|Test on Unit 1 | |
-  |**Wed**|Start on Unit 2 | |
-  |**Thu**| | |
-  |**Fri**| | |
+  |**Wed**|Test Corrections | |
+  |**Thu**|More practice on arrays and command-line args, see below | |
+  |**Fri**|Start on Unit 2 | |
 
 
 <meta http-equiv="refresh" content="300"/>
