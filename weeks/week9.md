@@ -8,7 +8,7 @@
   |**Tue**|Test on Unit 1 | |
   |**Wed**|Test Corrections | |
   |**Thu**|More practice on arrays and command-line args, see below | |
-  |**Fri**|Start on Unit 2 | |
+  |**Fri**|[Initials practice problem below](https://candib80.github.io/apcsp/weeks/week9/#initials) | |
 
 
 <meta http-equiv="refresh" content="300"/>
