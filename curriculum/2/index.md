@@ -47,15 +47,15 @@ Searching: Linear Search, Binary Search. Sorting: Bubble Sort, Selection Sort, M
   </ul>
 </details>
 
-<!-- ### Practice, Labs & Problems
+### Practice, Labs & Problems
 
-- [Practice Problems](https://cs50.harvard.edu/ap/2023/problems/3/)
-- [Lab 3](https://cs50.harvard.edu/ap/2023/curriculum/x/labs/3/)
+- [Practice Problems](https://cs50.harvard.edu/ap/2024/problems/3/)
+- [Lab 3](https://cs50.harvard.edu/ap/2024/problems/3/)
 - Problem Sets:
-  - Submit [Plurality](https://cs50.harvard.edu/ap/2023/curriculum/x/psets/3/plurality/)
+  - Submit [Plurality](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/3/plurality/)
   - Submit **one** of the following:
-    - [Runoff](https://cs50.harvard.edu/ap/2023/curriculum/x/psets/3/runoff/), if feeling less comfortable
-    - [Tideman](https://cs50.harvard.edu/ap/2023/curriculum/x/psets/3/tideman/), if feeling more comfortable
+    - [Runoff](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/3/runoff/), if feeling less comfortable
+    - [Tideman](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/3/tideman/), if feeling more comfortable
 
 
 #### Advice
@@ -72,7 +72,7 @@ is yielding errors, try running
 help50 make plurality
 ```
 
-instead! -->
+instead!
 
 
 

@@ -6,8 +6,8 @@
   |-------|---------              |---------  |
   |**Mon**|Start Unit 2 | |
   |**Tue**| | |
-  |**Wed**| | |
-  |**Thu**| | |
+  |**Wed**|Sorting and Recursion | |
+  |**Thu**|More recursion and Merge Sort | |
   |**Fri**| | |
 
 
