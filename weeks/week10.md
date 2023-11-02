@@ -7,8 +7,8 @@
   |**Mon**|Start Unit 2 | |
   |**Tue**| | |
   |**Wed**|Sorting and Recursion | |
-  |**Thu**|More recursion and Merge Sort | |
-  |**Fri**| | |
+  |**Thu**|More recursion | [`struct` Homework](https://candib80.github.io/apcsp/weeks/week10/#struct-homework) |
+  |**Fri**|Merge Sort  | |
 
 
 <meta http-equiv="refresh" content="300"/>
