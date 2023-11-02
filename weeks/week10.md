@@ -15,3 +15,6 @@
 
 <img src="https://pbs.twimg.com/media/Dqc1eRnXgAAAiR1.jpg" alt="learn more by looking for answer than finding it" height="300">
 
+#### `struct` Homework
+- Come up with sample `struct`s they might use to store information. Then, write a program that populates and prints out these sample `struct`s.
+- Put this program in your `practice` folder and call it `struct.c`
