@@ -1,14 +1,14 @@
-## Week 11 <br>Week of 11/7
+## Week 11 <br>Week of 11/6
 
 ### [Unit 2](/apcsp/curriculum/2)
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|[Caesar](https://cs50.harvard.edu/ap/2023/curriculum/x/psets/2/caesar/) |Work on Caesar at home some!! |
-  |**Tue**|[Caesar](https://cs50.harvard.edu/ap/2023/curriculum/x/psets/2/caesar/) |Work on Caesar at home some!! |
-  |**Wed**|Work on Caesar<br>Hand out Study Guide | |
-  |**Thu**|Review for Unit 2, Test tomorrow | |
-  |**Fri**|Test on Unit 2 |Caesar is Due Tuesday night! |
+  |**Mon**|Merge Sort |[Lab for this unit](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/3/) |
+  |**Tue**|Start on [Practice Problems](https://cs50.harvard.edu/ap/2024/problems/3/) | |
+  |**Wed**| | |
+  |**Thu**| | |
+  |**Fri**| | |
 
 
 <meta http-equiv="refresh" content="300"/>
