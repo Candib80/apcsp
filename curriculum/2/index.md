@@ -49,8 +49,8 @@ Searching: Linear Search, Binary Search. Sorting: Bubble Sort, Selection Sort, M
 
 ### Practice, Labs & Problems
 
+- [Lab 3](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/3/)
 - [Practice Problems](https://cs50.harvard.edu/ap/2024/problems/3/)
-- [Lab 3](https://cs50.harvard.edu/ap/2024/problems/3/)
 - Problem Sets:
   - Submit [Plurality](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/3/plurality/)
   - Submit **one** of the following:
