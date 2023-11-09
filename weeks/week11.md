@@ -7,8 +7,8 @@
   |**Mon**|Merge Sort |[Lab for this unit](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/3/) |
   |**Tue**|Cover how to swap values in class, then do Bubble Sort Practice below | |
   |**Wed**|Start on [Practice Problems](https://cs50.harvard.edu/ap/2024/problems/3/):<br>1. Average Temperatures (make sure you have done swap and Bubble Sort practice first)<br>2. Max | |
-  |**Thu**| | |
-  |**Fri**| | |
+  |**Thu**|Go over Max and start practice FRQs on this program<br>I'll put the questions in Teams so anyone that is going to be out won't miss anything | |
+  |**Fri**|Finish FRQ | |
 
 
 <meta http-equiv="refresh" content="300"/>
