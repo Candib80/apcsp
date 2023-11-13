@@ -59,7 +59,7 @@ Searching: Linear Search, Binary Search. Sorting: Bubble Sort, Selection Sort, M
 
 
 #### Advice
-- Try out David's programs from class via [Unit 3](https://cdn.cs50.net/2021/fall/lectures/3/src3.pdf)'s examples
+- Try out David's programs from class via [Unit 2](https://cdn.cs50.net/2022/fall/lectures/3/src3.pdf)'s examples
 - If you see any errors when compiling your code with `make`, focus first on fixing the very first error you see, scrolling up as needed. If unsure what it means, try asking `help50` for help. For instance, if trying to compile `plurality`, and
 
 ```

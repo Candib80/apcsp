@@ -1,13 +1,13 @@
-## Week 12 <br>Week of 11/14
+## Week 12 <br>Week of 11/13
 
-### [Unit 3](/apcsp/curriculum/3)
+### [Unit 2](/apcsp/curriculum/2)
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|Go over Test on Unit 2 | |
-  |**Tue**|Start Unit 3<br>[Lecture video](https://youtu.be/yb0PY3LX2x8?t=73) through Linear Search (ending around 30 minutes) |Caesar due by 11:59pm |
-  |**Wed**|Binary search pseudocode and searching examples; see [notes](https://cs50.harvard.edu/ap/2023/curriculum/x/notes/3/#searching-with-code) | |
-  |**Thu**| | |
+  |**Mon**|Finish up Teams assignment on FRQ | |
+  |**Tue**|Go over FRQ | |
+  |**Wed**|Review for Test | |
+  |**Thu**|Test on Unit 2 | |
   |**Fri**| | |
 
 
