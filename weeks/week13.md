@@ -1,6 +1,6 @@
-## Week 13 <br>Week of 11/21
+## Week 13 <br>Week of 11/20
 
-### [Unit 3](/apcsp/curriculum/3)
+### [Unit 2](/apcsp/curriculum/2)
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
@@ -13,4 +13,4 @@
 
 <meta http-equiv="refresh" content="300"/>
   
-<img src="https://www.digitaltechnologylabs.com/wp-content/uploads/2019/06/11.png" alt="afraid to compile" height="250">
+<img src="https://www.pinkthecat.com/cdn/shop/products/thanksgiving_free1.jpg?v=1606412714" alt="happy thanksgiving" height="250">
