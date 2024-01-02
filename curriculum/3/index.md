@@ -40,7 +40,7 @@
 
 - Practice Problems
   - [Whodunit](https://docs.cs50.net/2019/ap/problems/whodunit/whodunit.html)
-- [Lab 4](https://cs50.harvard.edu/ap/2023/curriculum/x/labs/4/)
+- [Lab 4](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/4/)
 - Problem Sets:
   - [Filter](https://cs50.harvard.edu/ap/2023/curriculum/x/psets/4/filter/less/)
 
