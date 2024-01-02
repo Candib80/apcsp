@@ -5,7 +5,7 @@
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
   |**Mon**|Last Day of Break! | |
-  |**Tue**|Review problems - Unit 3 Lab | |
+  |**Tue**|Quick start on Unit 3<br>Review problems, Lab 3 (hopefully) | |
   |**Wed**|More Review<br>Start Overview of Create | |
   |**Thu**| | |
   |**Fri**| | |
