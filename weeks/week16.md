@@ -53,4 +53,6 @@ The values store into the array are :
 The values store into the array in reverse are :  
 7 5 2  
 
+9. Create a `struct` named `book` to store book details like title, author, and price. Write a program to input details for 3 books, find the most expensive book and display its information.
+
 <meta http-equiv="refresh" content="300"/>
