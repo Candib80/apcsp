@@ -5,8 +5,12 @@
 Complete and submit the following via [Digital Portfolio](https://digitalportfolio.collegeboard.org/):
 - Final program code (created independently or collaboratively)
 - A video that displays the running of your program and demonstrates functionality you developed (created independently)
+- Code Segments for your Personalized Project Reference (created independently)
 
-## Program Requirements
+## Component A: Program Code
+
+Submit one PDF file that contains all of your program code (including comments). Include comments or acknowledgments for any part of the 
+submitted program code that has been written by someone other than you and/or your collaborative partner(s).
 
 In your program, you must include student-developed program code that contains the following:
 - Instructions for input from one of the following:
@@ -29,7 +33,7 @@ Before you submit your work as final, please:
 - Ensure that you have provided acknowledgement for any program code written by someone else.
 - Refrain from publicly posting any portion of your performance task. Work that is shared online is subject to being plagiarized by another student. When this happens both students will be flagged for plagiarism.
 
-## Video Requirements
+## Component B: Video
 
 Submit one video file that demonstrates the running of your program as described below. Collaboration is not allowed during the development of your video.
 
@@ -53,26 +57,32 @@ Before submitting your work as final, please:
 - Ensure that you have not collaborated on the development of this video.
 - Refrain from publicly posting any portion of your performance task. Work that is shared online is subject to being plagiarized by another student. When this happens both students will be flagged for plagiarism.
 
-<!-- ## Written Responses
+## Component C: Personalized Project Reference
 
-Submit your responses to prompts 3a – 3d, which are described in the Student Handout linked below, under Resources. Your response to all prompts combined must not exceed 750 words (program code is not included in the word count). Collaboration is not allowed on the written responses.
-- Provide written responses to the prompts in the fields indicated.  You can format text using the options in the text box. 
-- The total word count for the written response is 750 words. To allow some flexibility, your typed responses to all prompts must not exceed 850 words. A word count is displayed for each text entry box, and an overall word count is displayed at the top and bottom of the page.
-- Prompts asking for code segments must be inserted as images. The easiest way to do this is to take a screen capture (screenshot) of the appropriate code and save it. Then either drag and drop the image, or click on the photo icon and select the file. You can also copy and paste the image of the program code.
-- Save your work by clicking on one of the Save buttons that are at the top and bottom of the page. Your work will be auto-saved every two minutes. 
+To assist in responding to the written response prompts on exam day, submit required portions of your code by capturing and pasting program code segments you developed during the administration of this task. Screen captures should not be blurry, and text should be at least 10-point font size. **Your code segments should not include any comments.** These code segments will be made available to you on exam day only if this component is submitted as final in the AP Digital Portfolio by the deadline.
+
+- **Procedure:** Capture and paste two program code segments you developed during the administration of this task that contain a student-developed procedure that implements an algorithm used in your program and a call to that procedure. 
+  1. The first program code segment must be a student-developed procedure that:
+    - Defines the procedure’s name and return type (if necessary)
+    - Contains and uses one or more parameters that have an effect on the functionality of the procedure
+    - Implements an algorithm that includes sequencing, selection, and iteration
+  2. The second program code segment must show where your student-developed procedure is being called in your program.
+
+- **List:** Capture and paste two program code segments you developed during the administration of this task that contain a list (or other collection type) being used to manage complexity in your program. 
+  1. The first program code segment must show how data have been stored in the list.
+  2. The second program code segment must show the data in the same list being used, such as creating new data from the existing
+data or accessing multiple elements in the list, as part of fulfilling the program’s purpose.
 
 **Submission Reminder**  
 Before submitting your work as final, please:
 - Do not include your name.
-- Ensure that you have not collaborated on the written responses.
-- Refrain from publicly posting any portion of your performance task. Work that is shared online is subject to being plagiarized by another student. When this happens both students will be flagged for plagiarism. -->
+- Ensure that you have not collaborated on the Personalized Project Reference.
+- Refrain from publicly posting any portion of your performance task. Work that is shared online is subject to being plagiarized by another student. When this happens both students will be flagged for plagiarism.
 
-<!-- ## Resources  
+## Resources  
 
-[Survival Guide](https://candib80.github.io/apcsp/assets/pdfs/digital_portfolio/create-survival-2021.pdf)<br>
-[Scoring Guidelines](https://apcentral.collegeboard.org/media/pdf/ap22-sg-computer-science-principles.pdf)<br>
 [College Board Exam Resources](https://apcentral.collegeboard.org/courses/ap-computer-science-principles/exam)<br>
-[CB Student Handouts](https://apcentral.collegeboard.org/media/pdf/ap-csp-student-task-directions.pdf) - includes task directions -->
+[CB Student Handouts](https://apcentral.collegeboard.org/media/pdf/ap-csp-student-task-directions.pdf) - includes task directions
 
 
 ### PDF of Code:
@@ -83,4 +93,4 @@ Before submitting your work as final, please:
     - Must log in with your school Microsoft account
   - On Windows 10/11, you can use the built-in screen recording: [MS Support Article](https://support.microsoft.com/en-us/windows/use-a-screen-reader-to-record-your-screen-with-xbox-game-bar-5328cd25-9046-4472-8a14-c485f138802c)
   - [On a Mac](https://support.apple.com/en-us/HT208721)  
-**With any of these, make sure to mute your mic, as you are not supposed to have your voice in the video!**
+***With any of these, make sure to mute your mic, as you are not supposed to have your voice in the video!**
