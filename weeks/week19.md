@@ -8,7 +8,7 @@
   |**Tue**|Work on Create D9 |Work on Create |
   |**Wed**|Start on Unit 4 |Work on Create |
   |**Thu**|Continue Unit 4 |Work on Create |
-  |**Fri**|Continue Unit 4 |Continue to work on Create<br>Make sure to complete the Check-In on Teams before class is over |
+  |**Fri**|Continue Unit 4 |Continue to work on Create |
 
 <!-- <img src="https://techvidvan.com/tutorials/wp-content/uploads/sites/2/2019/12/Applications-of-python.jpg" alt="python applications" height="400"> -->
 
