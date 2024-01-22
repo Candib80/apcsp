@@ -55,7 +55,7 @@ Pointers. Segmentation Faults. Dynamic Memory Allocation. Stack. Heap. Buffer Ov
 
 
 #### Advice
-- Try out David's programs from class via [Chapter 4](https://cdn.cs50.net/2022/fall/lectures/4/src4.pdf)'s examples
+- Try out David's programs from class via [Unit 3](https://cdn.cs50.net/2022/fall/lectures/4/src4.pdf)'s examples
 - If you see any errors when compiling your code with `make`, focus first on fixing the very first error you see, scrolling up as needed. If unsure what it means, try asking `help50` for help. For instance, if trying to compile `filter`, and
 
 ```
