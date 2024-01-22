@@ -89,7 +89,7 @@ Before submitting your work as final, please:
   - [CS50's Render50](https://render.cs50.io/) - You must first download your code from Codespace then upload to Render50
 
 ### Screen Recording of Program Running:
-  - [Microsoft Stream](https://www.microsoft365.com/launch/stream) - see video of how to use here (coming soon)
+  - [Microsoft Stream](https://www.microsoft365.com/launch/stream) - will show how to use in class
     - Must log in with your school Microsoft account
   - On Windows 10/11, you can use the built-in screen recording: [MS Support Article](https://support.microsoft.com/en-us/windows/use-a-screen-reader-to-record-your-screen-with-xbox-game-bar-5328cd25-9046-4472-8a14-c485f138802c)
   - [On a Mac](https://support.apple.com/en-us/HT208721)  

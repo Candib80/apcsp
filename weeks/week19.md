@@ -4,7 +4,7 @@
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|Work on Create D8 |Work on Create |
+  |**Mon**|Work on Create D8<br>Today & tomorrow, I will show you how to create PDFs and screen recordings, as well as how to navigate the Digital Portfolio |Work on Create |
   |**Tue**|Work on Create D9 |Work on Create |
   |**Wed**|Start on Unit 4 |Work on Create |
   |**Thu**|Continue Unit 4 |Work on Create |
