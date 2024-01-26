@@ -47,8 +47,8 @@ Pointers. Segmentation Faults. Dynamic Memory Allocation. Stack. Heap. Buffer Ov
 - Practice Problems:
   - [Bottom Up](https://cs50.harvard.edu/ap/2024/problems/4/bottomup/), for practice working with images and metadata
   - [License](https://cs50.harvard.edu/ap/2024/problems/4/license/), for practice working with files and file pointers
-  - [Whodunit](https://docs.cs50.net/2019/ap/problems/whodunit/whodunit.html)
-- [Lab 4](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/4/)
+  - [Whodunit](https://docs.cs50.net/2019/ap/problems/whodunit/whodunit.html), oldie, but goodie
+- [Lab](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/4/)
 - Problem Sets:
   - [Filter](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/4/filter/less/)
 
