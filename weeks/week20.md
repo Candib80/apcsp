@@ -5,7 +5,7 @@
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
   |**Mon**|Finish up License<br>Start [Lab](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/4/) |Work on Create if not finished! |
-  |**Tue**|Work on the Lab | |
+  |**Tue**|Work on the [PSET](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/4/filter/less/) | |
   |**Wed**| | |
   |**Thu**| | |
   |**Fri**| | |
