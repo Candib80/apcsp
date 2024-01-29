@@ -1,14 +1,14 @@
-## Week 20 <br>Week of 1/30
+## Week 20 <br>Week of 1/29
 
-[Create](/apcsp/curriculum/pt/create) - Due to me, marked as FINAL in Digital Portfolio, March 3<br>[Unit 4](/apcsp/curriculum/4)
+### [Unit 3](/apcsp/curriculum/3)<br>Continue working on [Create](/apcsp/curriculum/pt/create) - Due to me, marked as FINAL in Digital Portfolio, March 1
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|Continue on Unit 4 - Pointer fun ;) |Work on Create |
-  |**Tue**|Finish up Unit 4<br>Start on Lab 4 | |
-  |**Wed**|Work on Lab 4 | |
-  |**Thu**|Finish up Lab 4<br>Start on Whodunit | |
-  |**Fri**|Lab 4 due at end of class | |
+  |**Mon**|Finish up License<br>Start [Lab](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/4/) |Work on Create if not finished! |
+  |**Tue**|Work on the Lab | |
+  |**Wed**| | |
+  |**Thu**| | |
+  |**Fri**| | |
 
 <img src="https://slideplayer.com/16079147/88/images/slide_1.jpg" alt="Pointer Fun with Binky" height="400">
 
