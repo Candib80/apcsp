@@ -1,14 +1,14 @@
-## Week 21 <br>Week of 2/6
+## Week 21 <br>Week of 2/5
 
-[Create](/apcsp/curriculum/pt/create) - Due to me, marked as FINAL in Digital Portfolio, March 3<br>[Unit 4](/apcsp/curriculum/4)<br>[Filter](https://cs50.harvard.edu/ap/2023/curriculum/x/psets/4/filter/less/)
+### [Unit 3](/apcsp/curriculum/3)<br>Continue working on [Create](/apcsp/curriculum/pt/create) - Due to me, marked as FINAL in Digital Portfolio, March 1
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|Whodunit |Work on Create |
-  |**Tue**|Finish up Whodunit<br>Start on Filter PSET |Read about [Grayscale](https://cs50.harvard.edu/ap/2023/curriculum/x/psets/4/filter/less/#grayscale) & download [starter code](https://cs50.harvard.edu/ap/2023/curriculum/x/psets/4/filter/less/#getting-started)<br>Work on Create |
-  |**Wed**|Work on Filter PSET |Work on Create |
-  |**Thu**|Work on Filter PSET |Work on Create |
-  |**Fri**|Work on Filter PSET |Work on Create |
+  |**Mon**|Work on Blur |Finish up Filter |
+  |**Tue**|Finish up Filter |Turn in Filter |
+  |**Wed**|Review for test | |
+  |**Thu**|Test on Unit 3 | |
+  |**Fri**| | |
 
 <img src="https://hips.hearstapps.com/seventeen/assets/15/52/1450814666-filters.jpg" alt="filter" height="400">
 
