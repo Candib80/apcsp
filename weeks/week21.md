@@ -8,7 +8,7 @@
   |**Tue**|Finish up Filter |Turn in Filter |
   |**Wed**|Review for test | |
   |**Thu**|Test on Unit 3 | |
-  |**Fri**|Start on [Unit 4](/apcsp/curriculum/6) | |
+  |**Fri**|Start on [Unit 4](/apcsp/curriculum/5) | |
 
 <img src="https://hips.hearstapps.com/seventeen/assets/15/52/1450814666-filters.jpg" alt="filter" height="400">
 
