@@ -8,7 +8,7 @@ title: false
 
 <img src="https://www.dv8sussex.com/wp-content/uploads/2020/03/bud-important-announcement-800x280-1.jpg" alt="announcements" height="300">  
 
-- <span style="font-size: 22px;">We are on Week 21!</span>
+- <span style="font-size: 22px;">We are on Week 22!</span>
 
 
 

@@ -1,15 +1,15 @@
-## Week 22 <br>Week of 2/13
+## Week 22 <br>Week of 2/12
 
-[Create](/apcsp/curriculum/pt/create) - Due to me, marked as FINAL in Digital Portfolio, March 3<br>[Unit 4](/apcsp/curriculum/4)<br>[Filter](https://cs50.harvard.edu/ap/2023/curriculum/x/psets/4/filter/less/)
+### [Unit 4](/apcsp/curriculum/4)<br>Continue working on [Create](/apcsp/curriculum/pt/create) - Due to me, marked as FINAL in Digital Portfolio, March 1
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|Work on Filter PSET |Work on Create & Filter |
-  |**Tue**|Work on Filter PSET |Work on Create & Filter |
-  |**Wed**|Work on Filter PSET |Work on Create & Filter |
-  |**Thu**|Work on Filter PSET |Work on Create & Filter |
-  |**Fri**|Work on Filter PSET |Work on Create Filter Due by midnight! |
+  |**Mon**|Sr. Skip Day | |
+  |**Tue**|Continue with Python |If you need to turn in or fix Filter, get it turned in **tonight** or you get what you get |
+  |**Wed**| | |
+  |**Thu**| | |
+  |**Fri**| | |
 
-<img src="https://hips.hearstapps.com/seventeen/assets/15/52/1450814666-filters.jpg" alt="filter" height="400">
+<img src="https://www.learncomputerscienceonline.com/wp-content/uploads/2019/10/Program-Coding.jpg" alt="computer programming" height="300">
 
 <meta http-equiv="refresh" content="300"/>
