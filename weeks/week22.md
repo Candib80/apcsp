@@ -7,8 +7,8 @@
   |**Mon**|Sr. Skip Day | |
   |**Tue**|Continue with Python |If you need to turn in or fix Filter, get it turned in **tonight** or you get what you get |
   |**Wed**| | |
-  |**Thu**| | |
-  |**Fri**| | |
+  |**Thu**|Finish Python | |
+  |**Fri**|[Practice problems](https://cs50.harvard.edu/ap/2024/problems/6/) | |
 
 <img src="https://www.learncomputerscienceonline.com/wp-content/uploads/2019/10/Program-Coding.jpg" alt="computer programming" height="300">
 
