@@ -24,7 +24,7 @@ Python: Functions, Arguments, Return Values; Variables; Boolean Expressions, Con
  - [Mrs. Beaman's Python Notes](\apcsp\assets\pdfs\python-notes.pdf)
 
 ### Practice, Labs & Problems
-- [Practice problems](https://cs50.harvard.edu/ap/2024/problems/6/) - Do not do Jar as we are not focusing on OOP and classes!
+- [Practice problems](https://cs50.harvard.edu/ap/2024/problems/6/) - Do not do Jar as we are not focusing on OOP and classes! Also, don't worry about doing Seven Day Averages, unless you REALLY want to figure out DictReader and csv files
 - [Lab](https://cs50.harvard.edu/ap/2023/curriculum/x/labs/6/)
 - Problems:
   - TBD
