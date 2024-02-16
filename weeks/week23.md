@@ -1,11 +1,11 @@
-## Week 23 <br>Week of 2/20
+## Week 23 <br>Week of 2/19
 
-[Create](/apcsp/curriculum/pt/create) - Due to me, marked as FINAL in Digital Portfolio, March 3<br>[Unit 4](/apcsp/curriculum/4)<br>[Filter](https://cs50.harvard.edu/ap/2023/curriculum/x/psets/4/filter/less/)
+### [Unit 4](/apcsp/curriculum/5)<br>Continue working on [Create](/apcsp/curriculum/pt/create) - Due to me, marked as FINAL in Digital Portfolio, March 1
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|Work on Create | |
-  |**Tue**|Work on Create | |
+  |**Mon**|Python practice | |
+  |**Tue**|Python practice | |
   |**Wed**|Winter Break | |
   |**Thu**|Winter Break | |
   |**Fri**|Winter Break | |
