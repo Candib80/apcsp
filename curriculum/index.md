@@ -16,7 +16,7 @@
   <li><a href="/apcsp/curriculum/1/">Arrays</a></li>
   <li><a href="/apcsp/curriculum/2/">Algorithms</a></li>
   <li><a href="/apcsp/curriculum/3/">Memory</a></li>
-  <li><a href="/apcsp/curriculum/4/">Data Structures</a></li>
+  <!-- <li><a href="/apcsp/curriculum/4/">Data Structures</a></li> -->
   <li><a href="/apcsp/curriculum/5/">Python</a></li>
   <li><a href="/apcsp/curriculum/6/">SQL</a></li>
   <li><a href="/apcsp/curriculum/7/">HTML, CSS, & JavaScript</a></li>
