@@ -4,8 +4,8 @@
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|Python practice | |
-  |**Tue**|Python practice | |
+  |**Mon**|[Python practice](https://cs50.harvard.edu/ap/2024/problems/6/)<br>Don't do Jar<br>I would focus on Bank, Taqueria, and the Letters one | |
+  |**Tue**|[Python practice](https://cs50.harvard.edu/ap/2024/problems/6/)<br>Don't do Jar<br>I would focus on Bank, Taqueria, and the Letters one  |If you were out this week, make sure that you have gotten at least Bank and Taqueria done, and hopefully Letters as well |
   |**Wed**|Winter Break | |
   |**Thu**|Winter Break | |
   |**Fri**|Winter Break | |
