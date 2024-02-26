@@ -5,7 +5,7 @@
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
   |**Mon**|[Python practice](https://cs50.harvard.edu/ap/2024/problems/6/)<br>Don't do Jar<br>I would focus on Bank, Taqueria, and the Letters one |Make sure you have completed at least 3 for a completion grade |
-  |**Tue**|Last class day for [Python practice](https://cs50.harvard.edu/ap/2024/problems/6/)<br>Don't do Jar<br>I would focus on Bank, Taqueria, and the Letters one |Make sure you have completed at least 3 for a completion grade |
+  |**Tue**|Last class day for [Python practice](https://cs50.harvard.edu/ap/2024/problems/6/)<br>Don't do Jar<br>I would focus on Bank, Taqueria, and the Letters one |Make sure you have completed at least 3 for a completion grade<br>I will come around at the start of class to check |
   |**Wed**|Start on [Python Lab](https://cs50.harvard.edu/ap/2023/curriculum/x/labs/6/) | |
   |**Thu**|Continue Lab | |
   |**Fri**| | |
