@@ -8,7 +8,7 @@
   |**Tue**|Start on [PSET](https://candib80.github.io/apcsp/curriculum/5/#practice-labs--problems) | |
   |**Wed**|Work on PSET |Work on PSET |
   |**Thu**|Create Questions in class |Work on PSET |
-  |**Fri**|Work on PSET |Work on PSET |
+  |**Fri**|Finish PSET |Finish PSET |
 
 
 
