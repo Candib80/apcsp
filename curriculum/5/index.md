@@ -27,7 +27,12 @@ Python: Functions, Arguments, Return Values; Variables; Boolean Expressions, Con
 - [Practice problems](https://cs50.harvard.edu/ap/2024/problems/6/) - Do not do Jar as we are not focusing on OOP and classes! Also, don't worry about doing Seven Day Averages, unless you REALLY want to figure out DictReader and csv files
 - [Lab](https://cs50.harvard.edu/ap/2023/curriculum/x/labs/6/)
 - Problems:
-  - TBD
+  - [Hello](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/6/hello/)
+  - One of the following:
+    - [Mario Less](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/6/mario/less/)
+    - [Mario More](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/6/mario/more/)
+  - [Cash](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/6/cash/)
+  - [Readability](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/6/readability/)
 
 #### Advice
 - Try out David's programs from class via [Unit 4](https://cdn.cs50.net/2022/fall/lectures/6/src6.pdf)'s examples
