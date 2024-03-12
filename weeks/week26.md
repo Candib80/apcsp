@@ -1,14 +1,14 @@
-## Week 26 <br>Week of 3/13
+## Week 26 <br>Week of 3/11
 
-[Unit 6](/apcsp/curriculum/6)<br>[Unit 8](/apcsp/curriculum/8)
+### [Unit 4 - Python](/apcsp/curriculum/5)<br>[Unit 5 - Web Design](/apcsp/curriculum/7)
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|Python exercises | |
-  |**Tue**|Continue Python exercises |Make sure to read the [Understanding for Lab 6](https://cs50.harvard.edu/ap/2023/curriculum/x/labs/6/#understanding) |
-  |**Wed**|Work on Lab 6 |3rd period: turn in Lab 6<br>2nd period: work on Lab 6 |
-  |**Thu**|Submit Lab 6, start on Unit 8 | |
-  |**Fri**| |If you got less than a 9/9 on the Lab, go to your Submit50, look at the comment I left you & make the changes. Resubmit & message me on Teams, then I'll update your grade! |
+  |**Mon**|No School | |
+  |**Tue**|Review Python |Study for test |
+  |**Wed**|Test on Python | |
+  |**Thu**|Start on Unit 5 - HTML | |
+  |**Fri**| | |
 
 
 <div style="text-align:center">
