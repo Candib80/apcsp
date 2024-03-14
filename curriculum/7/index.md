@@ -19,6 +19,8 @@ Internet: Routers; TCP/IP; DNS. HTTP: URLs, GET, POST. HTML: Tags; Attributes. S
 
 ### Resources
 
+- [Section](https://cs50.harvard.edu/ap/2024/curriculum/x/sections/8/)
+
 #### Shorts
 1. [Internet Primer](https://cs50.harvard.edu/ap/2022/curriculum/x/shorts/internet_primer/)
 2. [IP](https://cs50.harvard.edu/ap/2022/curriculum/x/shorts/ip/)
@@ -41,8 +43,6 @@ Internet: Routers; TCP/IP; DNS. HTTP: URLs, GET, POST. HTML: Tags; Attributes. S
     <li data-marker="*"><a href="\apcsp\assets\pdfs\javascript.pdf">JavaScript</a></li>
   </ul>
 </details>
-
-- [Section](https://cs50.harvard.edu/ap/2024/curriculum/x/sections/8/)
 
 #### W3Schools links
 - [HTML](https://www.w3schools.com/html/)
