@@ -5,7 +5,7 @@
 |         | In Class | Homework |
 | ------- | -------- | -------- |
 | **Mon** |Continue with HTML | |
-| **Tue** | | |
+| **Tue** |More HTML | |
 | **Wed** | | |
 | **Thu** | | |
 | **Fri** | | |

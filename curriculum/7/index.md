@@ -20,6 +20,9 @@ Internet: Routers; TCP/IP; DNS. HTTP: URLs, GET, POST. HTML: Tags; Attributes. S
 ### Resources
 
 - [Section](https://cs50.harvard.edu/ap/2024/curriculum/x/sections/8/)
+- [Valley of Code](https://thevalleyofcode.com/) - a reading resource 
+  - Focus on [The Internet](https://thevalleyofcode.com/the-internet) & [The Web](https://thevalleyofcode.com/the-web) for AP Exam material
+  - [HTML](https://thevalleyofcode.com/html) & [CSS](https://thevalleyofcode.com/css) for class coding material
 
 #### Shorts
 1. [Internet Primer](https://cs50.harvard.edu/ap/2022/curriculum/x/shorts/internet_primer/)
