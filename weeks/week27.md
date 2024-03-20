@@ -7,7 +7,7 @@
 | **Mon** |Continue with HTML | |
 | **Tue** |More HTML | |
 | **Wed** |CSS | |
-| **Thu** |Bootstrap & JS | |
+| **Thu** |[Bootstrap](https://getbootstrap.com) & JS | |
 | **Fri** |More JS | |
 
 <div style="text-align:center">
