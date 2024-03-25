@@ -4,11 +4,11 @@
 
 |         | Class | Homework |
 | ------- | ----- | -------- |
-| **Mon** |CSS & [Bootstrap](https://getbootstrap.com), start JS |  |
-| **Tue** |Continue with JS<br>Watch the video [starting here](https://youtu.be/2VauFS071pg?t=7547) |  |
-| **Wed** |Finish JS & start on Lab 8 |  |
-| **Thu** |Work on Lab 8<br>Go to the [JS notes](https://cs50.harvard.edu/ap/2023/curriculum/x/notes/8/#javascript) for some guidance or the [PDF of the source code](https://cdn.cs50.net/2021/fall/lectures/8/src8.pdf) in addition to W3Schools links below |  |
-| **Fri** |Finish up Lab 8 |  |
+| **Mon** |Continue with [Practice Problem](https://cs50.harvard.edu/ap/2024/problems/8/redo/) |  |
+| **Tue** |Start on [Lab](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/8/) |  |
+| **Wed** | |  |
+| **Thu** | |  |
+| **Fri** | |  |
 
 
 <div style="text-align:center">
