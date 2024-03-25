@@ -6,9 +6,9 @@
 | ------- | ----- | -------- |
 | **Mon** |Continue with [Practice Problem](https://cs50.harvard.edu/ap/2024/problems/8/redo/) |  |
 | **Tue** |Start on [Lab](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/8/) |  |
-| **Wed** | |  |
-| **Thu** | |  |
-| **Fri** | |  |
+| **Wed** |Lab |  |
+| **Thu** |PROM |  |
+| **Fri** |No School!! |  |
 
 
 <div style="text-align:center">
