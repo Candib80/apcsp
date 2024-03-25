@@ -1,6 +1,6 @@
-## Week 28 <br>Week of 3/27
+## Week 27 <br>Week of 3/25
 
-[Unit 8](/apcsp/curriculum/8) - HTML, CSS, JavaScript<br>[Lab 8](https://cs50.harvard.edu/ap/2023/curriculum/x/labs/8/)
+### [Unit 5 - The Internet & Web Design](/apcsp/curriculum/7)
 
 |         | Class | Homework |
 | ------- | ----- | -------- |
