@@ -20,7 +20,7 @@
   <li><a href="/apcsp/curriculum/5/">Python</a></li>
   <!-- <li><a href="/apcsp/curriculum/6/">SQL</a></li> -->
   <li><a href="/apcsp/curriculum/7/">HTML, CSS, & JavaScript</a></li>
-  <li><a href="/apcsp/curriculum/8/">Flask</a></li>
+  <!-- <li><a href="/apcsp/curriculum/8/">Flask</a></li> -->
 </ol>
 
 * [Cybersecurity](https://cs50.harvard.edu/ap/2023/curriculum/x/weeks/cybersecurity/)
