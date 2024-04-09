@@ -5,10 +5,10 @@
 |         | Class | Homework |
 | ------- | ----- | -------- |
 | **Mon** |Finish [Lab](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/8/) |Lab due tonight!! |
-| **Tue** |Start on Homepage PSET |Work on Homepage PSET |
-| **Wed** | | |
-| **Thu** | | |
-| **Fri** | | |
+| **Tue** |Start on [Homepage PSET](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/8/homepage/) |Work on Homepage |
+| **Wed** |Work on [Homepage](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/8/homepage/) |Work on Homepage |
+| **Thu** |Work on [Homepage](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/8/homepage/)  |Work on Homepage |
+| **Fri** |Review for Test on Monday |Study |
 
 
 <div style="text-align:center">
