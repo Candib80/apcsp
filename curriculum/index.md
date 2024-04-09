@@ -1,12 +1,9 @@
 # CS50 AP Curriculum
 
-## CS50T
+## Getting Started
 
 * [Hardware](/apcsp/curriculum/understanding_technology/hardware)
 * [Internet](/apcsp/curriculum/understanding_technology/internet)
-* [Multimedia](/apcsp/curriculum/understanding_technology/multimedia)
-* [Security](/apcsp/curriculum/understanding_technology/security)
-* [Web Development](https://cs50.harvard.edu/ap/2023/curriculum/technology/notes/web_development/)
 
 ## CS50 Core Curriculum
 
@@ -23,12 +20,14 @@
   <!-- <li><a href="/apcsp/curriculum/8/">Flask</a></li> -->
 </ol>
 
-* [Cybersecurity](https://cs50.harvard.edu/ap/2023/curriculum/x/weeks/cybersecurity/)
+## Additional Modules
 
-## AP Modules
-
+* [Multimedia](/apcsp/curriculum/understanding_technology/multimedia)
+* [Web Development](https://cs50.harvard.edu/ap/2023/curriculum/technology/notes/web_development/)
 * [Data Science](data_science)
 * [Impact of Computing](impact_of_computing)
+* [Security](/apcsp/curriculum/understanding_technology/security)
+* [Cybersecurity](https://cs50.harvard.edu/ap/2023/curriculum/x/weeks/cybersecurity/)
 
 ## Summer Assignment
 
