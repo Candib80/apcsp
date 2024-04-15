@@ -12,6 +12,7 @@
 - [Week 28](/apcsp/weeks/week28)
 - [Week 29](/apcsp/weeks/week29)
 - [Week 30](/apcsp/weeks/week30)
+- [Week 31](/apcsp/weeks/week31)
 
 
 
