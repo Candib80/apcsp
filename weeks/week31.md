@@ -5,7 +5,7 @@
 |         | Class | Homework |
 | ------- | ----- | -------- |
 | **Mon** |Test on Unit 5 |Read through the [Notes for Impact of Computing](/apcsp/curriculum/impact_of_computing/notes) |
-| **Tue** |Finish Impact of Computing |Read over [Data Science Notes](/apcsp/curriculum/data_science) |
+| **Tue** |Impact of Computing Guided Notes |Finish notes from class<br>Read over [Data Science Notes](/apcsp/curriculum/data_science) |
 | **Wed** |Review [Internet Notes](/apcsp/curriculum/understanding_technology/internet/notes/), [Multimedia Notes](/apcsp/curriculum/understanding_technology/multimedia/notes/) & [Security Notes](/apcsp/curriculum/understanding_technology/security/notes/) | |
 | **Thu** | | |
 | **Fri** |Field Day!! | |
