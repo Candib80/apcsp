@@ -4,7 +4,7 @@
 
 |         | Class | Homework |
 | ------- | ----- | -------- |
-| **Mon** | | |
+| **Mon** |Review answers for [Multimedia](/apcsp/curriculum/understanding_technology/multimedia) & [Security](/apcsp/curriculum/understanding_technology/security) notes | |
 | **Tue** | | |
 | **Wed** | | |
 | **Thu** | | |

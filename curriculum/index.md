@@ -27,7 +27,7 @@
 * [Data Science](data_science)
 * [Impact of Computing](impact_of_computing)
 * [Security](/apcsp/curriculum/understanding_technology/security)
-* [Cybersecurity](https://cs50.harvard.edu/ap/2023/curriculum/x/weeks/cybersecurity/)
+* [Cybersecurity](https://cs50.harvard.edu/ap/2024/curriculum/x/weeks/cybersecurity/)
 
 ## Summer Assignment
 
