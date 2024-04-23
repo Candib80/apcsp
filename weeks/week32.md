@@ -5,7 +5,7 @@
 |         | Class | Homework |
 | ------- | ----- | -------- |
 | **Mon** |Review answers for [Multimedia](/apcsp/curriculum/understanding_technology/multimedia) & [Security](/apcsp/curriculum/understanding_technology/security) notes | |
-| **Tue** |Take practice [MCQ Part 1 on CodeHS](https://codehs.com/lms/assignment/135658461)<br>Join our section from summer here: [https://codehs.com/go/94ACB](https://codehs.com/go/94ACB) | |
+| **Tue** |Take practice [MCQ Part 1 on CodeHS](https://codehs.com/lms/assignment/135658461)<br>Join our section from summer here: [https://codehs.com/go/94ACB](https://codehs.com/go/94ACB) |If you have not completed assignments, and you have a 0, turn them in TONIGHT or the 0 stays, as you have had over a week to turn them in and I have reminded you several times. |
 | **Wed** | | |
 | **Thu** | | |
 | **Fri** | | |
