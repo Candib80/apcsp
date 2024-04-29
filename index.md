@@ -28,4 +28,4 @@ title: false
 
 This is CS50 AP, Harvard University's introduction to the intellectual enterprises of computer science and the art of programming for students in high school, which satisfies the College Board's AP CS Principles curriculum framework. -->
 
-<iframe width="50%" src="https://www.youtube.com/embed/tZxLMIk_SaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- <iframe width="50%" src="https://www.youtube.com/embed/tZxLMIk_SaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
