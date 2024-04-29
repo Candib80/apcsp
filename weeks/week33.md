@@ -1,6 +1,7 @@
-## Week 33
+## Week 33 <br>Week of 4/29
 
-### Week of 5/2/2022<br>AP Exam is May 9th
+### AP Review<br>AP Exam is May 15th
+
 
 - Review more this week. Come with any questions you have
 - Read over notes in the [Curriculum](/apcsp/curriculum/) on anything you feel you need to review
