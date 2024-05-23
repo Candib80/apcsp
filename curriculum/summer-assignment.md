@@ -19,7 +19,7 @@ I look forward to having you all in the fall, and have a great rest of your summ
 - **There will be a test on Friday, August 25** on material covered in the assignment; however, we will review before.
 
 ### Part 0
-- Join the CodeHS Section for this summer here: [https://codehs.com/go/94ACB](https://codehs.com/go/94ACB)
+- Join the CodeHS Section for this summer here: [https://codehs.com/go/2630D](https://codehs.com/go/2630D)
   - We will only be using CodeHS for the summer assignment to introduce programming and what computing is
 - Download the [Guided Notes](\apcsp\assets\pdfs\summer\summer-23.pdf) and complete as you go through the first part within CodeHS
 - Try your best on the quizzes, but those will not be for a grade, rather your test the first week will determine your knowledge on the subject

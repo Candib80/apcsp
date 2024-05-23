@@ -31,4 +31,4 @@
 
 ## Summer Assignment
 
-* [Summer 2023 - IS HERE!!!](\apcsp\curriculum\summer-assignment)
+* [Summer 2024 - IS HERE!!!](\apcsp\curriculum\summer-assignment)
