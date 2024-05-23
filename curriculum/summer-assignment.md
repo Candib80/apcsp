@@ -13,10 +13,10 @@ I look forward to having you all in the fall, and have a great rest of your summ
 
 <br><br>
 
-## Summer Assignment 2023 
+## Summer Assignment 2024 
 
 - The assignment below is due the first day we all meet and will count as a **Major** grade
-- **There will be a test on Friday, August 25** on material covered in the assignment; however, we will review before.
+- **There will be a test on the first Friday** on material covered in the assignment; however, we will review before.
 
 ### Part 0
 - Join the CodeHS Section for this summer here: [https://codehs.com/go/2630D](https://codehs.com/go/2630D)
@@ -25,8 +25,9 @@ I look forward to having you all in the fall, and have a great rest of your summ
 - Try your best on the quizzes, but those will not be for a grade, rather your test the first week will determine your knowledge on the subject
 
 ### Part 1
-- Complete the **What is Computing?** section on CodeHS & complete the notes you downloaded
+- Complete the **What is Computing?** section on CodeHS & complete the notes you downloaded from above
 - Make sure to complete the free response parts within CodeHS!
 
 ### Part 2
 - Complete the **Programming With Karel** section on CodeHS
+- Do not look up answers to these programming problems, but work through them. If you don't get them right, that's ok, but you need to do the work yourself, so you have a good understanding of what's to come.
