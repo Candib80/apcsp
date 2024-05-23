@@ -5,20 +5,14 @@
 
 ---
 
-<!-- - [Summer Assignment 2023](\apcsp\curriculum\summer-assignment) -->
+<!-- - [Summer Assignment](\apcsp\curriculum\summer-assignment) -->
 
-- [Week 26](/apcsp/weeks/week26)
-- [Week 27](/apcsp/weeks/week27)
-- [Week 28](/apcsp/weeks/week28)
-- [Week 29](/apcsp/weeks/week29)
-- [Week 30](/apcsp/weeks/week30)
-- [Week 31](/apcsp/weeks/week31)
-- [Week 32](/apcsp/weeks/week32)
-- [Week 33](/apcsp/weeks/week33)
+<!-- - [Week 26](/apcsp/weeks/week26) -->
 
 
 
-<details>
+
+<!-- <details>
     <summary>Q1</summary>
     <ul>
         <li><a href="https://candib80.github.io/apcsp/weeks/week0/">Week 0</a></li>
@@ -30,10 +24,10 @@
         <li><a href="https://candib80.github.io/apcsp/weeks/week6/">Week 6</a></li>
         <li><a href="https://candib80.github.io/apcsp/weeks/week7/">Week 7</a></li>
     </ul>
-</details>
+</details> -->
 
 
-<details>
+<!-- <details>
     <summary>Q2</summary>
     <ul>
         <li><a href="https://candib80.github.io/apcsp/weeks/week8/">Week 8</a></li>
@@ -45,11 +39,11 @@
         <li><a href="https://candib80.github.io/apcsp/weeks/week14/">Week 14</a></li>
         <li><a href="https://candib80.github.io/apcsp/weeks/week15/">Week 15</a></li>
     </ul>
-</details>
+</details> -->
 
 
 
-<details>
+<!-- <details>
     <summary>Q3</summary>
     <ul>
         <li><a href="https://candib80.github.io/apcsp/weeks/week16/">Week 16</a></li>
@@ -64,7 +58,7 @@
         <li><a href="https://candib80.github.io/apcsp/weeks/week25/">Week 25</a></li>
     </ul>
 </details>
-        
+         -->
 
 ---
 
