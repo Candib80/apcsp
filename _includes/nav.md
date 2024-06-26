@@ -66,8 +66,8 @@
 
 ---
 
-- [Manual Pages](https://man.cs50.io/)
+- <a href="https://man.cs50.io/" target="_blank">Manual Pages</a>
 - <a href="https://cs50.readthedocs.io/style/c/" target="_blank">Style Guide</a>
 - <a href="https://cs50.statuspage.io/" target="_blank">Status Page</a>
-- <a href="https://cs50.harvard.edu/ap/2024/" target="_blank">CS50AP 23-24 Harvard</a>
-- <a href="https://cs50.harvard.edu/ap/2024/syllabus/" target="_blank">CS50AP Syllabus 2023-24</a>
+- <a href="https://cs50.harvard.edu/ap/2025/" target="_blank">CS50AP 24-25 Harvard</a>
+- <a href="https://cs50.harvard.edu/ap/2025/syllabus/" target="_blank">CS50AP Syllabus 2023-24</a>
