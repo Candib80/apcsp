@@ -13,7 +13,7 @@ title: false
 
 
 
-<!-- ### Your [Summer Assignment](\apcsp\curriculum\summer-assignment) is live now!! -->
+### Your [Summer Assignment](\apcsp\curriculum\summer-assignment) is live now!!
 
 #### Why CS?
 - To satisfy personal creativity
