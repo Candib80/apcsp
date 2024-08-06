@@ -27,6 +27,7 @@ I look forward to having you all in the fall, and have a great rest of your summ
 ### Part 1
 - Complete the **What is Computing?** section on CodeHS & complete the notes you downloaded from above
 - Make sure to complete the free response parts within CodeHS!
+- **When answering the Evidence Collection within the History of Computers section, do not worry about the Bonus Exhibit questions.** I took out that lesson while streamlining the content but forgot to update that part.
 
 ### Part 2
 - Complete the **Programming With Karel** section on CodeHS
