@@ -10,7 +10,7 @@
   |       | Class | Homework |
   | ----- | ----- | -------- |
   |**Mon**|First Day!! Welcome 😀<br>Go over syllabus & expectations<br>Review Summer Assignment<br>Get ready for test (Thursday) on material | |
-  |**Tue**|Sr. Retreat | |
+  |**Tue**|Sr. Retreat<br>Juniors will have more review | |
   |**Wed**|Ms. B out<br>Review for your Summer test with each other |Make sure to join AP Classroom! |
   |**Thu**|Test on Summer Assignment |Make sure to join AP Classroom!  |
   |**Fri**|Getting class tools set up for the year: see below | |
@@ -19,5 +19,5 @@
 - In the order listed, do the following:  
   1. In order to submit problem sets, you'll need an account on GitHub:
     - If you don't already have one, visit [https://github.com/join](https://github.com/join) and create an account (for free). Make sure to use an email that you have access to. **Take care to remember your username and password!** 
-  <!-- 1. [Fill out this form](https://forms.microsoft.com/r/EsPTb1hGmU); must log into your APA Microsoft account to answer -->
+  1. Fill out this form (link coming); must log into your APA Microsoft account to answer
 
