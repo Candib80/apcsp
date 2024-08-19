@@ -5,8 +5,6 @@
 </div>
 <br>
 
-### This week's agenda
-
   |       | Class | Homework |
   | ----- | ----- | -------- |
   |**Mon**|First Day!! Welcome 😀<br>Go over syllabus & expectations<br>Review Summer Assignment<br>Get ready for test (Thursday) on material | |
