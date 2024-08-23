@@ -28,6 +28,7 @@ C. Source Code. Machine Code. Compiler. Correctness, Design, Style. Visual Studi
     <li><a href="https://www.youtube.com/embed/FqUeHzvci10?rel=0">Conditional Statements</a></li>
     <li><a href="https://www.youtube.com/embed/QOvo-xFL9II?rel=0">Loops</a></li>
     <li><a href="https://www.youtube.com/embed/lnYKOnz9ln8?rel=0">Command Line</a></li>
+    <li><a href="https://youtu.be/vK_naJkrtjc?si=zWAN-HhIy37nVd2X">Magic Numbers</a></li>
   </ul>
 </details>
 
