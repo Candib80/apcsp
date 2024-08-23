@@ -18,7 +18,7 @@
   1. In order to submit problem sets, you'll need an account on GitHub:
     - If you don't already have one, visit [https://github.com/join](https://github.com/join) and create an account (for free). Make sure to use an email that you have access to. **Take care to remember your username and password!** 
   1. [Fill out this form](https://forms.microsoft.com/r/sqmw77BXt5); must log into your APA Microsoft account to answer
-- Then move on to setting up VS COde:  
+- Then move on to setting up VS Code:  
     Visual Studio Code (aka VS Code) is a popular “integrated development environment” (IDE) via which you can write code. So that you don’t have to download, install, and configure your own copy of VS Code, we’ll use a cloud-based version instead that has everything you’ll need pre-installed.
 
     1. Log into code.cs50.io using your GitHub account and follow the on-screen instructions to set up your very own “codespace” for Visual Studio Code. Once your codespace loads, you should see that, by default, VS Code is divided into three regions. Toward the top of VS Code is your “text editor,” where you’ll write all of your programs. Toward the bottom is a “terminal window,” a command-line interface (CLI) that allows you to explore your codespace’s files and directories (aka folders), compile code, and run programs. And on the left is your file “explorer,” a graphical user interface (GUI) via which you can also explore your codespace’s files and directories.
