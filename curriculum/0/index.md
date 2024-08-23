@@ -2,7 +2,7 @@
 
 C. Source Code. Machine Code. Compiler. Correctness, Design, Style. Visual Studio Code. Syntax Highlighting. Escape Sequences. Header Files. Libraries. Manual Pages. Types. Conditionals. Variables. Loops. Linux. Graphical User Interface (GUI). Command-Line Interface (CLI). Constants. Comments. Pseudocode. Operators. Integer Overflow. Floating-Point Imprecision.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ywg7cW0Txs4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cwtpLIWylAw?si=1RkxCeDAleJHhS8U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Lecture
 
@@ -32,7 +32,7 @@ C. Source Code. Machine Code. Compiler. Correctness, Design, Style. Visual Studi
   </ul>
 </details>
 
-- [Section](https://cs50.harvard.edu/ap/2024/curriculum/x/sections/1/)
+- [Section](https://cs50.harvard.edu/ap/2025/curriculum/x/sections/1/)
 
 <details>  
   <summary><a href="\apcsp\assets\pdfs\ch1-ref-sheets.pdf">Reference Sheets</a></summary>
@@ -51,7 +51,9 @@ C. Source Code. Machine Code. Compiler. Correctness, Design, Style. Visual Studi
 
 ### Labs, Practice, and Problems
 
-- [Lab 1](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/1/)
+- Coming soon!
+
+<!-- - [Lab 1](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/1/)
 - [Practice Problems](https://cs50.harvard.edu/ap/2024/problems/1/)
 - Problem Sets: 
   1. Submit one of:
@@ -74,4 +76,4 @@ is yielding errors, try running
 ```
 help50 make hello
 ```
-instead!
+instead! -->
