@@ -6,16 +6,15 @@ C. Source Code. Machine Code. Compiler. Correctness, Design, Style. Visual Studi
 
 ### Lecture
 
-  - [Notes](https://cs50.harvard.edu/ap/2024/curriculum/x/notes/1/)
-  - [Slides](https://docs.google.com/presentation/d/1gTpAaUbeu30YuvMu4rHEVTG6S9M3UeLyoEiWkqoGiJA/edit?usp=sharing)
+  - [Notes](https://cs50.harvard.edu/ap/2025/curriculum/x/notes/1/)
+  - [Slides](https://docs.google.com/presentation/d/12s7zQ2vXsVJQ82NlkN8G0YflBN6XlfMMYrYne6W_k40/edit?usp=sharing)
 
 
   <details>
     <summary>Source Code</summary>
     <ul>
-      <li><a href="https://cdn.cs50.net/2022/fall/lectures/1/src1/">Index</a></li>
-      <li><a href="https://cdn.cs50.net/2022/fall/lectures/1/src1.pdf">PDF</a></li>
-      <li><a href="https://cdn.cs50.net/2022/fall/lectures/1/src1.zip">Zip</a></li>
+      <li><a href="https://cdn.cs50.net/2023/fall/lectures/1/src1/">Index</a></li>
+      <li><a href="https://cdn.cs50.net/2023/fall/lectures/1/src1.pdf">PDF</a></li>
     </ul>
   </details>
 
