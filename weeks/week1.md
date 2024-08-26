@@ -1,6 +1,6 @@
 <meta http-equiv="refresh" content="300"/>
 
-## Week 1<br>Week of 8/26  
+## Week 1 <br>Week of 8/26  
 
 ### [Unit 0](/apcsp/curriculum/0)
   
