@@ -1,13 +1,13 @@
 <meta http-equiv="refresh" content="300"/>
 
-## Week 1<br>Week of 8/28  
+## Week 1<br>Week of 8/26  
 
 ### [Unit 0](/apcsp/curriculum/0)
   
   |       | Class | Homework |
   | ----- | ----- | -------- |
-  |**Mon**|Start C |Join class on Submit50 - Details in Teams!<br>Join AP Classroom |
-  |**Tue**|Continue C |Join class on Submit50 - Details in Teams!<br>Join AP Classroom |
+  |**Mon**|Start C |Join our Class on Submit50 - details in Teams |
+  |**Tue**|Continue C | |
   |**Wed**|Continue C | |
   |**Thu**|Continue C | |
   |**Fri**| | |
