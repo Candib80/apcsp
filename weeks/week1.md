@@ -9,7 +9,7 @@
   |**Mon**|Start C |Join our Class on Submit50 - details in Teams |
   |**Tue**|Continue C | |
   |**Wed**|Continue C - finish conditionals start on loops | |
-  |**Thu**|Continue C | |
+  |**Thu**|Continue C - continue loops | |
   |**Fri**| | |
 
    
