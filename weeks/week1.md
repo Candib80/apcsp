@@ -9,7 +9,7 @@
   |**Mon**|Start C |Join our Class on Submit50 - details in Teams |
   |**Tue**|Continue C | |
   |**Wed**|Continue C - finish conditionals start on loops | |
-  |**Thu**|Continue C - continue loops | |
+  |**Thu**|Continue C - continue loops<br>Finished up through `meow.c` chapter on video (minute 1:24:30)<br>Wrote `meow3.c` and `meow4.c` and a quick practice problem | |
   |**Fri**| | |
 
    
