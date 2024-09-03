@@ -8,6 +8,6 @@
   |-------|---------              |---------  |
   |**Mon**|Labor Day Holiday!! | |
   |**Tue**|Continue with C - Start on Mario background<br>Join class in Submit50 | |
-  |**Wed**| | |
+  |**Wed**|Integer overflow<br>Start Lab | |
   |**Thu**| | |
   |**Fri**| | |
