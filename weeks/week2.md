@@ -9,5 +9,5 @@
   |**Mon**|Labor Day Holiday!! | |
   |**Tue**|Continue with C - Start on Mario background<br>Join class in Submit50 | |
   |**Wed**|Integer overflow - Watch [video from here](https://youtu.be/cwtpLIWylAw?si=An-s6vJ-7EhVhqWE&t=7708) to the end | |
-  |**Thu**|Start on Lab |Work on Lab, and try to have finished by tomorrow |
+  |**Thu**|Unit Check-in<br>Start on Practice problems |Work on Practice problems, and try to have finished by tomorrow |
   |**Fri**| | |

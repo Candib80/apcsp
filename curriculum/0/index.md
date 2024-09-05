@@ -49,9 +49,11 @@ C. Source Code. Machine Code. Compiler. Correctness, Design, Style. Visual Studi
   </ul>
 </details>
 
-### Labs, Practice, and Problems
+### Practice and Problems
 
-- Coming soon!
+- Practice: 
+  - Complete [Hello, World](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/1/world/)
+  - Submit [Hello, It's Me](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/1/me/)
 
 <!-- - [Lab 1](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/1/)
 - [Practice Problems](https://cs50.harvard.edu/ap/2024/problems/1/)
