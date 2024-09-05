@@ -53,8 +53,9 @@ C. Source Code. Machine Code. Compiler. Correctness, Design, Style. Visual Studi
 
 - Practice: 
   - Complete [Hello, World](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/1/world/)
+    - Make this in your practice folder
   - Submit [Hello, It's Me](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/1/me/)
-    - Make this file called `hellome.c`
+    - Make this in a subfolder called me and a file called `hello.c`
 
 <!-- - [Lab 1](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/1/)
 - [Practice Problems](https://cs50.harvard.edu/ap/2024/problems/1/)
