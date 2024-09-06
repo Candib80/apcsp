@@ -53,9 +53,9 @@ C. Source Code. Machine Code. Compiler. Correctness, Design, Style. Visual Studi
 
 - Practice: 
   - Complete [Hello, World](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/1/world/)
-    - Make this in your practice folder
+    - Make this in your `practice` folder
   - Submit [Hello, It's Me](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/1/me/)
-    - Make this in a subfolder called me and a file called `hello.c`
+    - Make this in a subfolder of `practice` called `me` and a file called `hello.c`
   - Complete [Population Lab](https://cs50.harvard.edu/ap/2025/curriculum/x/problems/population/)
     - Check: `check50 cs50/labs/2023/x/population` hopefully will work
     - Submit: `submit50 cs50/labs/2023/x/population` should work to submit, but may not check on submission
