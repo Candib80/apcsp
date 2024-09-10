@@ -59,17 +59,14 @@ C. Source Code. Machine Code. Compiler. Correctness, Design, Style. Visual Studi
   - Complete [Population Lab](https://cs50.harvard.edu/ap/2025/curriculum/x/problems/population/)
     - Check: `check50 cs50/labs/2023/x/population` hopefully will work
     - Submit: `submit50 cs50/labs/2023/x/population` should work to submit, but may not check on submission
-
-
-<!-- - [Lab 1](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/1/)
-- [Practice Problems](https://cs50.harvard.edu/ap/2024/problems/1/)
 - Problem Sets: 
+  - Inside a new subfolder folder as such `unit0/pset` create the following:
   1. Submit one of:
-    - [this version of Mario](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/1/mario/less/) if feeling less comfortable
-    - [this version of Mario](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/1/mario/more/) if feeling more comfortable
+    - [this version of Mario](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/1/mario/less/) if feeling less comfortable
+    - [this version of Mario](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/1/mario/more/) if feeling more comfortable
   1. Submit one of:
-    - [Cash](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/1/cash/) if feeling less comfortable
-    - [Credit](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/1/credit/) if feeling more comfortable 
+    - [Cash](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/1/cash/) if feeling less comfortable
+    - [Credit](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/1/credit/) if feeling more comfortable 
 
     *If you submit both versions of Mario, I’ll record the higher of your two scores. If you submit both Cash and Credit, I’ll record the higher of your two scores.*
    
@@ -84,4 +81,4 @@ is yielding errors, try running
 ```
 help50 make hello
 ```
-instead! -->
+instead!

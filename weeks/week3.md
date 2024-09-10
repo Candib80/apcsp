@@ -7,8 +7,8 @@
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
   |**Mon**|Finish up [Population Lab](https://candib80.github.io/apcsp/curriculum/0/#practice-and-problems) | |
-  |**Tue**| | |
-  |**Wed**| | |
+  |**Tue**|Start on [PSET](https://candib80.github.io/apcsp/curriculum/0/#practice-and-problems) | |
+  |**Wed**|Work on PSET |Test on Unit 0 next week - date TBD |
   |**Thu**|Work on PSET |Test on Unit 0 next week - date TBD |
   |**Fri**|Work on PSET |Test on Unit 0 next week - date TBD |
 
