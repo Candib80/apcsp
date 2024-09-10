@@ -51,7 +51,7 @@ C. Source Code. Machine Code. Compiler. Correctness, Design, Style. Visual Studi
 
 ### Practice and Problems
 
-- Practice: 
+- Practice:  
   - Complete [Hello, World](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/1/world/)
     - Make this in your `practice` folder
   - Submit [Hello, It's Me](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/1/me/)
@@ -59,7 +59,7 @@ C. Source Code. Machine Code. Compiler. Correctness, Design, Style. Visual Studi
   - Complete [Population Lab](https://cs50.harvard.edu/ap/2025/curriculum/x/problems/population/)
     - Check: `check50 cs50/labs/2023/x/population` hopefully will work
     - Submit: `submit50 cs50/labs/2023/x/population` should work to submit, but may not check on submission
-- Problem Sets: 
+- Problem Sets:  
   Inside a new subfolder folder as such `unit0/pset` create the following:  
   1. Submit one of:  
     - [this version of Mario](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/1/mario/less/) if feeling less comfortable
