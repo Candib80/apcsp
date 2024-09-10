@@ -60,11 +60,11 @@ C. Source Code. Machine Code. Compiler. Correctness, Design, Style. Visual Studi
     - Check: `check50 cs50/labs/2023/x/population` hopefully will work
     - Submit: `submit50 cs50/labs/2023/x/population` should work to submit, but may not check on submission
 - Problem Sets: 
-  - Inside a new subfolder folder as such `unit0/pset` create the following:
-  1. Submit one of:
+  Inside a new subfolder folder as such `unit0/pset` create the following:  
+  1. Submit one of:  
     - [this version of Mario](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/1/mario/less/) if feeling less comfortable
     - [this version of Mario](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/1/mario/more/) if feeling more comfortable
-  1. Submit one of:
+  1. Submit one of:  
     - [Cash](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/1/cash/) if feeling less comfortable
     - [Credit](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/1/credit/) if feeling more comfortable 
 
