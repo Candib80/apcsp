@@ -23,10 +23,10 @@ Preprocessing. Compiling. Assembling. Linking. Debugging. Arrays. Strings. Comma
 <details>  
   <summary>Shorts</summary>
   <ol>
-    <li><a href="https://www.youtube.com/watch?v=---HbbANxDQ">Step Over</a></li>
-    <li><a href="https://www.youtube.com/watch?v=tk3cl8hyfqM">Step Into</a></li>
     <li><a href="https://www.youtube.com/embed/b7-0sb-DV84">Functions</a></li>
     <li><a href="https://www.youtube.com/embed/GiFbdVGjF9I">Variables and Scope</a></li>
+    <li><a href="https://cs50.harvard.edu/ap/2025/curriculum/x/shorts/debugging_step_through/">Debugging - Step Through</a></li>
+    <li><a href="https://cs50.harvard.edu/ap/2025/curriculum/x/shorts/debugging_step_into/">Debugging - Step Into</a></li>
     <li><a href="https://www.youtube.com/embed/mISkNAfWl8k">Arrays</a></li>
     <li><a href="https://www.youtube.com/embed/AI6Ccfno6Pk">Command Line Arguments</a></li>
   </ol>
