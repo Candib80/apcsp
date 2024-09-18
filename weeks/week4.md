@@ -8,7 +8,7 @@
   |-------|---------              |---------  |
   |**Mon**|Review for Test | |
   |**Tue**|Test | |
-  |**Wed**|Finish up [PSETs](https://candib80.github.io/apcsp/curriculum/0/#practice-and-problems) | |
+  |**Wed**|Finish up [PSETs](https://candib80.github.io/apcsp/curriculum/0/#practice-and-problems)<br>Watch the lecture video story time - first 6 minutes | |
   |**Thu**| | |
   |**Fri**| | |
 
