@@ -11,6 +11,7 @@
 - [Week 1](/apcsp/weeks/week1)
 - [Week 2](/apcsp/weeks/week2)
 - [Week 3](/apcsp/weeks/week3)
+- [Week 4](/apcsp/weeks/week4)
 
 
 

@@ -2,19 +2,19 @@
 
 Preprocessing. Compiling. Assembling. Linking. Debugging. Arrays. Strings. Command-Line Arguments. Cryptography.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XmYnsO7iSI8?si=5flLfWHOiNjIHudo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4vU4aEFmTSo?si=ByG4RatAU1wt_9wH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Lecture
 
-  - [Notes](https://cs50.harvard.edu/ap/2024/curriculum/x/notes/2/)
-  - [Slides](https://docs.google.com/presentation/d/1HBQcIKeQUy-kK_WW8G2bABTJu94bAdfgyZRaJbR0lbE/edit?usp=sharing)
+  - [Notes](https://cs50.harvard.edu/ap/2025/curriculum/x/notes/2/)
+  - [Slides](https://docs.google.com/presentation/d/1puJbZeUXOk5UphIFmiq0pH0pl3Cc0PuCBULV9RhV57k/edit?usp=sharing)
 
   <details>
     <summary>Source Code</summary>
     <ul>
-      <li><a href="https://cdn.cs50.net/2022/fall/lectures/2/src2/">Index</a></li>
-      <li><a href="https://cdn.cs50.net/2022/fall/lectures/2/src2.pdf">PDF</a></li>
-      <li><a href="https://cdn.cs50.net/2022/fall/lectures/2/src2.zip">Zip</a></li>
+      <li><a href="https://cdn.cs50.net/2023/fall/lectures/2/src2/">Index</a></li>
+      <li><a href="https://cdn.cs50.net/2023/fall/lectures/2/src2.pdf">PDF</a></li>
+      <li><a href="https://cdn.cs50.net/2023/fall/lectures/2/src2.zip">Zip</a></li>
     </ul>
   </details>
 
@@ -32,7 +32,7 @@ Preprocessing. Compiling. Assembling. Linking. Debugging. Arrays. Strings. Comma
   </ol>
 </details>
 
-- [Section](https://cs50.harvard.edu/ap/2024/curriculum/x/sections/2/)
+- [Section](https://cs50.harvard.edu/ap/2025/curriculum/x/sections/2/)
 
 <details>  
   <summary><a href="\apcsp\assets\pdfs\ch2_ref_sheets.pdf">Reference Sheets</a></summary>
@@ -46,9 +46,9 @@ Preprocessing. Compiling. Assembling. Linking. Debugging. Arrays. Strings. Comma
   </ul>
 </details>
 
-### Practice, Labs & Problems
+### Practice & Problems
 
-- [Lab 2](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/2/)
+<!-- - [Lab 2](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/2/)
 - [Practice Problems](https://cs50.harvard.edu/ap/2024/problems/2/)
 - Problem Sets:
   - Run `update50` in your codespace’s terminal window to ensure your codespace is up-to-date and, when prompted, click **Rebuild now**
@@ -59,7 +59,7 @@ Preprocessing. Compiling. Assembling. Linking. Debugging. Arrays. Strings. Comma
     - [Substitution](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/2/substitution/), if feeling more comfortable
     - [Wordle50](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/2/wordle50/), if feeling more comfortable
 
-If you submit more than one of Bulbs, Caesar, Substitution, or Wordle50, we’ll record the single highest of your scores among those problems.
+If you submit more than one of Bulbs, Caesar, Substitution, or Wordle50, we’ll record the single highest of your scores among those problems. -->
 
 
 
