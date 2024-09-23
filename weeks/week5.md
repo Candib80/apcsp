@@ -1,12 +1,12 @@
-## Week 5 <br>Week of 9/25
+## Week 5 <br>Week of 9/23
 
 ### [Unit 1](/apcsp/curriculum/1)  
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|Continue with Unit 1 | |
-  |**Tue**|Watch the [arrays section ov video](https://www.youtube.com/live/XmYnsO7iSI8?si=Q-iuK2Gq8Wwrb8NF&t=3778) until strings at 1:35:11<br>Someone please help the sub with the TV and YT :) | |
-  |**Wed**|Finish debugging in VSCode and start on Strings | |
+  |**Mon**|Continue with Unit 1 - Arrays | |
+  |**Tue**|Strings | |
+  |**Wed**| | |
   |**Thu**| | |
   |**Fri**| | |
 
