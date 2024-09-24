@@ -8,7 +8,7 @@
   |**Tue**|Strings | |
   |**Wed**|Continue with Strings; Command-Line Args; Exit status |Look over notes for your check-in tomorrow |
   |**Thu**|Weekly check-in; Cryptography | |
-  |**Fri**|JRs & SRs gone | |
+  |**Fri**|JRs gone | |
 
   **If you need help, or have questions, please let me know and we can meet during break/club or lunch.** Don't wait until a PSET is due to start asking questions.
 
