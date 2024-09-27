@@ -48,9 +48,9 @@ Preprocessing. Compiling. Assembling. Linking. Debugging. Arrays. Strings. Comma
 
 ### Practice & Problems
 
-<!-- - [Lab 2](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/2/)
+- [Lab 2](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/2/)
 - [Practice Problems](https://cs50.harvard.edu/ap/2024/problems/2/)
-- Problem Sets:
+<!-- - Problem Sets:
   - Run `update50` in your codespace’s terminal window to ensure your codespace is up-to-date and, when prompted, click **Rebuild now**
   - Submit [Readability](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/2/readability/)
   - Submit **one** of the following:
@@ -63,12 +63,12 @@ If you submit more than one of Bulbs, Caesar, Substitution, or Wordle50, we’ll
 
 
 
-<!-- 1. [Shining](https://lab.cs50.io/candib80/cs50labs/c/shining/)
+1. [Shining](https://lab.cs50.io/candib80/cs50labs/c/shining/)
 2. [Array Countdown](https://lab.cs50.io/candib80/cs50labs/c/arrayCountdown/)
 3. [Garbage Values](https://lab.cs50.io/candib80/cs50labs/c/garbage/)
 3. [Decode](https://lab.cs50.io/candib80/cs50labs/c/decode/)
 4. [Old Friends](https://lab.cs50.io/candib80/cs50labs/c/oldFriends/)
-5. [Lab 2](\apcsp\psets\scrabble) -->
+5. [Lab 2](\apcsp\psets\scrabble)
 
 
 ### Advice
