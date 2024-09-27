@@ -50,6 +50,7 @@ Preprocessing. Compiling. Assembling. Linking. Debugging. Arrays. Strings. Comma
 
 - [Lab 2](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/2/)
 - [Practice Problems](https://cs50.harvard.edu/ap/2024/problems/2/)
+
 <!-- - Problem Sets:
   - Run `update50` in your codespace’s terminal window to ensure your codespace is up-to-date and, when prompted, click **Rebuild now**
   - Submit [Readability](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/2/readability/)
