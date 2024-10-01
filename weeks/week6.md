@@ -4,9 +4,9 @@
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**| | |
-  |**Tue**| | |
-  |**Wed**| | |
+  |**Mon**|Finish Unit<br>[Scrabble Lab](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/2/) | |
+  |**Tue**|[Scrabble Lab](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/2/) |Make sure to submit Scrabble tonight!! |
+  |**Wed**|[Practice Problems](https://cs50.harvard.edu/ap/2024/problems/2/) | |
   |**Thu**|Ms. B out<br>work on Practice and PSETs | |
   |**Fri**|Ms. B out<br>work on Practice and PSETs | |
 
