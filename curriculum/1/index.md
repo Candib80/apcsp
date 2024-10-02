@@ -51,16 +51,25 @@ Preprocessing. Compiling. Assembling. Linking. Debugging. Arrays. Strings. Comma
 - [Lab 2](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/2/)
 - [Practice Problems](https://cs50.harvard.edu/ap/2024/problems/2/)
 
-<!-- - Problem Sets:
+- Problem Sets:
   - Run `update50` in your codespace’s terminal window to ensure your codespace is up-to-date and, when prompted, click **Rebuild now**
-  - Submit [Readability](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/2/readability/)
-  - Submit **one** of the following:
-    - [Bulbs](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/2/bulbs/), if feeling less comfortable
-    - [Caesar](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/2/caesar/), if feeling less comfortable
-    - [Substitution](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/2/substitution/), if feeling more comfortable
-    - [Wordle50](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/2/wordle50/), if feeling more comfortable
+  - Submit [Readability](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/2/readability/)
+  - Submit **one** of the following:  
+    - [Caesar](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/2/caesar/), if feeling less comfortable
+    - [Substitution](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/2/substitution/), if feeling more comfortable
 
-If you submit more than one of Bulbs, Caesar, Substitution, or Wordle50, we’ll record the single highest of your scores among those problems. -->
+If you submit more than one of Caesar or Substitution I’ll record the single highest of your scores among those problems.
+
+<details>  
+  <summary>Past Problems</summary>
+  <ul>
+    <li><a href="https://cs50.harvard.edu/ap/2025/curriculum/x/psets/2/bulbs/">Bulbs</a></li>
+    <li><a href="https://cs50.harvard.edu/ap/2025/curriculum/x/psets/2/wordle50/">Wordle50</a></li>
+    <li><a href="https://docs.cs50.net/2019/ap/problems/calc/calc.html">Calc</a></li>
+    <li><a href="https://docs.cs50.net/2019/ap/problems/crack/crack.html">Crack, for those more comfortable</a></li>
+    <li><a href="https://docs.cs50.net/2019/ap/problems/vigenere/vigenere.html">Vigenère, for those more comfortable</a></li>
+  </ul>
+</details>
 
 
 
