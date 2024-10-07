@@ -4,12 +4,13 @@
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|Work Practice problems or start on [PSET: Readability](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/2/readability/)<br>Make sure to update your codespace first! |Work on PSET |
+  |**Mon**|[Work on Practice and PSETs](https://candib80.github.io/apcsp/curriculum/1/#practice--problems) |Work on PSET |
   |**Tue**|Work on PSET |Work on PSET |
   |**Wed**|Work on PSET |Work on PSET |
-  |**Thu**|Readability Due tonight!<br>Start on your choice of other PSET if finished with Readability |Work on PSET |
+  |**Thu**|SRs taking pics <br>everyone else will continue to work on any problems not turned in | |
   |**Fri**|Fall Break!| |
 
+  **If you need help, or have questions, please let me know and we can meet during break/club or lunch.** Don't wait until a PSET is due to start asking questions.
 
 <img src="https://ih0.redbubble.net/image.453247676.2842/flat,800x800,070,f.u3.jpg" alt="hide and seek champ ;" height="350">
 
