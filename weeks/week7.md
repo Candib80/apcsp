@@ -7,8 +7,8 @@
   |**Mon**|[Work on Practice and PSETs](https://candib80.github.io/apcsp/curriculum/1/#practice--problems) |Work on PSET |
   |**Tue**|Work on PSET |Work on PSET |
   |**Wed**|Work on PSET |Work on PSET |
-  |**Thu**|SRs taking pics <br>everyone else will continue to work on any problems not turned in | |
-  |**Fri**|Fall Break!| |
+  |**Thu**|Continue to work on any problems not turned in | |
+  |**Fri**|Fall Break!|Practice Problems due on Tuesday, with an brief explanation to me about what they are doing, for an opportunity for extra credit |
 
   **If you need help, or have questions, please let me know and we can meet during break/club or lunch.** Don't wait until a PSET is due to start asking questions.
 
