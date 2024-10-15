@@ -9,7 +9,7 @@ title: false
 <!-- <img src="https://www.dv8sussex.com/wp-content/uploads/2020/03/bud-important-announcement-800x280-1.jpg" alt="important announcement" height="300">   -->
 <img src="https://schools.scsk12.org/cms/lib/TN50000520/Centricity/Domain/3250/Screen%20Shot%202020-09-03%20at%2010.43.04%20AM.png" alt="updates & announcements" height="300">  
 
-- <span style="font-size: 22px;">We are on Week 7!</span>
+- <span style="font-size: 22px;">We are on Week 8!</span>
 
 
 

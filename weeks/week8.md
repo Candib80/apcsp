@@ -5,10 +5,10 @@
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
   |**Mon**|Fall Holiday - NO SCHOOL! | |
-  |**Tue**|Start on next [PSET](https://candib80.github.io/apcsp/curriculum/1/#practice-labs--problems) | |
-  |**Wed**| | |
-  |**Thu**| | |
-  |**Fri**|Finish up PSETs, and look over stuff from Unit 1<br>Test on Unit 1 next week | |
+  |**Tue**|Review of Unit 1<br>ACT|Study for Test on Friday |
+  |**Wed**|Review of Unit 1 |Study for Test on Friday |
+  |**Thu**|Review of Unit 1 |Study for Test on Friday |
+  |**Fri**|Test on Unit 1 | |
 
 
 <meta http-equiv="refresh" content="300"/>
