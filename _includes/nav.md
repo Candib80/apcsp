@@ -5,7 +5,7 @@
 
 ---
 
-- [Summer Assignment](\apcsp\curriculum\summer-assignment)
+<!-- - [Summer Assignment](\apcsp\curriculum\summer-assignment) -->
 
 - [Week 8](/apcsp/weeks/week8)
 
