@@ -6,8 +6,8 @@
   |-------|---------              |---------  |
   |**Mon**|Fall Holiday - NO SCHOOL! | |
   |**Tue**|Review of Unit 1<br>ACT|Study for Test on Friday |
-  |**Wed**|Review of Unit 1 |Study for Test on Friday |
-  |**Thu**|Review of Unit 1 |Study for Test on Friday |
+  |**Wed**|Review of Unit 1<br>Sr Pics & PSAT - Sophs |Study for Test on Friday |
+  |**Thu**|Review of Unit 1<br>PSAT - Sophs |Study for Test on Friday |
   |**Fri**|Test on Unit 1 | |
 
 
