@@ -1,14 +1,14 @@
-## Week 9 <br>Week of 10/23
+## Week 9 <br>Week of 10/21
 
-### [Unit 1](/apcsp/curriculum/1)<br>[Unit 2](/apcsp/curriculum/2)
+### [Unit 2](/apcsp/curriculum/2)
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|Review for Test on Unit 1<br>Test tomorrow |If you would like some extra practice, and some simple programs, [see below](https://candib80.github.io/apcsp/weeks/week9/#additional-practice-on-arrays--command-line-arguments) |
-  |**Tue**|Test on Unit 1 | |
-  |**Wed**|Test Corrections | |
-  |**Thu**|More practice on arrays and command-line args, see below | |
-  |**Fri**|[Initials practice problem below](https://candib80.github.io/apcsp/weeks/week9/#initials) | |
+  |**Mon**|Test Corrections | |
+  |**Tue**|Start Unit 2 | |
+  |**Wed**| | |
+  |**Thu**| | |
+  |**Fri**| | |
 
 
 <meta http-equiv="refresh" content="300"/>
@@ -17,7 +17,7 @@
 <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20201209135923/String-in-C.png" alt="Strings in C" height="350">
 
 
-### Additional Practice on Arrays & Command-line Arguments
+<!-- ### Additional Practice on Arrays & Command-line Arguments
 
 #### `addition.c`
 
@@ -61,4 +61,4 @@
       int main(void)
       {
         ...
-    ```
+    ``` -->
