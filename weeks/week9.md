@@ -6,9 +6,9 @@
   |-------|---------              |---------  |
   |**Mon**|Test Corrections | |
   |**Tue**|Start Unit 2 | |
-  |**Wed**| | |
-  |**Thu**| | |
-  |**Fri**| | |
+  |**Wed**|Running time |`strcmp` fix |
+  |**Thu**|`struct`s |`book.c ``struct`s |
+  |**Fri**|Sorting | |
 
 
 <meta http-equiv="refresh" content="300"/>
