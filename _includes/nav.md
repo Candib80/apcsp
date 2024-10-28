@@ -9,6 +9,7 @@
 
 - [Week 8](/apcsp/weeks/week8)
 - [Week 9](/apcsp/weeks/week9)
+- [Week 10](/apcsp/weeks/week10)
 
 
 
