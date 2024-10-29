@@ -15,8 +15,8 @@
 
 <img src="https://pbs.twimg.com/media/Dqc1eRnXgAAAiR1.jpg" alt="learn more by looking for answer than finding it" height="300">
 
-#### Homework
+### Homework
 
-##### Factorial - Tuesday night
+#### Factorial - Tuesday night
 - Write a program `fact.c` where you have a recursive function `fact` that returns the factorial of any given number enter by the user then prints the answer to the terminal.
 - Recall that factorial is the product of n * (n - 1) * (n - 2) * ... * 1 and is written n!
