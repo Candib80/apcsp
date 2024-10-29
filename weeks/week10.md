@@ -4,7 +4,7 @@
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|Intro to Recursion |Sophomores (and others if you want a review) - [watch the video starting at this link](https://youtu.be/jZzyERW7h1A?si=s12xCZShurtpxNay&t=5593;end=6303;) - it should end where you need to stop |
+  |**Mon**|Intro to Recursion |Sophomores (and others if you want a review) - [watch the video starting at this link](https://youtu.be/jZzyERW7h1A?si=bII5eRU__dFf-p-S&start=5593;end=6303;) - it should end where you need to stop |
   |**Tue**|Recursion practice & Merge Sort | |
   |**Wed**|Start lab & practice problems | |
   |**Thu**| | |
