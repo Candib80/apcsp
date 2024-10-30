@@ -49,17 +49,21 @@ Searching: Linear Search, Binary Search. Sorting: Bubble Sort, Selection Sort, M
 
 ### Practice, Labs & Problems
 
-<!-- - [Lab 3](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/3/)
-- [Practice Problems](https://cs50.harvard.edu/ap/2024/problems/3/)
-- Problem Sets:
+- Practice Problems:
+  - [Snackbar](https://cs50.harvard.edu/ap/2025/practice/snackbar/)
+  - [Max](https://cs50.harvard.edu/ap/2025/practice/max/)
+
+ - Problem Sets:
+  - [Sort](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/3/sort/)
+  <!--
   - Submit [Plurality](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/3/plurality/)
   - Submit **one** of the following:
     - [Runoff](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/3/runoff/), if feeling less comfortable
-    - [Tideman](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/3/tideman/), if feeling more comfortable -->
+    - [Tideman](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/3/tideman/), if feeling more comfortable  -->
 
 
 #### Advice
-- Try out David's programs from class via [Unit 2](https://cdn.cs50.net/2022/fall/lectures/3/src3.pdf)'s examples
+- Try out David's programs from class via [Unit 2](https://cdn.cs50.net/2023/fall/lectures/3/src3.pdf)'s examples
 - If you see any errors when compiling your code with `make`, focus first on fixing the very first error you see, scrolling up as needed. If unsure what it means, try asking `help50` for help. For instance, if trying to compile `plurality`, and
 
 ```
