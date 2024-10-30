@@ -47,7 +47,7 @@ Searching: Linear Search, Binary Search. Sorting: Bubble Sort, Selection Sort, M
   </ul>
 </details>
 
-### Practice, Labs & Problems
+### Practice, Problems & EC
 
 - Practice Problems:
   - [Snackbar](https://cs50.harvard.edu/ap/2025/practice/snackbar/)
@@ -56,11 +56,14 @@ Searching: Linear Search, Binary Search. Sorting: Bubble Sort, Selection Sort, M
  - Problem Sets:
   - [Sort](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/3/sort/)
   <!--
-  - Submit [Plurality](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/3/plurality/)
+  - Submit [Plurality](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/3/plurality/)
   - Submit **one** of the following:
-    - [Runoff](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/3/runoff/), if feeling less comfortable
-    - [Tideman](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/3/tideman/), if feeling more comfortable  -->
+    - [Runoff](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/3/runoff/), if feeling less comfortable
+    - [Tideman](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/3/tideman/), if feeling more comfortable  -->
 
+  - Extra Credit Problems:
+    - [Recursive `atoi`](https://cs50.harvard.edu/ap/2025/practice/atoi/)
+    - [Average Temperatures](https://cs50.harvard.edu/ap/2025/practice/temps/)
 
 #### Advice
 - Try out David's programs from class via [Unit 2](https://cdn.cs50.net/2023/fall/lectures/3/src3.pdf)'s examples
@@ -77,15 +80,3 @@ help50 make plurality
 ```
 
 instead!
-
-
-
-<!-- <details>  
-  <summary>Labs</summary>
-  <ul>
-    <li><a href="https://lab.cs50.io/candib80/cs50labs/c/struct0/">Struct 0</a></li>
-    <li><a href="https://lab.cs50.io/candib80/cs50labs/c/struct1/">Struct 1</a></li>
-    <!-- <li><a href="https://lab.cs50.io/candib80/cs50labs/c//"></a></li>
-    <li><a href="https://lab.cs50.io/candib80/cs50labs/c//"></a></li> -->
-  <!-- </ul>
-</details> -->
