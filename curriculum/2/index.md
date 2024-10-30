@@ -53,7 +53,7 @@ Searching: Linear Search, Binary Search. Sorting: Bubble Sort, Selection Sort, M
   - [Snackbar](https://cs50.harvard.edu/ap/2025/practice/snackbar/)
   - [Max](https://cs50.harvard.edu/ap/2025/practice/max/)
 
- - Problem Sets:
+- Problem Sets:
   - [Sort](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/3/sort/)
 
 
