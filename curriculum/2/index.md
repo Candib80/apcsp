@@ -55,10 +55,10 @@ Searching: Linear Search, Binary Search. Sorting: Bubble Sort, Selection Sort, M
 
 - Problem Sets:
   1. [Sort](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/3/sort/)
-
-
-<!--   
   1. Submit [Plurality](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/3/plurality/)
+
+
+<!--
   1. Submit **one** of the following:
     - [Runoff](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/3/runoff/), if feeling less comfortable
     - [Tideman](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/3/tideman/), if feeling more comfortable -->
