@@ -7,7 +7,7 @@
   |**Mon**|Intro to Recursion |Sophomores (and others if you want a review) - [watch the video starting at this link](https://youtu.be/jZzyERW7h1A?si=bII5eRU__dFf-p-S&start=5593&end=6303;) - it should end where you need to stop but if not, stop before Merge Sort |
   |**Tue**|Recursion practice & Merge Sort |Watch video on Merge Sort<br>See homework below |
   |**Wed**|Work on [Practice Problems](https://candib80.github.io/apcsp/curriculum/2/#practice-problems--ec) |Practice Problems |
-  |**Thu**|If finished with practice, do the Sort PSET and submit when finished | |
+  |**Thu**|If finished with practice, do the Sort PSET and submit when finished |Look over notes to get started on test material |
   |**Fri**| | |
 
 
