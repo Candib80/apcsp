@@ -50,23 +50,23 @@ Searching: Linear Search, Binary Search. Sorting: Bubble Sort, Selection Sort, M
 ### Practice, Problems & EC
 
 - Practice Problems:
-  - [Snackbar](https://cs50.harvard.edu/ap/2025/practice/snackbar/)
-  - [Max](https://cs50.harvard.edu/ap/2025/practice/max/)
+  1. [Snackbar](https://cs50.harvard.edu/ap/2025/practice/snackbar/)
+  1. [Max](https://cs50.harvard.edu/ap/2025/practice/max/)
 
 - Problem Sets:
-  - [Sort](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/3/sort/)
+  1. [Sort](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/3/sort/)
 
 
 <!--   
-  - Submit [Plurality](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/3/plurality/)
-  - Submit **one** of the following:
+  1. Submit [Plurality](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/3/plurality/)
+  1. Submit **one** of the following:
     - [Runoff](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/3/runoff/), if feeling less comfortable
     - [Tideman](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/3/tideman/), if feeling more comfortable -->
 
 
   - Extra Credit Problems:
-    - [Recursive `atoi`](https://cs50.harvard.edu/ap/2025/practice/atoi/)
-    - [Average Temperatures](https://cs50.harvard.edu/ap/2025/practice/temps/)
+    1. [Recursive `atoi`](https://cs50.harvard.edu/ap/2025/practice/atoi/)
+    1. [Average Temperatures](https://cs50.harvard.edu/ap/2025/practice/temps/)
 
 #### Advice
 - Try out David's programs from class via [Unit 2](https://cdn.cs50.net/2023/fall/lectures/3/src3.pdf)'s examples
