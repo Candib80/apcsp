@@ -1,14 +1,14 @@
-## Week 11 <br>Week of 11/6
+## Week 11 <br>Week of 11/4
 
 ### [Unit 2](/apcsp/curriculum/2)
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|Merge Sort |[Lab for this unit](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/3/) |
-  |**Tue**|Cover how to swap values in class, then do Bubble Sort Practice below | |
-  |**Wed**|Start on [Practice Problems](https://cs50.harvard.edu/ap/2024/problems/3/):<br>1. Average Temperatures (make sure you have done swap and Bubble Sort practice first)<br>2. Max | |
-  |**Thu**|Go over Max and start practice FRQs on this program<br>I'll put the questions in Teams so anyone that is going to be out won't miss anything | |
-  |**Fri**|Finish FRQ | |
+  |**Mon**|Work on PSETs |If you are working on the EC problems for Unit 2, see Bubble Sort Practice below<br>You may also want to see me about how to swap values if you can't figure it out on your own |
+  |**Tue**| | |
+  |**Wed**| | |
+  |**Thu**| | |
+  |**Fri**| | |
 
 
 <meta http-equiv="refresh" content="300"/>
