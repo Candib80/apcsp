@@ -4,10 +4,10 @@
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|Finish up Teams assignment on FRQ | |
-  |**Tue**|Go over FRQ | |
-  |**Wed**|Review for Test | |
-  |**Thu**|Test on Unit 2 | |
+  |**Mon**|Review for Test | |
+  |**Tue**|Test on Unit 2 | |
+  |**Wed**| | |
+  |**Thu**| | |
   |**Fri**| | |
 
 

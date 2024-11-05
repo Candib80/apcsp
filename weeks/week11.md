@@ -6,9 +6,9 @@
   |-------|---------              |---------  |
   |**Mon**|Work on PSETs |If you are working on the EC problems for Unit 2, see Bubble Sort Practice below<br>You may also want to see me about how to swap values if you can't figure it out on your own |
   |**Tue**|Check that practice problems are done<br>Continue working on PSETs |Continue working on PSETs |
-  |**Wed**|Continue working on PSETs<br>They are potentially due tonight or tomorrow<br>Test will be next week, Monday or Tuesday |Continue working on PSETs |
+  |**Wed**|Continue working on PSETs<br>They are potentially due tonight or tomorrow<br>Test will be next STuesday |Continue working on PSETs |
   |**Thu**| | |
-  |**Fri**|Review for Test | |
+  |**Fri**|Write Runoff together in class<br>Test next Tuesday, review on Monday | |
 
 
 <meta http-equiv="refresh" content="300"/>
