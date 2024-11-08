@@ -8,7 +8,7 @@
   |**Tue**|Check that practice problems are done<br>Continue working on PSETs |Continue working on PSETs |
   |**Wed**|Continue working on PSETs<br>They are due tomorrow<br>Test will be next Tuesday |Continue working on PSETs |
   |**Thu**| | |
-  |**Fri**|Write Runoff together in class<br>Test next Tuesday, review on Monday | |
+  |**Fri**|Write [Runoff](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/3/runoff/) together in class<br>Test next Tuesday, review on Monday | |
 
 
 <meta http-equiv="refresh" content="300"/>
