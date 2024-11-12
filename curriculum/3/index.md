@@ -2,19 +2,19 @@
 
 Pointers. Segmentation Faults. Dynamic Memory Allocation. Stack. Heap. Buffer Overflow. File I/O. Images.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AcWIE9qazLI?si=NRkLawMD-eHpwjEu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F9-yqoS7b8w?si=JU-1U9bhiPNzaQ2b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Lecture  
 
-  - [Notes](https://cs50.harvard.edu/ap/2024/curriculum/x/notes/4/)
-  - [Slides](https://docs.google.com/presentation/d/1YiuW-uq_7Eh0lSWMYuVm4lfvOGAafX2mpRhNYpC2QRM/edit?usp=sharing)
+  - [Notes](https://cs50.harvard.edu/ap/2025/curriculum/x/notes/4/)
+  - [Slides](https://docs.google.com/presentation/d/11_Jk-uo5r7tasBkRFtKpgR9WTcAd68xVD7TSsAbU79Q/edit?usp=sharing)
 
   <details>
     <summary>Source Code</summary>
     <ul>
-      <li><a href="https://cdn.cs50.net/2022/fall/lectures/4/src4/">Index</a></li>
-      <li><a href="https://cdn.cs50.net/2022/fall/lectures/4/src4.pdf">PDF</a></li>
-      <li><a href="https://cdn.cs50.net/2022/fall/lectures/4/src4.zip">Zip</a></li>
+      <li><a href="https://cdn.cs50.net/2023/fall/lectures/4/src4/">Index</a></li>
+      <li><a href="https://cdn.cs50.net/2023/fall/lectures/4/src4.pdf">PDF</a></li>
+      <li><a href="https://cdn.cs50.net/2023/fall/lectures/4/src4.zip">Zip</a></li>
     </ul>
   </details>
 
@@ -31,7 +31,7 @@ Pointers. Segmentation Faults. Dynamic Memory Allocation. Stack. Heap. Buffer Ov
    </ul>
 </details>
 
-- [Section](https://cs50.harvard.edu/ap/2024/curriculum/x/sections/4/)
+- [Section](https://cs50.harvard.edu/ap/2025/curriculum/x/sections/4/)
 
 <details><summary><a href="\apcsp\assets\pdfs\ch4_ref_sheets_2020.pdf">Reference Sheets</a></summary>
   <ul>
@@ -42,7 +42,7 @@ Pointers. Segmentation Faults. Dynamic Memory Allocation. Stack. Heap. Buffer Ov
   </ul>
 </details>
 
-### Practice, Labs & Problems
+<!-- ### Practice, Labs & Problems
 
 - Practice Problems:
   - [Bottom Up](https://cs50.harvard.edu/ap/2024/problems/4/bottomup/), for practice working with images and metadata
@@ -51,7 +51,7 @@ Pointers. Segmentation Faults. Dynamic Memory Allocation. Stack. Heap. Buffer Ov
 - [Lab](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/4/)
 - Problem Sets:
   - [Filter](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/4/filter/less/)
-
+ -->
 
 
 #### Advice
