@@ -5,7 +5,7 @@
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
   |**Mon**|Continue with Unit 3 | |
-  |**Tue**| | |
+  |**Tue**|`scanf` & File I/O | |
   |**Wed**| | |
   |**Thu**| | |
   |**Fri**| | |
