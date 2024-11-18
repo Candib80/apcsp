@@ -1,16 +1,16 @@
-## Week 13 <br>Week of 11/20
+## Week 13 <br>Week of 11/18
 
-### [Unit 2](/apcsp/curriculum/2)
+### [Unit 3](/apcsp/curriculum/3)
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**| | |
+  |**Mon**|Continue with Unit 3 | |
   |**Tue**| | |
-  |**Wed**|Thanksgiving Break | |
-  |**Thu**|Happy Thanksgiving | |
-  |**Fri**|Thanksgiving Break | |
+  |**Wed**| | |
+  |**Thu**| | |
+  |**Fri**| | |
 
 
 <meta http-equiv="refresh" content="300"/>
   
-<img src="https://www.pinkthecat.com/cdn/shop/products/thanksgiving_free1.jpg?v=1606412714" alt="happy thanksgiving" height="250">
+<!-- <img src="https://www.pinkthecat.com/cdn/shop/products/thanksgiving_free1.jpg?v=1606412714" alt="happy thanksgiving" height="250"> -->
