@@ -5,10 +5,10 @@
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
   |**Mon**|Continue with Unit 3 | |
-  |**Tue**|`scanf` & File I/O | |
-  |**Wed**| | |
-  |**Thu**| | |
-  |**Fri**| | |
+  |**Tue**|`scanf` & File I/O |Finish worksheet for homework for a grade |
+  |**Wed**|Review | |
+  |**Thu**|Review | |
+  |**Fri**|Test on Unit 3 | |
 
 
 <meta http-equiv="refresh" content="300"/>
