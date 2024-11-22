@@ -42,7 +42,7 @@ Pointers. Segmentation Faults. Dynamic Memory Allocation. Stack. Heap. Buffer Ov
   </ul>
 </details>
 
-### Practice, Labs & Problems
+### Practice, Problems & EC
 
 - Practice Problems:
   - [Bottom Up](https://cs50.harvard.edu/ap/2024/problems/4/bottomup/), for practice working with images and metadata
