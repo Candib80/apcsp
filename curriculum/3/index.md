@@ -45,17 +45,18 @@ Pointers. Segmentation Faults. Dynamic Memory Allocation. Stack. Heap. Buffer Ov
 ### Practice, Problems & EC
 
 - Practice Problems:
-  1. [Smiley](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/4/smiley/)
-  1. [Bottom Up](https://cs50.harvard.edu/ap/2024/problems/4/bottomup/), for practice working with images and metadata
-  1. [License](https://cs50.harvard.edu/ap/2024/problems/4/license/), for practice working with files and file pointers
-  1. [Whodunit](https://docs.cs50.net/2019/ap/problems/whodunit/whodunit.html), oldie, but goodie
+  1. [Smiley](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/4/smiley/): Learn how to work with images & practice manipulating pixels
+  1. [Bottom Up](https://cs50.harvard.edu/ap/2024/problems/4/bottomup/): practice working with images and metadata
+  1. [License](https://cs50.harvard.edu/ap/2024/problems/4/license/): practice working with files and file pointers
+  1. [Whodunit](https://docs.cs50.net/2019/ap/problems/whodunit/whodunit.html), oldie, but goodie; working with images
 
 - Problem Set:
   - [Filter](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/4/filter/less/)
 
 - Extra Credit:
   - [Volume](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/4/volume/)
-
+  - In addition to this EC problem, if you complete some or all of the practice problems above, I will give a little extra extra credit 😊
+  - All practice problems should be submitted if that is an option, or a screenshot placed in the Unit3 EC assignment in Teams, labeled as to which problem it is; I will post the Teams assignment for this EC the week of Thanksgiving
 
 
 #### Advice
