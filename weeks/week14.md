@@ -1,17 +1,18 @@
-## Week 14 <br>Week of 11/27
+## Week 14 <br>Week of 11/25
 
-### [Unit 2](/apcsp/curriculum/2)
+### [Unit 3](/apcsp/curriculum/3)
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|Plurality | |
-  |**Tue**|Finish Plurality<br>Review Create Task requirements PPT | |
-  |**Wed**|Start on Plurality responses | |
-  |**Thu**|Work on Plurality responses | |
-  |**Fri**|Finish Plurality responses | |
+  |**Mon**|Filter PSET | |
+  |**Tue**|Filter PSET | |
+  |**Wed**|Thanksgiving Holiday!!! | |
+  |**Thu**|Happy Thanksgiving | |
+  |**Fri**|Thanksgiving Holiday | |
 
 
 <meta http-equiv="refresh" content="300"/>
   
-<img src="https://i.ytimg.com/vi/47GRtdHOKMg/maxresdefault.jpg" alt="computational complexity" height="250">
+<!-- <img src="https://i.ytimg.com/vi/47GRtdHOKMg/maxresdefault.jpg" alt="computational complexity" height="250"> -->
 
+<img src="https://www.pinkthecat.com/cdn/shop/products/thanksgiving_free1.jpg?v=1606412714" alt="happy thanksgiving" height="250"> 
