@@ -4,7 +4,7 @@
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|Filter PSET |Don't forget about the Unit 2 Extra Credit that is in Teams!! |
+  |**Mon**|Filter PSET |Filter getting started homework in Teams<br>Don't forget about the Unit 2 Extra Credit that is in Teams!! |
   |**Tue**|Filter PSET |Don't forget about the Unit 2 Extra Credit that is in Teams!! |
   |**Wed**|Thanksgiving Holiday!!! | |
   |**Thu**|Happy Thanksgiving | |
