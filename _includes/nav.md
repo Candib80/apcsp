@@ -15,6 +15,7 @@
 - [Week 13](/apcsp/weeks/week13)
 - [Week 14](/apcsp/weeks/week14)
 - [Week 15](/apcsp/weeks/week15)
+- [Week 16](/apcsp/weeks/week16)
 
 
 
