@@ -1,4 +1,4 @@
-## Week 17 <br>Week of 1/8
+## Week 17 <br>Week of 1/6
 
 ### Review
 

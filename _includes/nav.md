@@ -8,6 +8,7 @@
 <!-- - [Summer Assignment](\apcsp\curriculum\summer-assignment) -->
 
 - [Week 17](/apcsp/weeks/week17)
+- [Week 18](/apcsp/weeks/week18)
 
 
 
