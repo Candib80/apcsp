@@ -90,5 +90,5 @@ Before submitting your work as final, please:
 
 ### Screen Recording of Program Running:
   - Mac: use the QuickTime Player app or press the Command, Shift, and 5 keys simultaneously
-  - Windows: press Windows logo key (start key) + Shift + R to start a recording or Windows logo key (start key) + G (for the gamebar)
+  - Windows: press Windows logo key (start key) + Shift + R to start a recording or Windows logo key (start key) + G (for the gamebar)  
 ***With any of these, make sure to mute your mic, as you are not supposed to have your voice in the video!**
