@@ -17,13 +17,13 @@ Python: Functions, Arguments, Return Values; Variables; Boolean Expressions, Con
     </ul>
   </details>  
 
-<hr>
-
 ### Resources
  - [Python Short](https://www.youtube.com/watch?v=mgBpcQRDtl0)
  - [Section](https://cs50.harvard.edu/ap/2025/curriculum/x/sections/6/)
  - [Python Ref Sheet](\apcsp\assets\pdfs\python.pdf)
  - [Mrs. Beaman's Python Notes](\apcsp\assets\pdfs\python-notes.pdf)
+
+<hr> 
 
 <!-- ### Practice, Labs & Problems
 - [Practice problems](https://cs50.harvard.edu/ap/2024/problems/6/) - Do not do Jar as we are not focusing on OOP and classes! Also, don't worry about doing Seven Day Averages, unless you REALLY want to figure out DictReader and csv files
