@@ -6,9 +6,9 @@
   |-------|---------              |---------  |
   |**Mon**|MLK Day - NO SCHOOL |Work on Create |
   |**Tue**|Work on Create D5 |Work on Create |
-  |**Wed**|Work on Create D6 |Work on Create |
-  |**Thu**|Work on Create D7 |Work on Create |
-  |**Fri**|Work on Create D8<br>Today & Monday, I will show you how to create PDFs and screen recordings, as well as how to navigate the Digital Portfolio |Continue to work on Create |
+  |**Wed**|SNOW DAY!! |Work on Create |
+  |**Thu**|SNOW DAY!! This will still count as Day 6 |Work on Create |
+  |**Fri**|SNOW DAY!! This will still count as Day 7 so that we are not behind<br>Monday, I will show you how to create PDFs and screen recordings, as well as how to navigate the Digital Portfolio |Continue to work on Create |
 
 <!-- <img src="https://techvidvan.com/tutorials/wp-content/uploads/sites/2/2019/12/Applications-of-python.jpg" alt="python applications" height="400"> -->
 
