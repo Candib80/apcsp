@@ -1,16 +1,18 @@
-## Week 21 <br>Week of 2/5
+## Week 21 <br>Week of 2/3
 
-### [Unit 3](/apcsp/curriculum/3)<br>Continue working on [Create](/apcsp/curriculum/pt/create) - Due to me, marked as FINAL in Digital Portfolio, March 1
+### [Unit 4](/apcsp/curriculum/4)<br>Continue working on [Create](/apcsp/curriculum/pt/create) - Due to me, marked as FINAL in Digital Portfolio, Feb. 28
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|Work on Blur |Finish up Filter |
-  |**Tue**|Finish up Filter |Turn in Filter |
-  |**Wed**|Review for test | |
-  |**Thu**|Test on Unit 3 | |
-  |**Fri**|Start on [Unit 4](/apcsp/curriculum/5) | |
+  |**Mon**Finish Python |Work on Lab |
+  |**Tue**| | |
+  |**Wed**| | |
+  |**Thu**| | |
+  |**Fri**| | |
 
-<img src="https://hips.hearstapps.com/seventeen/assets/15/52/1450814666-filters.jpg" alt="filter" height="400">
+<img src="https://techvidvan.com/tutorials/wp-content/uploads/sites/2/2019/12/Applications-of-python.jpg" alt="python applications" height="400">
+
+<!-- <img src="https://hips.hearstapps.com/seventeen/assets/15/52/1450814666-filters.jpg" alt="filter" height="400"> -->
 
 <meta http-equiv="refresh" content="300"/>
 
