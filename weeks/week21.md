@@ -4,7 +4,7 @@
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**Finish Python |Work on Lab |
+  |**Mon**Finish Python |Work on Practice problems |
   |**Tue**| | |
   |**Wed**| | |
   |**Thu**| | |
