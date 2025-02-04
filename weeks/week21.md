@@ -5,8 +5,8 @@
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
   |**Mon**|Finish Python |Work on Practice problems |
-  |**Tue**| | |
-  |**Wed**| | |
+  |**Tue**|Work on Practice Problems | |
+  |**Wed**|Work on Practice Problems | |
   |**Thu**| | |
   |**Fri**| | |
 
