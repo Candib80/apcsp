@@ -1,14 +1,14 @@
-## Week 22 <br>Week of 2/12
+## Week 22 <br>Week of 2/10
 
-### [Unit 4](/apcsp/curriculum/5)<br>Continue working on [Create](/apcsp/curriculum/pt/create) - Due to me, marked as FINAL in Digital Portfolio, March 1
+### [Unit 4](/apcsp/curriculum/5)<br>Continue working on [Create](/apcsp/curriculum/pt/create) - Due to me, marked as FINAL in Digital Portfolio, Feb 28
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
   |**Mon**|Sr. Skip Day | |
-  |**Tue**|Continue with Python |If you need to turn in or fix Filter, get it turned in **tonight** or you get what you get |
-  |**Wed**| | |
-  |**Thu**|Finish Python | |
-  |**Fri**|[Practice problems](https://cs50.harvard.edu/ap/2024/problems/6/)<br>Do not do Jar as we are not focusing on OOP and classes! | |
+  |**Tue**|Work on PSET |PSET due **tonight** at 11:59 |
+  |**Wed**|Python Test Review | |
+  |**Thu**|Python Test | |
+  |**Fri**| | |
 
 <img src="https://www.learncomputerscienceonline.com/wp-content/uploads/2019/10/Program-Coding.jpg" alt="computer programming" height="300">
 
