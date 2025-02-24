@@ -1,25 +1,29 @@
 # Unit 5 - HTML, CSS, JavaScript
 
-Internet: Routers; TCP/IP; DNS. HTTP: URLs, GET, POST. HTML: Tags; Attributes. Servers. CSS: Properties; Selectors. Frameworks. JavaScript: Variables; Conditionals; Loops. Events.
+Internet: Routers; TCP/IP; DNS.  
+HTTP: URLs, GET, POST.  
+HTML: Tags; Attributes. Servers.  
+CSS: Properties; Selectors. Frameworks.  
+JavaScript: Variables; Conditionals; Loops. Events.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/alnzFK-4xMY?si=0tzalEyYZvTzBAQF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ciz2UaifaNM?si=8XQM279PAoMrB1iR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Lecture
-  - [Notes](https://cs50.harvard.edu/ap/2024/curriculum/x/notes/8/)
-  - [Slides](https://docs.google.com/presentation/d/1whQY3YOmNTOdUiGqjs7MsnMSH326BoUhQh8fdlBrsRc/edit?usp=sharing)
+  - [Notes](https://cs50.harvard.edu/ap/2025/curriculum/x/notes/8/)
+  - [Slides](https://docs.google.com/presentation/d/1mSiShIskOu7_w26K_r3VM8Kbb7z192AFNS1v64s6-s8/edit?usp=sharing)
   
   <details>
   <summary>Source Code</summary>
     <ul>
-      <li><a href="https://cdn.cs50.net/2022/fall/lectures/8/src8/">Index</a></li>
-      <li><a href="https://cdn.cs50.net/2022/fall/lectures/8/src8.pdf">PDF</a></li>
-      <li><a href="https://cdn.cs50.net/2022/fall/lectures/8/src8.zip">Zip</a></li>
+      <li><a href="https://cdn.cs50.net/2023/fall/lectures/8/src8/">Index</a></li>
+      <li><a href="https://cdn.cs50.net/2023/fall/lectures/8/src8.pdf">PDF</a></li>
+      <li><a href="https://cdn.cs50.net/2023/fall/lectures/8/src8.zip">Zip</a></li>
     </ul>
   </details> 
 
 ### Resources
 
-- [Section](https://cs50.harvard.edu/ap/2024/curriculum/x/sections/8/)
+- [Section](https://cs50.harvard.edu/ap/2025/curriculum/x/sections/8/)
 - [Valley of Code](https://thevalleyofcode.com/) - a reading resource 
   - Focus on [The Internet](https://thevalleyofcode.com/the-internet) & [The Web](https://thevalleyofcode.com/the-web) for AP Exam material
   - [HTML](https://thevalleyofcode.com/html) & [CSS](https://thevalleyofcode.com/css) for class coding material
@@ -52,9 +56,9 @@ Internet: Routers; TCP/IP; DNS. HTTP: URLs, GET, POST. HTML: Tags; Attributes. S
 - [CSS](https://www.w3schools.com/css/)
 - [JavaScript](https://www.w3schools.com/js/)
 
-### Practice, Labs & Problems
+<!-- ### Practice, Labs & Problems
 - [Practice Problem -Radio Shack Redo](https://cs50.harvard.edu/ap/2024/problems/8/redo/)
 - [Lab - Trivia](https://cs50.harvard.edu/ap/2024/curriculum/x/labs/8/)
 - [Problem - Homepage](https://cs50.harvard.edu/ap/2024/curriculum/x/psets/8/homepage/)
-
+ -->
 
