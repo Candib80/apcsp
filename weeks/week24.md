@@ -12,6 +12,6 @@
 
 **Note:* If you are turning in your Create task and are uncertain of it, please come have a conversation with me about extending the deadline. I would rather you have something you did not rush to finish as this is part of your AP Exam grade.
 
-<img src="https://www.learncomputerscienceonline.com/wp-content/uploads/2019/10/Program-Coding.jpg" alt="computer programming" height="300">
+<img src="https://cdn.prod.website-files.com/6344c9cef89d6f2270a38908/673f2a3b44c1ed4901bb43bb_6386328bea96dffacc89946b_d1.webp" alt="web development" height="300">
 
 <meta http-equiv="refresh" content="300"/>
