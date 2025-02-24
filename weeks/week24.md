@@ -1,6 +1,6 @@
 ## Week 24 <br>Week of 2/24
 
-### [Unit 5](/apcsp/curriculum/7)<br>Continue working on [Create](/apcsp/curriculum/pt/create) - Due to me, marked as FINAL in Digital Portfolio, THIS FRIDAY - see **Note* below
+### [Unit 5](/apcsp/curriculum/7)<br>Continue working on [Create](/apcsp/curriculum/pt/create) - Due to me, marked as *FINAL* in Digital Portfolio, *THIS FRIDAY* - see *Note* below
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
