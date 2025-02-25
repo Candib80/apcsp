@@ -24,6 +24,11 @@ JavaScript: Variables; Conditionals; Loops. Events.
 ### Resources
 
 - [Section](https://cs50.harvard.edu/ap/2025/curriculum/x/sections/8/)
+- Handbooks from [flaviocopes.com](https://flaviocopes.com):
+  - [HTML Handbook](https://flaviocopes.pages.dev/books/html-handbook.pdf)
+  - [CSS Handbook](https://flaviocopes.pages.dev/books/css-handbook.pdf)
+  - [JavaScript Handbook](https://flaviocopes.pages.dev/books/js-handbook.pdf)
+  - [Other Books](https://flaviocopes.com/books/)
 
 #### Shorts
 1. [Internet Primer](https://cs50.harvard.edu/ap/2022/curriculum/x/shorts/internet_primer/)
