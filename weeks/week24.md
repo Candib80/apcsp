@@ -5,10 +5,10 @@
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
   |**Mon**|Intro to the Internet | |
-  |**Tue**| | |
-  |**Wed**| | |
-  |**Thu**| | |
-  |**Fri**| | |
+  |**Tue**|DHCP, HTTP, HTML intro | |
+  |**Wed**|HTML continued | |
+  |**Thu**|CSS | |
+  |**Fri**|Bootstrap | |
 
 **Note:* If you are turning in your Create task and are uncertain of it, please come have a conversation with me about extending the deadline. I would rather you have something you did not rush to finish as this is part of your AP Exam grade.
 
