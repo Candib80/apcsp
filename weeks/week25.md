@@ -4,7 +4,7 @@
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|[Practice Problem -Radio Shack Redo](https://cs50.harvard.edu/ap/2025/practice/redo/) |Finish Radio Shack Redo |
+  |**Mon**|[Practice Problem -Radio Shack Redo](https://cs50.harvard.edu/ap/2025/practice/redo/) |Finish Radio Shack Redo - upload screenshot in Canvas |
   |**Tue**| | |
   |**Wed**| | |
   |**Thu**| | |
