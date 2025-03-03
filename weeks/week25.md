@@ -1,14 +1,14 @@
-## Week 25 <br>Week of 3/4
+## Week 25 <br>Week of 3/2
 
-### [Unit 4](/apcsp/curriculum/5)
+### [Unit 5](/apcsp/curriculum/7)
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
-  |**Mon**|Finish up [Lab](https://cs50.harvard.edu/ap/2023/curriculum/x/labs/6/) | Finish Lab so we can start on PSET |
-  |**Tue**|Start on [PSET](https://candib80.github.io/apcsp/curriculum/5/#practice-labs--problems) | |
-  |**Wed**|Work on PSET |Work on PSET |
-  |**Thu**|Create Questions in class |Work on PSET |
-  |**Fri**|Finish PSET |Finish PSET |
+  |**Mon**|[Practice Problem -Radio Shack Redo](https://cs50.harvard.edu/ap/2025/practice/redo/) |Finish Radio Shack Redo |
+  |**Tue**| | |
+  |**Wed**| | |
+  |**Thu**| | |
+  |**Fri**| | |
 
 
 
