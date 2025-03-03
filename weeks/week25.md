@@ -1,14 +1,14 @@
-## Week 25 <br>Week of 3/2
+## Week 25 <br>Week of 3/3
 
 ### [Unit 5](/apcsp/curriculum/7)
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
   |**Mon**|[Practice Problem -Radio Shack Redo](https://cs50.harvard.edu/ap/2025/practice/redo/) |Finish Radio Shack Redo - upload screenshot in Canvas |
-  |**Tue**| | |
+  |**Tue**|JavaScript | |
   |**Wed**| | |
-  |**Thu**| | |
-  |**Fri**| | |
+  |**Thu**|Ms. Beaman gone - work on lab then PSET | |
+  |**Fri**|Ms. Beaman gone - work on lab then PSET | |
 
 
 <div style="text-align:center">
