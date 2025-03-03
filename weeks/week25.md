@@ -20,6 +20,5 @@
 <a href="https://eloquentjavascript.net/" target="_blank"><img src="https://eloquentjavascript.net/img/cover.jpg" alt="eloquent JS book" height="400px"></a>
 </div>
 
-<img src="https://www.learncomputerscienceonline.com/wp-content/uploads/2019/10/Program-Coding.jpg" alt="computer programming" height="300">
 
 <meta http-equiv="refresh" content="300"/>
