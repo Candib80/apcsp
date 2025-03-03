@@ -60,6 +60,7 @@ JavaScript: Variables; Conditionals; Loops. Events.
 
 ### Practice, Labs & Problems
 - [Practice Problem -Radio Shack Redo](https://cs50.harvard.edu/ap/2025/practice/redo/); for practice with Bootstrap
+
 <!-- - [Lab - Trivia](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/8/trivia/)
 - [Problem - Homepage](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/8/homepage/)
  -->
