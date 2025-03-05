@@ -6,8 +6,8 @@
   |-------|---------              |---------  |
   |**Mon**|[Practice Problem -Radio Shack Redo](https://cs50.harvard.edu/ap/2025/practice/redo/) |Finish Radio Shack Redo - upload screenshot in Canvas |
   |**Tue**|JavaScript | |
-  |**Wed**| | |
-  |**Thu**|Ms. Beaman gone - work on lab then PSET | |
+  |**Wed**|Finish JS and start [Trivia Lab](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/8/trivia/) | |
+  |**Thu**|Ms. Beaman gone - work on lab then PSET - [Homepage](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/8/homepage/) | |
   |**Fri**|Ms. Beaman gone - work on lab then PSET | |
 
 
