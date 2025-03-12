@@ -1,14 +1,14 @@
 ## Week 26 <br>Week of 3/11
 
-### [Unit 4 - Python](/apcsp/curriculum/5)<br>[Unit 5 - Web Design](/apcsp/curriculum/7)
+### [Unit 5 - Web Design](/apcsp/curriculum/7)
 
   |       |In Class               |Homework   |
   |-------|---------              |---------  |
   |**Mon**|No School | |
-  |**Tue**|Review Python |Study for test |
-  |**Wed**|Test on Python | |
-  |**Thu**|Start on Unit 5 - HTML | |
-  |**Fri**| | |
+  |**Tue**|Work on [Homepage](https://cs50.harvard.edu/ap/2025/curriculum/x/psets/8/homepage/) | |
+  |**Wed**|Work on Homepage|Homepage and Trivia due tonight<br>Answer Study Guide |
+  |**Thu**|Review for Test on Unit 5 |Study! |
+  |**Fri**|Test Unit 5 | |
 
 
 <div style="text-align:center">
