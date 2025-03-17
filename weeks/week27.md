@@ -1,22 +1,15 @@
-## Week 27 <br>Week of 3/18
+## Week 27 <br>Week of 3/17
 
-### [Unit 5 - The Internet & Web Design](/apcsp/curriculum/7)
+### [Additional Modules](/apcsp/curriculum/#additional-modules)
 
 |         | In Class | Homework |
 | ------- | -------- | -------- |
-| **Mon** |Continue with HTML | |
-| **Tue** |More HTML | |
-| **Wed** |CSS | |
-| **Thu** |[Bootstrap](https://getbootstrap.com) & JS | |
-| **Fri** |More JS | |
+| **Mon** |Review Test<br>[Multimedia](https://candib80.github.io/apcsp/curriculum/understanding_technology/multimedia) |Make sure to read over and take any notes on the Multimedia for a quiz on the material tomorrow |
+| **Tue** |Quiz<br>Multimedia review; Start on [Data Science](https://candib80.github.io/apcsp/curriculum/data_science) | |
+| **Wed** | | |
+| **Thu** | | |
+| **Fri** | | |
 
-<div style="text-align:center">
-<a href="https://www.w3schools.com/html" target="_blank"><img src="\apcsp\assets\img\html-icon.jpg" alt="html" style="padding: 0px 25px"></a> <a href="https://www.w3schools.com/css" target="_blank"><img src="\apcsp\assets\img\css-icon.jpg" alt="css" style="padding: 0px 25px"></a><a href="https://www.w3schools.com/js" target="_blank"><img src="\apcsp\assets\img\js-icon.jpg" alt="javascript" style="padding: 0px 25px"></a>
-</div>
 
-<br>
-<div style="text-align:center">
-<a href="https://eloquentjavascript.net/" target="_blank"><img src="https://eloquentjavascript.net/img/cover.jpg" alt="eloquent JS book" height="400px"></a>
-</div>
 
 <meta http-equiv="refresh" content="300"/>
