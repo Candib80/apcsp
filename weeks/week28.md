@@ -5,7 +5,7 @@
 |         | Class | Homework |
 | ------- | ----- | -------- |
 | **Mon** |Finish up Security/Cybersecurity |Make sure you have your notes for the quiz tomorrow  |
-| **Tue** |Quiz on Security<br>Start on Problems |  |
+| **Tue** |Quiz on Security<br>Start on Simulate! - should be available in Canvas at 9:15 this am ;) |  |
 | **Wed** |  |  |
 | **Thu** |  |  |
 | **Fri** |  |  |
