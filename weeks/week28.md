@@ -8,7 +8,7 @@
 | **Tue** |Quiz on Security<br>Start on Simulate! - should be available in Canvas at 9:15 this am ;) |  |
 | **Wed** |  |  |
 | **Thu** |  |  |
-| **Fri** |Test next week, probably Wed. This will be on the Additional Modules and any other topics we have covered  |  |
+| **Fri** |Test next Tuesday. This will be on the Additional Modules and any other topics we have covered  |  |
 
 
 
