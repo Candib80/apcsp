@@ -7,9 +7,9 @@ title: false
 # Hello, world!
 
 <!-- <img src="https://www.dv8sussex.com/wp-content/uploads/2020/03/bud-important-announcement-800x280-1.jpg" alt="important announcement" height="300">   -->
-<img src="https://schools.scsk12.org/cms/lib/TN50000520/Centricity/Domain/3250/Screen%20Shot%202020-09-03%20at%2010.43.04%20AM.png" alt="updates & announcements" height="300">  
+<!-- <img src="https://schools.scsk12.org/cms/lib/TN50000520/Centricity/Domain/3250/Screen%20Shot%202020-09-03%20at%2010.43.04%20AM.png" alt="updates & announcements" height="300">   -->
 
-- <span style="font-size: 22px;">We are on Week 31</span>
+<!-- - <span style="font-size: 22px;">We are on Week 31</span> -->
 
 
 
@@ -26,6 +26,11 @@ title: false
   - Almost 2 open jobs for every student with a CS degree
   - CS is on average the highest-paid college major upon graduation
 
-This is CS50 AP, Harvard University's introduction to the intellectual enterprises of computer science and the art of programming for students in high school, which satisfies the College Board's AP CS Principles curriculum framework.
+This is CS50 AP, Harvard University's introduction to the intellectual enterprises of computer science and the art of programming for students in high school, which satisfies the College Board's [AP CS Principles](https://apcentral.collegeboard.org/courses/ap-computer-science-principles/course) curriculum framework.
 
-<iframe width="50%" src="https://www.youtube.com/embed/tZxLMIk_SaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+An entry-level course for students with no prior background, CS50 AP teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web programming. Languages include C, Python, and SQL plus HTML, CSS, and JavaScript. Problem sets inspired by the arts, humanities, social sciences, and sciences.
+
+<details>
+<summary>What is CS50?</summary>
+  <iframe width="50%" src="https://www.youtube.com/embed/tZxLMIk_SaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</details>
