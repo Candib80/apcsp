@@ -7,9 +7,9 @@
 
   |       | Class | Homework |
   | ----- | ----- | -------- |
-  |**Mon**|First Day!! Welcome 😀<br>Go over syllabus & expectations<br>Review Summer Assignment<br>Get ready for test (Thursday) on material | |
+  |**Mon**|First Day!! Welcome 😀<br>Go over syllabus & expectations<br>Review Summer Assignment<br>Get ready for test on material | |
   |**Tue**|Sr. Retreat<br>Juniors will have more review | |
-  |**Wed**|Ms. B out<br>Review for your Summer test with each other |Make sure to join AP Classroom! |
+  |**Wed**|Review for your Summer test |Make sure to join AP Classroom! |
   |**Thu**|Test on Summer Assignment |Make sure to join AP Classroom!  |
   |**Fri**|Getting class tools set up for the year: see below | |
 
